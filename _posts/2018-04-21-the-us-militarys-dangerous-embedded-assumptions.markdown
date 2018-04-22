@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "The US Military's Dangerous Embedded Assumptions"
-date: 2018-04-21 23:00 -0700
+date: 2018-04-21 12:00 -0700
 categories: article_summaries
 slug: "dangerous-assumptions"
 ---
