@@ -17,6 +17,7 @@ github_username:  quanticle
 
 # Build settings
 markdown: kramdown
+  input: GFM
 
 # Dev Server settings
 host: 0.0.0.0
