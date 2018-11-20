@@ -1,0 +1,22 @@
+.page-header {
+    display: flex;
+    align-items: center;
+    background-color: #c6c6c6;
+}
+
+.page-header > .header-logo {
+    flex-grow: 0;
+}
+.page-header > .header-text {
+    flex-grow: 1;
+    text-align: center;
+}
+
+.page-header > .header-text > .header-text-wrapper {
+    display: inline-block;
+}
+
+.page-content {
+    width: 75%;
+    margin-left: 150px;
+}
