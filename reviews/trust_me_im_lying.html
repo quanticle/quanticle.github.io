@@ -1,40 +1,297 @@
-<html>
-    <head>
-        <meta charset="utf-8">
-        <title>Trust Me I'm Lying: Confessions of A Media Manipulator (review)</title>
-        <link href="..//page.css" rel="stylesheet">
-    </head>
-    <body>
-        <header class="page-header">
-            <div class="logo"><a href="../"><img src="..//logo.png" alt="quanticle.net logo" height="160"/></a></div>
-            <div class="header-text">
-                <div class="header-text-wrapper">
-                    <h1>Trust Me I'm Lying: Confessions of A Media Manipulator (review)</h1>
-                </div>
-            </div>
-        </header>
-        <div class="content-container">
-            <div class="page-content">
-                
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- 2019-01-21 Mon 19:19 -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Trust Me I'm Lying: Confessions of A Media Manipulator (review)</title>
+<meta name="generator" content="Org mode">
+<meta name="author" content="Rohit Patnaik">
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
 
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<link href="/page.css" rel="stylesheet">
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2018 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        displayAlign: "center",
+        displayIndent: "0em",
+
+        "HTML-CSS": { scale: 100,
+                        linebreaks: { automatic: "false" },
+                        webFont: "TeX"
+                       },
+        SVG: {scale: 100,
+              linebreaks: { automatic: "false" },
+              font: "TeX"},
+        NativeMML: {scale: 100},
+        TeX: { equationNumbers: {autoNumber: "AMS"},
+               MultLineWidth: "85%",
+               TagSide: "right",
+               TagIndent: ".8em"
+             }
+});
+</script>
+<script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
+</head>
+<body>
+<div id="preamble" class="status">
+<header class="page-header">
+  <div class="logo"><a href="/"><img src="/logo.png" height="160"></a></div>
+  <div class="header-text">
+    <div class="header-text-wrapper">
+      <h1>quanticle.net</h1>
+    </div>
+  </div>
+</header>
+</div>
+<div id="content">
+<h1 class="title">Trust Me I'm Lying: Confessions of A Media Manipulator (review)</h1>
 <p>
-<em>Trust Me I'm Lying</em>, by Ryan Holiday, is probably the most influential book I've read in the past two years. This book is a guidebook to the twenty-first century media ecosystem, and shows how the structures and incentives of online media serve to polarize us by stoking fear and anger. First published in 2012, the book is eerily prophetic in many places, as it talks about the toxic influence of online publishing on politics and society.
+<i>Trust Me I'm Lying</i>, by Ryan Holiday, is probably the most influential book I've read in the past two years. This book is a guidebook to the twenty-first century media ecosystem, and shows how the structures and incentives of online media serve to polarize us by stoking fear and anger. First published in 2012, the book is eerily prophetic in many places, as it talks about the toxic influence of online publishing on politics and society.
 </p>
 
 <p>
-Ryan Holiday is a marketer and publicist who specializes in manipulating <em>blogs</em> in service of his clients. So what is a blog? A blog is any online publishing platform which derives its revenue from advertising. Blogs range in size from small, fly-by-night local publications all the way up to multi million dollar properties like <em>Gawker</em> and the <em>Huffington Post</em>. Blogs may be independent, such as <em>Huffington Post</em> or <em>Politico</em> or they may be associated with an existing media franchise. For example the <em>Monkey Cage</em> politics blog is hosted by the Washington Post, and <em>MoneyWatch</em> is a financial blog hosted by CBS.
+Ryan Holiday is a marketer and publicist who specializes in manipulating <i>blogs</i> in service of his clients. So what is a blog? A blog is any online publishing platform which derives its revenue from advertising. Blogs range in size from small, fly-by-night local publications all the way up to multi million dollar properties like <i>Gawker</i> and the <i>Huffington Post</i>. Blogs may be independent, such as <i>Huffington Post</i> or <i>Politico</i> or they may be associated with an existing media franchise. For example the <i>Monkey Cage</i> politics blog is hosted by the Washington Post, and <i>MoneyWatch</i> is a financial blog hosted by CBS.
 </p>
 
 <p>
-The key observation that Ryan makes is that all blogs, no matter how large or small they are, no matter if they're associated with an existing media franchise or not, are driven by the same economic incentives. The revenue a blog makes can be expressed as (price per page-view) \(\times\) (number of page-views). Since blogs have little control over how much they are paid per reader, blogs universally tend to work to maximize the number of readers they get. Moreover the sheer number of blogs, and the extremely low barrier to entry creates a brutally Darwinian marketplace where any content that doesn't maximize page-views is rapidly superseded by content that does.
+The key observation that Ryan makes is that all blogs, no matter how large or small they are, no matter if they're associated with an existing media franchise or not, are driven by the same economic incentives. The revenue a blog makes can be expressed as (price per page-view) \( \times \) (number of page-views). Since blogs have little control over how much they are paid per reader, blogs universally tend to work to maximize the number of readers they get. Moreover the sheer number of blogs, and the extremely low barrier to entry creates a brutally Darwinian marketplace where any content that doesn't maximize page-views is rapidly superseded by content that does.
 </p>
 
 <p>
-In order to maximize the number of people clicking on their stories (and thus viewing the ads on those stories), blogs exploit every flaw in human psychology they can find. Chief among these is provocation. Ryan cites a study by Berger and Milkman from 2012 [1] which shows that content with high emotional valence spreads much faster than content which is emotionally neutral. The study compared stories on the New York Times website, and found that articles which induced anger were 34% more likely than the median article to make the top-10 most e-mailed list. Articles that induced awe also did well, being 30% more likely than the median article to make the most e-mailed list. Both anger and awe are high-arousal emotions (in a negative and positive direction, respectively). On the flip side, articles that induce low-arousal emotions, like sadness, suffer a penalty. Sad articles were 16% <em>less</em> likely than the median article to end up on the most e-mailed list. These facts about human psychology act as constraints on the kinds of stories blogs will write. Every story has to make people feel a "high-energy" emotion, like anger, or awe. Stories that are thoughtful, practical, useful or beautiful but melancholy fall by the wayside. 
+In order to maximize the number of people clicking on their stories (and thus viewing the ads on those stories), blogs exploit every flaw in human psychology they can find. Chief among these is provocation. Ryan cites a study by Berger and Milkman from 2012 [1] which shows that content with high emotional valence spreads much faster than content which is emotionally neutral. The study compared stories on the New York Times website, and found that articles which induced anger were 34% more likely than the median article to make the top-10 most e-mailed list. Articles that induced awe also did well, being 30% more likely than the median article to make the most e-mailed list. Both anger and awe are high-arousal emotions (in a negative and positive direction, respectively). On the flip side, articles that induce low-arousal emotions, like sadness, suffer a penalty. Sad articles were 16% <i>less</i> likely than the median article to end up on the most e-mailed list. These facts about human psychology act as constraints on the kinds of stories blogs will write. Every story has to make people feel a "high-energy" emotion, like anger, or awe. Stories that are thoughtful, practical, useful or beautiful but melancholy fall by the wayside. 
 </p>
 
 <p>
-Another constraint on blogs is their very structure. Marshall McLuhan's adage, "the medium is the message" applies just as much to blogs as it does to television. For blogs, the medium is the <em>stack</em>. Most blogs are arranged in a reverse-chronological list, with new stories coming in at the top of the page, and percolating down towards the bottom as further stories come in. A blog which can always produce something fresh at the top of the stack can draw in more readers by having more novel content for readers to click on and share. Ryan points out that, unlike newspapers, who have a finite number of column-inches per day and unlike cable news, which has a finite number of hours per day, a blog's appetite for content is functionally <em>infinite</em>. Blogs whose writers produce the fastest win, regardless of the quality of their writing.
+Another constraint on blogs is their very structure. Marshall McLuhan's adage, "the medium is the message" applies just as much to blogs as it does to television. For blogs, the medium is the <i>stack</i>. Most blogs are arranged in a reverse-chronological list, with new stories coming in at the top of the page, and percolating down towards the bottom as further stories come in. A blog which can always produce something fresh at the top of the stack can draw in more readers by having more novel content for readers to click on and share. Ryan points out that, unlike newspapers, who have a finite number of column-inches per day and unlike cable news, which has a finite number of hours per day, a blog's appetite for content is functionally <i>infinite</i>. Blogs whose writers produce the fastest win, regardless of the quality of their writing.
 </p>
 
 <p>
@@ -50,7 +307,7 @@ Ryan created a process, which he termed "trading up the chain" to do just that. 
 </p>
 
 <p>
-A concrete example of this is work he did for the movie <em>I Hope They Serve Beer In Hell</em>, starring Tucker Max. He wished to get coverage for the movie in the <em>Washington Post</em>. By observing the sources of the <em>Post's</em> stories carefully, he found out that much of the <em>Post</em>'s media coverage originated from stories on <em>Gawker</em>. Going one level further he noticed that <em>Gawker</em>, in turn, pulled its stories from smaller city-focused blogs like <em>MediaBistro</em> and <em>Curbed LA</em>. He then targeted those blogs with a series of provocative actions, such as buying billboards promoting the movie and then vandalizing them himself, calling feminist groups to protest showings of the movie, arranging for provocative advertisements on buses, and other acts designed to go viral on social media. When those blogs inevitably began covering <em>I Hope They Serve Beer In Hell</em>, he ensured that there was enough "chatter" to quickly drive the story up the chain to the <em>Washington Post</em>.
+A concrete example of this is work he did for the movie <i>I Hope They Serve Beer In Hell</i>, starring Tucker Max. He wished to get coverage for the movie in the <i>Washington Post</i>. By observing the sources of the <i>Post's</i> stories carefully, he found out that much of the <i>Post</i>'s media coverage originated from stories on <i>Gawker</i>. Going one level further he noticed that <i>Gawker</i>, in turn, pulled its stories from smaller city-focused blogs like <i>MediaBistro</i> and <i>Curbed LA</i>. He then targeted those blogs with a series of provocative actions, such as buying billboards promoting the movie and then vandalizing them himself, calling feminist groups to protest showings of the movie, arranging for provocative advertisements on buses, and other acts designed to go viral on social media. When those blogs inevitably began covering <i>I Hope They Serve Beer In Hell</i>, he ensured that there was enough "chatter" to quickly drive the story up the chain to the <i>Washington Post</i>.
 </p>
 
 <p>
@@ -62,46 +319,44 @@ The important thing to note is that all of these manipulations make the stories 
 </p>
 
 <p>
-If the effects of this media manipulation were merely to drive customers to products they wouldn't otherwise buy, Ryan would still probably be out there plying his trade. What caused him to reconsider his profession (and write this book) was the increasing use of these manipulation techniques to spread political ideas, and, in the process, hurt individuals. In the second half of the book, he talks about how sites like <em>Jezebel</em> and <em>Breitbart News</em> use the techniques he pioneered to push product for American Apparel to maximize their own page-views by stoking outrage both among their supporters and their opponents. In his view, much of responsibility for the coarsening and polarization of politics and culture can be laid at the feet of professional manipulators like himself. 
+If the effects of this media manipulation were merely to drive customers to products they wouldn't otherwise buy, Ryan would still probably be out there plying his trade. What caused him to reconsider his profession (and write this book) was the increasing use of these manipulation techniques to spread political ideas, and, in the process, hurt individuals. In the second half of the book, he talks about how sites like <i>Jezebel</i> and <i>Breitbart News</i> use the techniques he pioneered to push product for American Apparel to maximize their own page-views by stoking outrage both among their supporters and their opponents. In his view, much of responsibility for the coarsening and polarization of politics and culture can be laid at the feet of professional manipulators like himself. 
 </p>
 
 <p>
-Ryan's hope is that by writing this book and exposing the actual techniques that manipulators use, we can inoculate ourselves and make ourselves less susceptible to the sort of media manipulation that he used to carry out. Though things look bleak at the moment, Ryan looks to history to show that our online media ecosystem today is very similar to the "yellow-press" era at the turn of the 20th century. Given that, he has hope that the current state of affairs is not sustainable, and we will eventually craft a stronger, more trustworthy online media, just as the provocative tabloids like the <em>New York Herald</em> and <em>The World</em> eventually gave way to more trustworthy publications like <em>The New York Times</em> and the <em>Wall Street Journal</em>.
+Ryan's hope is that by writing this book and exposing the actual techniques that manipulators use, we can inoculate ourselves and make ourselves less susceptible to the sort of media manipulation that he used to carry out. Though things look bleak at the moment, Ryan looks to history to show that our online media ecosystem today is very similar to the "yellow-press" era at the turn of the 20th century. Given that, he has hope that the current state of affairs is not sustainable, and we will eventually craft a stronger, more trustworthy online media, just as the provocative tabloids like the <i>New York Herald</i> and <i>The World</i> eventually gave way to more trustworthy publications like <i>The New York Times</i> and the <i>Wall Street Journal</i>.
 </p>
 
 <p>
-Personally, I found this book important because it explained and crystallized many of the troubling trends I had personally observed in online media, and put them in a framework that allowed me to see clearly how they worked and how they were manipulating me. Though I knew that online media was growing ever more provocative and ever less accurate, my prior was that it was the result of blind evolutionary forces, as described in Scott Alexander's post on the same topic, <em>The Toxoplasma of Rage</em>. 
+Personally, I found this book important because it explained and crystallized many of the troubling trends I had personally observed in online media, and put them in a framework that allowed me to see clearly how they worked and how they were manipulating me. Though I knew that online media was growing ever more provocative and ever less accurate, my prior was that it was the result of blind evolutionary forces, as described in Scott Alexander's post on the same topic, <i>The Toxoplasma of Rage</i>. 
 </p>
 
 <p>
-While Scott's piece is important and insightful, it's still written from an outsider's perspective. It frames the ever escalating spiral of provocation as the result of groups competing to stoke the most outrage among their own members. <em>Trust Me I'm Lying</em>, by contrast, says that the result of deliberate manipulation by people who deliberately set groups against one another in order to bring attention to the issues that they want attention brought to. When Ryan vandalized his own billboards and organized protests by feminist groups against <em>I Hope They Serve Beer In Hell</em>, he wasn't attempting to send a message about the content of the film. He was merely operating under the adage, "Any publicity is good publicity." Similarly, Ryan's claim is that much of the outrage we find in today's politics and culture is the result of deliberate manipulation by publications who want to drive traffic to their own sites, without necessarily caring about which side "wins".
+While Scott's piece is important and insightful, it's still written from an outsider's perspective. It frames the ever escalating spiral of provocation as the result of groups competing to stoke the most outrage among their own members. <i>Trust Me I'm Lying</i>, by contrast, says that the result of deliberate manipulation by people who deliberately set groups against one another in order to bring attention to the issues that they want attention brought to. When Ryan vandalized his own billboards and organized protests by feminist groups against <i>I Hope They Serve Beer In Hell</i>, he wasn't attempting to send a message about the content of the film. He was merely operating under the adage, "Any publicity is good publicity." Similarly, Ryan's claim is that much of the outrage we find in today's politics and culture is the result of deliberate manipulation by publications who want to drive traffic to their own sites, without necessarily caring about which side "wins".
 </p>
 
 <p>
-Where the book is weakest is in its advice about where to go from here. The book ends with a note that people's time and attention are limited, and eventually people will catch on to the fact that they're being manipulated, and will start to demand higher quality reporting, rather than merely quantity. In support of this contention, he cites the evolution of print journalism, which evolved from "yellow press" tabloids to newspapers that are widely considered to be accurate and <em>relatively</em> unbiased. However, he gives few predictions about how this will come to pass, other than noting the current media ecosystem is unsustainable and that unsustainable things cannot be sustained over the long term.
+Where the book is weakest is in its advice about where to go from here. The book ends with a note that people's time and attention are limited, and eventually people will catch on to the fact that they're being manipulated, and will start to demand higher quality reporting, rather than merely quantity. In support of this contention, he cites the evolution of print journalism, which evolved from "yellow press" tabloids to newspapers that are widely considered to be accurate and <i>relatively</i> unbiased. However, he gives few predictions about how this will come to pass, other than noting the current media ecosystem is unsustainable and that unsustainable things cannot be sustained over the long term.
 </p>
 
 <p>
-Nevertheless, I found the book insightful, entertaining, and more than slightly horrifying. As a result of the book, I can look at stories like BGR's piece on a "potential acquisition" of 1Password by Apple [3] and better look past the manipulative elements to see how little substance there actually is to the article. As a result, I find that I'm more efficient at extracting the factual content from news articles, and better at identifying and avoiding so-called "fake news". For this reason, I consider <em>Trust Me I'm Lying</em> to be a strong recommendation.
+Nevertheless, I found the book insightful, entertaining, and more than slightly horrifying. As a result of the book, I can look at stories like BGR's piece on a "potential acquisition" of 1Password by Apple [3] and better look past the manipulative elements to see how little substance there actually is to the article. As a result, I find that I'm more efficient at extracting the factual content from news articles, and better at identifying and avoiding so-called "fake news". For this reason, I consider <i>Trust Me I'm Lying</i> to be a strong recommendation.
 </p>
 
-<div id="Citations"><h4 id="Citations">Citations</h4></div>
-<ol>
-<li>
-<a href="https://sci-hub.tw/https://doi.org/10.1509/jmr.10.0353">Berger and Milkman, 2012</a>
-
-<li>
-<a href="http://slatestarcodex.com/2014/12/17/the-toxoplasma-of-rage/">Scott Alexander. The Toxoplasma of Rage</a>
-
-<li>
-<a href="https://bgr.com/2018/07/10/apple-1password-acquisition-deal/">BGR clickbait</a>
-
+<div id="outline-container-org08b5bf3" class="outline-2">
+<h2 id="org08b5bf3">Citations</h2>
+<div class="outline-text-2" id="text-org08b5bf3">
+<ol class="org-ol">
+<li><a href="https://journals.sagepub.com/doi/10.1509/jmr.10.0353">Berger and Milkman, 2012</a></li>
+<li><a href="http://slatestarcodex.com/2014/12/17/the-toxoplasma-of-rage/">The Toxoplasma of Rage</a></li>
+<li><a href="https://bgr.com/2018/07/10/apple-1password-acquisition-deal/">BGR Clickbait</a></li>
 </ol>
-
-            </div>
-        </div>
-        <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
-    </body>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Rohit Patnaik</p>
+<p class="date">Created: 2019-01-21 Mon 19:19</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
 </html>
-
-

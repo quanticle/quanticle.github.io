@@ -1,24 +1,259 @@
-<html>
-    <head>
-        <meta charset="utf-8">
-        <title>The US Military's Dangerous Embedded Assumptions (review)</title>
-        <link href="..//page.css" rel="stylesheet">
-    </head>
-    <body>
-        <header class="page-header">
-            <div class="logo"><a href="../"><img src="..//logo.png" alt="quanticle.net logo" height="160"/></a></div>
-            <div class="header-text">
-                <div class="header-text-wrapper">
-                    <h1>The US Military's Dangerous Embedded Assumptions (review)</h1>
-                </div>
-            </div>
-        </header>
-        <div class="content-container">
-            <div class="page-content">
-                
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- 2019-01-21 Mon 14:27 -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The US Military's Dangerous Embedded Assumptions (review)</title>
+<meta name="generator" content="Org mode">
+<meta name="author" content="Rohit Patnaik">
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
 
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<link href="/page.css" rel="stylesheet">
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2018 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="preamble" class="status">
+<header class="page-header">
+  <div class="logo"><a href="/"><img src="/logo.png" height="160"></a></div>
+  <div class="header-text">
+    <div class="header-text-wrapper">
+      <h1>quanticle.net</h1>
+    </div>
+  </div>
+</header>
+</div>
+<div id="content">
+<h1 class="title">The US Military's Dangerous Embedded Assumptions (review)</h1>
 <p>
-Lt. General David Barno and Nora Bensahel, scholar-in-residence at the School of International Service write about 10 dangerous "embedded assumptions" [1] in US military planning that could prove disastrous if mistaken. All are food for thought, but I found the fourth ("Stealth aircraft will remain stealthy") to be the most interesting from a strategic point of view. Right now, all branches of the US military assume that the US Air Force and the US Navy will be able to establish air supremacy prior to other combat operations. Stealth is a cornerstone of this capability. Without stealth, you lose the ability to degrade enemy air defense systems, and without the ability to degrade enemy air defense systems, you lose the ability to establish air supremacy.
+Lt. General David Barno and Nora Bensahel, scholar-in-residence at the School of International Service write about <a href="https://warontherocks.com/2018/04/the-u-s-militarys-dangerous-embedded-assumptions/">10 dangerous "embedded assumptions"</a> in US military planning that could prove disastrous if mistaken. All are food for thought, but I found the fourth ("Stealth aircraft will remain stealthy") to be the most interesting from a strategic point of view. Right now, all branches of the US military assume that the US Air Force and the US Navy will be able to establish air supremacy prior to other combat operations. Stealth is a cornerstone of this capability. Without stealth, you lose the ability to degrade enemy air defense systems, and without the ability to degrade enemy air defense systems, you lose the ability to establish air supremacy.
 </p>
 
 <p>
@@ -26,26 +261,21 @@ Historically, our ability to establish air supremacy relied on two factors: stea
 </p>
 
 <p>
-This is why technologies such as passive radar [2] (linked from the above article) are so interesting and worrying. Historically, due to signal processing constraints, radar transmitters and receivers have had to be coupled. This is significant because while receivers have expensive and valuable signal processing equipment (and often have even more expensive and valuable people monitoring said equipment), radar transmitters are basically overclocked microwave ovens. However, improvements in computing and signal processing technologies are allowing for the <em>decoupling</em> of transmitters and receivers, with a relatively small number of sophisticated receivers being able to integrate returns from a large number of "dumb" transmitters in order to create the same "picture" that one would gain from a single tightly coupled transmitter/receiver pair. In addition, many of these passive radar systems can use "transmitters of opportunity", allowing an air defense system to use civilian radio sources, like radio and television broadcasts or cell-phone towers as impromptu radar transmitters.
+This is why technologies such as <a href="http://www.dtic.mil/dtic/tr/fulltext/u2/a515506.pdf">passive radar</a> (linked from the above article) are so interesting and worrying. Historically, due to signal processing constraints, radar transmitters and receivers have had to be coupled. This is significant because while receivers have expensive and valuable signal processing equipment (and often have even more expensive and valuable people monitoring said equipment), radar transmitters are basically overclocked microwave ovens. However, improvements in computing and signal processing technologies are allowing for the <i>decoupling</i> of transmitters and receivers, with a relatively small number of sophisticated receivers being able to integrate returns from a large number of "dumb" transmitters in order to create the same "picture" that one would gain from a single tightly coupled transmitter/receiver pair. In addition, many of these passive radar systems can use "transmitters of opportunity", allowing an air defense system to use civilian radio sources, like radio and television broadcasts or cell-phone towers as impromptu radar transmitters.
 </p>
 
 <p>
-Why is this significant for stealth? As tacticians have pointed since the dawn of stealth aircraft, stealth is <em>not</em> invisibility. Stealth is camouflage. Low observability designs and radar-absorbent materials reduce the range at which observation is probable, but do not eliminate the possibility of observation. A good counter to attacks by camouflaged adversaries is to set up floodlights and motion detectors. Passive radar allows air-defense systems to do exactly that. The relative cheapness of transmitters means that an adversary can simply "tighten the net", eliminating the shadows and gaps that stealth aircraft rely on to sneak past defenses. Simultaneously the proliferation of transmitters and their physical decoupling from receivers means that SEAD missions will no longer be as effective as they used to be at knocking holes in enemy defenses. Finally, dual-use nature of these transmitters means that they can be located in civilian areas, further increasing the risks of SEAD missions targeting these transmitters.
+Why is this significant for stealth? As tacticians have pointed since the dawn of stealth aircraft, stealth is <i>not</i> invisibility. Stealth is camouflage. Low observability designs and radar-absorbent materials reduce the range at which observation is probable, but do not eliminate the possibility of observation. A good counter to attacks by camouflaged adversaries is to set up floodlights and motion detectors. Passive radar allows air-defense systems to do exactly that. The relative cheapness of transmitters means that an adversary can simply "tighten the net", eliminating the shadows and gaps that stealth aircraft rely on to sneak past defenses. Simultaneously the proliferation of transmitters and their physical decoupling from receivers means that SEAD missions will no longer be as effective as they used to be at knocking holes in enemy defenses. Finally, dual-use nature of these transmitters means that they can be located in civilian areas, further increasing the risks of SEAD missions targeting these transmitters.
 </p>
 
 <p>
-The US military has long been operating under a modified version of Stanley Baldwin's famous dictum: "the <em>stealth</em> bomber will always get through". Technologies such as passive radar, combined with other innovations in visual and infrared tracking are increasingly rendering the modified dictum as false as the original. However, instead of recognizing this, the US military is doubling down on stealth, with the new B-21 and F-35 programs focused on building even stealthier bombers and strike aircraft. US tactics continue to emphasize the need to establish air supremacy, even as that requirement becomes more and more infeasible to achieve in practice. I fear that this will lead to a nasty surprise the next time the US has to fight a conventional war.
+The US military has long been operating under a modified version of Stanley Baldwin's famous dictum: "the <i>stealth</i> bomber will always get through". Technologies such as passive radar, combined with other innovations in visual and infrared tracking are increasingly rendering the modified dictum as false as the original. However, instead of recognizing this, the US military is doubling down on stealth, with the new B-21 and F-35 programs focused on building even stealthier bombers and strike aircraft. US tactics continue to emphasize the need to establish air supremacy, even as that requirement becomes more and more infeasible to achieve in practice. I fear that this will lead to a nasty surprise the next time the US has to fight a conventional war.
 </p>
-
-<p>
-[1]: <a href="https://warontherocks.com/2018/04/the-u-s-militarys-dangerous-embedded-assumptions/">https://warontherocks.com/2018/04/the-u-s-militarys-dangerous-embedded-assumptions/</a>
-[2]: <a href="http://www.dtic.mil/dtic/tr/fulltext/u2/a515506.pdf">http://www.dtic.mil/dtic/tr/fulltext/u2/a515506.pdf</a>
-</p>
-
-            </div>
-        </div>
-        <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
-    </body>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Rohit Patnaik</p>
+<p class="date">Created: 2019-01-21 Mon 14:27</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
 </html>
-
-
