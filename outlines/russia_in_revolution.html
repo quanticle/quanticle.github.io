@@ -1,886 +1,666 @@
-<html>
-    <head>
-        <meta charset="utf-8">
-        <title>Russia In Revolution: An Empire In Crisis 1890 - 1928 </title>
-        <link href="..//page.css" rel="stylesheet">
-    </head>
-    <body>
-        <header class="page-header">
-            <div class="logo"><a href="../"><img src="..//logo.png" alt="quanticle.net logo" height="160"/></a></div>
-            <div class="header-text">
-                <div class="header-text-wrapper">
-                    <h1>Russia In Revolution: An Empire In Crisis 1890 - 1928 </h1>
-                </div>
-            </div>
-        </header>
-        <div class="content-container">
-            <div class="page-content">
-                
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- 2019-01-22 Tue 20:06 -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Russia In Revolution: An Empire In Crisis 1890 - 1928</title>
+<meta name="generator" content="Org mode">
+<meta name="author" content="Rohit Patnaik">
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
 
-<div id="Introduction"><h2 id="Introduction">Introduction</h2></div>
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<link href="/page.css" rel="stylesheet">
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
 
+Copyright (C) 2012-2018 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="preamble" class="status">
+<header class="page-header">
+  <div class="logo"><a href="/"><img src="/logo.png" height="160"></a></div>
+  <div class="header-text">
+    <div class="header-text-wrapper">
+      <h1>quanticle.net</h1>
+    </div>
+  </div>
+</header>
+</div>
+<div id="content">
+<h1 class="title">Russia In Revolution: An Empire In Crisis 1890 - 1928</h1>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
 <ul>
-<li>
-Book covers the main events, personalities and developments in the former Russian empire from the late 19th century through the forced collectivization of 1928-29
-
-<li>
-Attempts to answer the "big questions" about the Russian Revolution
-
+<li><a href="#orgdb4724f">Introduction</a></li>
+<li><a href="#orgb385124">Chapter 1: Roots of the Revolution: 1880s - 1905</a>
 <ul>
-<li>
-Why did the tsarist autocracy fail?
-
-<li>
-Why did attempts to establish a parliamentary democracy also fail?
-
-<li>
-How was a small, extreme socialist party able to gain power and hold power through a ferocious civil war?
-
-<li>
-How did Stalin rise to power?
-
-<li>
-Why did he unleash forced industrialization and collectivization on his people?
-
+<li><a href="#orgad1a696">Autocracy and Orthodoxy</a></li>
+<li><a href="#org0ec7e79">Popular Religion</a></li>
+<li><a href="#org11ea7f9">Agriculture and Peasantry</a></li>
+<li><a href="#orge2fc6f0">Industrial capitalism</a></li>
 </ul>
-<li>
-The book is largely concerned with <em>power</em>
-
-<ul>
-<li>
-How a determination to hold on to power can cause the old regime to fail to adapt to new developments
-
-<li>
-How those seeking to build a better society can become corrupted
-
+</li>
 </ul>
-<li>
-Why another book on the Russian revolution?
+</div>
+</div>
 
-<ul>
-<li>
-Since the fall of the Soviet Union, a wealth of new scholarly material has come to light
-
-<li>
-Books seeks to give the reader an updated understanding on the events of the Russian Revolution using this new material
-
-<li>
-May more attention than was possible prior to 1991 to issues such as:
-
-<ul>
-<li>
-The imperial and national dimensions of the Revolution
-
-<li>
-Complexity of forces in the civil war
-
-<li>
-Attempts by moderate socialist and anarchist parties to resist the Bolsheviks
-
-<li>
-Peasant and worker resistance to the Bolsheviks
-
-<li>
-Economic privation and suffering of the new regime
-
-<li>
-Economic and social contradictions of the Soviet Union under the New Economic Plan of the 1920s
-
+<div id="outline-container-orgdb4724f" class="outline-2">
+<h2 id="orgdb4724f">Introduction</h2>
+<div class="outline-text-2" id="text-orgdb4724f">
+<ul class="org-ul">
+<li>Book covers the main events, personalities and developments in the former Russian empire from the late 19th century through the forced collectivization of 1928-29</li>
+<li>Attempts to answer the "big questions" about the Russian Revolution
+<ul class="org-ul">
+<li>Why did the tsarist autocracy fail?</li>
+<li>Why did attempts to establish a parliamentary democracy also fail?</li>
+<li>How was a small, extreme socialist party able to gain power and hold power through a ferocious civil war?</li>
+<li>How did Stalin rise to power?</li>
+<li>Why did he unleash forced industrialization and collectivization on his people?</li>
+</ul></li>
+<li>The book is largely concerned with <span class="underline">power</span>
+<ul class="org-ul">
+<li>How a determination to hold on to power can cause the old regime to fail to adapt to new developments</li>
+<li>How those seeking to build a better society can become corrupted</li>
+</ul></li>
+<li>Why another book on the Russian revolution?
+<ul class="org-ul">
+<li>Since the fall of the Soviet Union, a wealth of new scholarly material has come to light</li>
+<li>Books seeks to give the reader an updated understanding on the events of the Russian Revolution using this new material</li>
+<li>May more attention than was possible prior to 1991 to issues such as:
+<ul class="org-ul">
+<li>The imperial and national dimensions of the Revolution</li>
+<li>Complexity of forces in the civil war</li>
+<li>Attempts by moderate socialist and anarchist parties to resist the Bolsheviks</li>
+<li>Peasant and worker resistance to the Bolsheviks</li>
+<li>Economic privation and suffering of the new regime</li>
+<li>Economic and social contradictions of the Soviet Union under the New Economic Plan of the 1920s</li>
+</ul></li>
+</ul></li>
+<li>The timeframe of the book is due to the emphasis of some important continuities across the revolutionary divide of 1917</li>
+<li>The causes of the revolution are categorized into external pressures and internal pressures
+<ul class="org-ul">
+<li>External pressures - geopolitics and rivalries within the international state system</li>
+<li>Internal pressures - pressures caused by the undermining of social hierarchies by rapid economic modernization</li>
+</ul></li>
+<li>In addition, this book focuses less on the writings of the revolutionaries themselves, and more on the conditions that allowed revolution to be possible</li>
+<li>The book also focuses heavily on World War 1, since the socialist revolutions of the 20th century were made possible by the social crisis caused by war, specifically</li>
+<li>The book also focuses on the experience of Eurasian Russia in the Revolution
+<ul class="org-ul">
+<li>One thing that most histories of the Russian Revolution gloss over is that during the Revolution and the Civil War, the Russian Empire shattered, and had to be reassembled by the Communists</li>
+<li>Recent research has brought out how the Revolution was shaped by local ecological socioeconomic and ethnic structures</li>
+</ul></li>
+<li>Revolutions are different from coups in that the breakdown of the state is total, and this opens up space for mass mobilization
+<ul class="org-ul">
+<li>The peasantry is excluded from all too many books about the revolution, but they were its primary agents and victims</li>
+<li>Peasantry rose up against the old rural order, but found themselves bearing the main cost of economic modernization</li>
+</ul></li>
+<li>This book also seeks to incorporate new findings from cultural history
+<ul class="org-ul">
+<li>Bolsheviks were the first to attempt to create an atheistic society</li>
+<li>However, in order to consolidate their rule, they had to compromise with and appropriate beliefs that they had once excoriated</li>
+</ul></li>
+<li>The lack of strong revolutionary impulses in the world today has affected how historians write about the Russian revolution
+<ul class="org-ul">
+<li>See Russian revolution as the initiator of a cycle of violence that culminated in Stalinism than a flawed attempt to create a better world</li>
+<li>Russian revolution today is viewed as a historical cul-de-sac - Russia went from capitalism to communism and then back to capitalism</li>
+<li>From the perspective of Vladimir Putin's Russia, it seems like the hardly anything has changed in Russian political cultures</li>
+</ul></li>
+<li>So why should we study the Russian revolution
+<ul class="org-ul">
+<li>Offered by far the most radical challenge to the existing social order until that time</li>
+<li>First serious challenge to capitalism</li>
+<li>The current Russian government is a product of the Revolution and the Cold War that followed, so we need to understand the Revolution in order to understand the mindset of the current Russian government</li>
+<li>We can learn lessons from how the ideals of the Revolution were corrupted by thirst for power, enthusiasm for violence and contempt for law</li>
+</ul></li>
 </ul>
+</div>
+</div>
+
+
+<div id="outline-container-orgb385124" class="outline-2">
+<h2 id="orgb385124">Chapter 1: Roots of the Revolution: 1880s - 1905</h2>
+<div class="outline-text-2" id="text-orgb385124">
+<ul class="org-ul">
+<li>Collapse of the tsarist regime was rooted in economic and social modernization</li>
+<li>Pressures were greatly exacerbated by World War 1</li>
+<li>As society modernized new social classes were created (industrial workers, commercial capitalists) that did not fit into the feudal system of estates</li>
+<li>The pressures of this modernization, combined with military defeat against Japan, led to the 1905 revolution</li>
+<li>The 1905 revolution was composed of the middle classes, a militant labor movement and a peasant revolt against the landed gentry</li>
+<li>Forced Tsar Nicholas II to promise significant concessions and create a constitutional monarchy - October Manifesto</li>
+<li>However, after the revolution had been suppressed, the Tsar reneged on his promises</li>
+<li>The years after the Revolution, from 1907 to 1914, were called the "years of reaction", and were largely characterized by a stalemate between the new legislature (the Duma) and the tsarist government
+<ul class="org-ul">
+<li>In addition, the regime came under fire from conservative groups like the landed gentry and the church for the concessions that it did give</li>
+<li>Even though there was political stalemate, there was reason to hope that revolution could be averted thanks to economic growth and military modernization</li>
+</ul></li>
+<li>However, the outbreak of World War 1 put pressures on Russian society that it was not prepared to tolerate
+<ul class="org-ul">
+<li>The demands of total war strained the agricultural and industrial economies</li>
+<li>Increased gap between the common people and the privileged classes</li>
+<li>Combination of elite dissatisfaction with the management of the war combined with common people's dissatisfaction and economic privation and food shortages would lead to 1917 revolution that would overthrow the Romanov dynasty</li>
+</ul></li>
+<li>Russia's development can be characterized as the colonization of a "boundless and inhospitable plain"
+<ul class="org-ul">
+<li>Russia lacks natural frontiers, which makes it vulnerable to invasion</li>
+<li>Each invasion (Poles, Swedes, Napoleon, etc.) was repelled, but at increasing human and material cost</li>
+<li>This led to the creation of an increasingly autocratic and imperial state</li>
+</ul></li>
+<li>The state managed to rule its territory for large parts of its history by co-opting non-Russian local elites</li>
+<li>However, economic development and imperialist ambitions on the parts of other European powers in the latter half of the 19th century put enormous strain on Russia's borders, leading to increasing centralization</li>
+<li>While Britain, Germany, France, Austria-Hugary, Russia and the Ottoman Empire sought to maintain the fiction of "balance of power" through treaties and alliances, it became increasingly clear that the great powers were unequal in strength</li>
+<li>As a result, great power relations in the years prior to 1914 were inherently risky, as each power sought to judge how strong the others actually were, and how likely each was to back up its resolutions with force</li>
+<li>While Russia enjoyed international preeminence after the defeat of Napoleon, that aura of invincibility was shattered by its poor performance during the Crimean War (1853-1856)
+<ul class="org-ul">
+<li>Result: Russia was denied the right to a navy or to build fortifications on the Black Sea</li>
+</ul></li>
+<li>As a result, tsar Alexander II launched a program of far-reaching economic and military reforms
+<ul class="org-ul">
+<li>Abolition of serfdom (1861)</li>
+<li>Establishment of conscription and cadet (junker) schools</li>
+<li>Judicial reforms - limited trial by jury (<sub>How</sub> were trials carried out prior to this?_)</li>
+<li>Establishment of local government institutions (<sub>zemstvos</sub>_) and municipal dumas</li>
+</ul></li>
+<li>If these reforms had been allowed to proceed, it is possible that revolution could have been averted</li>
+<li>However, in 1881, Alexander II was assassinated by a member of the terrorist People's Will organization, and many of his reforms were reversed under his son, Alexander III</li>
+<li>The reforms of Alexander II did little to bolster Russia's international influence
+<ul class="org-ul">
+<li>Russia's gains in the war of Russo-Turkish War of 1877-1878 were much reduced by the politicking of Otto Von Bismarck at the Congress of Berlin</li>
+<li>Bismarck's actions underscored the threat posed to Russia by a unified and powerful Germany</li>
+<li>This eventually led to the formation of an alliance with France, and France would remain allied with Russia against Germany until 1917</li>
+</ul></li>
+<li>Although Russia was worried about the threat posed by Germany, it was actually attacked by Japan</li>
+<li>Russo-Japanese War of 1904
+<ul class="org-ul">
+<li>Russia and Japan were rivals in Manchuria</li>
+<li>Russia had recently inagurated the Trans-Siberian railway, which was designed to open up the Russian hinterlands to settlement</li>
+<li>Russia pressured the Qing dynasty of China to allow it to build the China Eastern Railway as a spur line to connect the Russian base at Port Arthur with the Trans-Siberian Railway</li>
+<li>This was viewed as a provocative move by the Japanese, who launched a surprise attack on the Russian fleet anchored at Port Arthur</li>
+<li>Russia then sent its western fleet on a long (18,000 mile) voyage which ended with defeat at the battle of Tsushima</li>
+<li>The defeat of two Russian fleets by an Asiatic power was humiliating and served to harden domestic political opposition to the tsar</li>
+</ul></li>
+<li>The Russian empire was a vast conglomeration of different ethnicities and religions
+<ul class="org-ul">
+<li>Excluding Ukrainians, ethnic Russians were actually a minority (44%) of the empire</li>
+<li>People were defined in terms of social estate and religion</li>
+<li>There was also a distinction between Slavs and "inorodsty" ("person of other origin" - a term applied to non-Slavs living in Russia)</li>
+</ul></li>
+<li>Historically, the empire had been managed by allowing local elites to rule the borderlands
+<ul class="org-ul">
+<li>Significant degree of religious tolerance, especially with regards to Islam</li>
+<li>Many different local legal and judicial systems</li>
+</ul></li>
+<li>However, as security concerns mounted, this diversity was increasingly seen as a problem
+<ul class="org-ul">
+<li>In the late 1800s there were increasing efforts to impose Russian as a standard language across the Empire</li>
+<li>Especially hard crackdowns against Poles and Jews</li>
+<li>Central Asia was ruled in an increasingly colonial manner with Russian overlords exerting more and more control over the "less civilized" peoples</li>
+<li>That said, the Russian empire was still formally multi-ethnic, defining itself as "rossiskaia" (state containing all the peoples of the Russian lands) as opposed to "russkaia" (land of the Russian people)</li>
+</ul></li>
 </ul>
-<li>
-The timeframe of the book is due to the emphasis of some important continuities across the revolutionary divide of 1917
+</div>
 
-<li>
-The causes of the revolution are categorized into external pressures and internal pressures
-
-<ul>
-<li>
-External pressures - geopolitics and rivalries within the international state system
-
-<li>
-Internal pressures - pressures caused by the undermining of social hierarchies by rapid economic modernization
-
+<div id="outline-container-orgad1a696" class="outline-3">
+<h3 id="orgad1a696">Autocracy and Orthodoxy</h3>
+<div class="outline-text-3" id="text-orgad1a696">
+<ul class="org-ul">
+<li>Tsar Nicholas II came to power in 1894 (after the death of Alexander III)</li>
+<li>Nicholas thought of himself as a monarch governing my divine right</li>
+<li>Even the Basic Law of 1906, ostensibly created to ensure a constitutional monarchy said that Nicholas II was an "autocratic and unrestricted monarch"</li>
+<li>Nicholas II was also hostile to his own bureaucracy and sought the advice of holy men like Rasputin</li>
+<li>Even though the Russian state had sweeping powers on paper, in practice it was quite weak
+<ul class="org-ul">
+<li>Narrow tax base</li>
+<li>Limited material and human resources</li>
+<li>Understaffed administration</li>
+<li>Corruption</li>
+<li>Inefficiency</li>
+</ul></li>
+<li>These drawbacks had been noted by tsar Alexander II, who had sought to address them with reforms</li>
+<li>However, these reforms were largely shelved after Alexander II's death</li>
+<li>Nicholas II's two most talented advisors, Sergie Witte (Finance) and Peter Stolypin (Interior) both recognized that reform was necessary</li>
+<li>Although many have likened pre-revolutionary Imperial Russia to a police state, this overstates the central authority of the state
+<ul class="org-ul">
+<li>The police did have wide ranging powers to arrest people for subversive activity</li>
+<li>The Okhrana, the secret police, had agents in factories, institutions and revolutionary parties</li>
+<li>However, there were not nearly enough police to turn these theoretical powers into an actual police state</li>
+<li>A single constable, assisted by a few low-ranking officers, might find himself responsible for 4,700 sq. km. and anywhere between 50 and 100 thousand people</li>
+<li>Wide powers were delegated to provincial governors by a central state that didn't have the bureaucratic capacity to execute its formal powers</li>
+<li>Rather than building up an effective police force, the state turned to the army to quell uprisings as the developed</li>
+</ul></li>
+<li>In practice, many parts of Imperial Russia effectively governed themselves, with little oversight from the central state
+<ul class="org-ul">
+<li>The new zemstvo institutions were supposed to maintain order after the emancipation of the serfs, but the central state did little to ensure that they were exercising leadership in a way approved by the government</li>
+<li>At the township level, assemblies of heads of household, known as <span class="underline">skhod</span> were responsible for ensuring that local infrastructure was maintained and taxes were paid</li>
+<li>Tsar Alexander III established the office of the <span class="underline">land captain</span>, an appointed representative of the autocracy
+<ul class="org-ul">
+<li>Oversaw the activities of the village and township assemblies</li>
+<li>Had the authority to act as judge in certain civil and lesser criminal cases</li>
+<li>Was widely reviled because the office of land captain displaced roles that had earlier been held by elected representatives of the villagers</li>
+</ul></li>
+</ul></li>
+<li>Another pillar of social order was the Orthodox Church
+<ul class="org-ul">
+<li>Administered by the Holy Synod which had been subsumed into the imperial bureaucracy by Peter The Great</li>
+<li>Led by Procurator Konstantin Pobedonotsev, an extreme reactionary, from 1880 to 1905</li>
+<li>The Church held 3 million hectares of land and 1/3 primary schools in the empire</li>
+<li>Over 40 thousand churches 50 thousand priests, 21 thousand monks and 70 thouand nuns</li>
+<li>Although the Orthodox Church was the official state religion, there were substantial religious minorities in the Empire
+<ul class="org-ul">
+<li>Muslim minorities in Central Asia</li>
+<li>Roman Catholics in Poland and Lithuania</li>
+<li>Jews in the Western Provinces</li>
+</ul></li>
+<li>While the church was never completely monolithic or unchanging the increasing secularism of the intelligentsia and the transition from a rural to an urban economy put great strains upon the church in the years before the revolution</li>
+</ul></li>
 </ul>
-<li>
-In addition, this book focuses less on the writings of the revolutionaries themselves, and more on the conditions that allowed revolution to be possible
+</div>
+</div>
 
-<li>
-The book also focuses heavily on World War 1, since the socialist revolutions of the 20th century were made possible by the social crisis caused by war, specifically
-
-<li>
-The book also focuses on the experience of Eurasian Russia in the Revolution
-
-<ul>
-<li>
-One thing that most histories of the Russian Revolution gloss over is that during the Revolution and the Civil War, the Russian Empire shattered, and had to be reassembled by the Communists
-
-<li>
-Recent research has brought out how the Revolution was shaped by local ecological socioeconomic and ethnic structures
-
+<div id="outline-container-org0ec7e79" class="outline-3">
+<h3 id="org0ec7e79">Popular Religion</h3>
+<div class="outline-text-3" id="text-org0ec7e79">
+<ul class="org-ul">
+<li>Like all things in Russia, there was significant divergence between official religion and religion as it was actually practiced</li>
+<li>Peasant religion was much more oriented towards warding off various demonic forces from the Devil, and also from various other spirits of woods and streams</li>
+<li>Villages often had their own unofficial saints and icons above and beyond those officially recognized by the Church</li>
+<li>While these unofficial icons and saints were occasionally labeled heresies, they were increasingly tolerated after 1905</li>
+<li>Although popular religion was strongly traditionalist, it was not completely unchanging in the face of new technologies and social norms
+<ul class="org-ul">
+<li>Trains allowed many more people to make pilgrimages</li>
+<li>Increasing literacy allowed people to read popular stories about saints and stories of miracles and healing</li>
+<li>Cheap printing allowed the distribution of icons</li>
+<li>Migration and schooling allowed a more individualized faith; not necessarily secularization</li>
+</ul></li>
+<li>Popular religion also had a strong train of apocalyptic thought, due in part to the political and social upheavals that Russia was experiencing at this time</li>
 </ul>
-<li>
-Revolutions are different from coups in that the breakdown of the state is total, and this opens up space for mass mobilization
+</div>
+</div>
 
-<ul>
-<li>
-The peasantry is excluded from all too many books about the revolution, but they were its primary agents and victims
-
-<li>
-Peasantry rose up against the old rural order, but found themselves bearing the main cost of economic modernization
-
+<div id="outline-container-org11ea7f9" class="outline-3">
+<h3 id="org11ea7f9">Agriculture and Peasantry</h3>
+<div class="outline-text-3" id="text-org11ea7f9">
+<ul class="org-ul">
+<li>Russia, at the turn of the 20th century, was an overwhelmingly agrarian society</li>
+<li>Rural peasantry had a precarious existence
+<ul class="org-ul">
+<li>Population growth meant that more people had to farm the same amount of land</li>
+<li>Extremely high child mortality - in 1905 fewer than half of children born reached the age of 5</li>
+<li>A single harsh winter combined with a bad harvest could lead to widespread famine</li>
+<li>Diseases such as measles and diptheria were endemic</li>
+</ul></li>
+<li>As a result, village society was extremely conservative, in order to ensure the survival of the community
+<ul class="org-ul">
+<li>Villages were organized as communes with common ownership of land</li>
+<li>Land was periodically redistributed among the villagers by a council consisting of all the village heads of household</li>
+<li>In addition, this council decided planting and harvesting schedules and decided who would grow which crop</li>
+<li>The council also acted as an interface with the larger bureaucracy of the state, making sure that taxes were paid and law and order were maintained</li>
+</ul></li>
+<li>Village society was patriarchical, however, women could gain substantial informal power by dint of their household responsibilities and their primary role in arranging marriages</li>
+<li>Another burden on the peasantry was the redemption payments that they owed the nobility in exchange for their freedom - renumeration payments were imposed by Alexander II when he eliminated serfdom
+<ul class="org-ul">
+<li><span class="underline">bullshit, IMHO - it's not freedom if you have to pay for it</span></li>
+</ul></li>
+<li>Despite these burdens, however, there were indications that the quality of peasant life was improving around 1900
+<ul class="org-ul">
+<li>Healthy deposits in rural savings banks</li>
+<li>Increases in agricultural yields that outstripped population growth</li>
+<li>Increasing health of army conscripts</li>
+<li>Increased productivity of commercial agriculture</li>
+</ul></li>
+<li>Although life overall was (probably) improving for the peasantry, these gains were very unequally distributed, and indicators for e.g. the central black earth, and Volga provinces were in decline</li>
+<li>The biggest change in pre-Revolution Russian agriculture were the reforms imposed by Peter Stolypin after the 1905 unrest
+<ul class="org-ul">
+<li>Allowed families to buy out their share of communal property and farm it as they pleased</li>
+<li>Intended to create a class of conservative yeoman farmers who would be a base of support for the tsarist regime</li>
+<li><span class="underline">So does this mean that the kulaks were actually intended to be reactionary counterrevolutionaries?</span></li>
+<li>By 1914 15.9% of land had been privatized, at which point the strain of the war put an end to further domestic reforms</li>
+</ul></li>
+<li>As capitalism took hold in the countryside, there was increasing social stratification among the peasantry
+<ul class="org-ul">
+<li>The richest peasants (usually with privatized land) were known as <span class="underline">kulaks</span> (fists)</li>
+<li>Unclear how much socioeconomic mobility there was - some have argued that intergenerational socioeconomic mobility was high, since wealthy families would have lots of children who would subdivide and redistribute the wealth</li>
+<li>Also unclear how to measure socioeconomic class, since land ownership was only one of many possible ways to be wealthy</li>
+</ul></li>
+<li>If peasant life was improving, why was there so much unrest?
+<ul class="org-ul">
+<li>Peasants thought they'd been cheated in the process of abolishing serfdom</li>
+<li>Nobles were owed 49 years of redemption payments</li>
+<li>Actual amount of land the peasants received was less and of lower quality than the land they had farmed as serfs</li>
+<li>Absentee landlords were an affront to the peasant ethic that only those who lived on and worked the land should own it</li>
+<li><span class="underline">I'm not going to lie - the peasantry was cheated by the abolition of serfdom</span></li>
+</ul></li>
+<li>Although nobles were compensated for the loss of their serfs, their fortunes still entered a steep decline around the turn of the century
+<ul class="org-ul">
+<li>While there were some nobles with large estates, a large number had farms smaller than 150 hectares</li>
+<li>Moreover, the gentry was just as ill-equipped as the peasantry for the transition to capital-intensive commercial farming - nobles and peasants alike encountered the same issues getting financing</li>
+</ul></li>
+<li>The tsarist state, needing educated soliders and industrial workers invested in teaching rural children how to read and write
+<ul class="org-ul">
+<li>Literacy increased to 21.1% by 1897, with 13.1% of women able to read and write as compared to 29.3% of men</li>
+<li>Urban literacy significantly outpaced rural literacy, with 45% of urban dwellers able to read and write</li>
+<li>Though literacy increased steadily in the years leading up to 1914, even in 1914 less then 20% of school-age children were actually enrolled in school
+<ul class="org-ul">
+<li>Many families felt that only the firstborn son needed functional literacy - education was strictly optional for the other children</li>
+</ul></li>
+<li>While the state acknowledged the need for education, it also recognized that education could lead to free thinking and rebellion against the state</li>
+<li>As a result, it closely monitored primary education to ensure that state propaganda was also being transmitted in addition to the knowledge of how to read and write</li>
+</ul></li>
 </ul>
-<li>
-This book also seeks to incorporate new findings from cultural history
+</div>
+</div>
 
-<ul>
-<li>
-Bolsheviks were the first to attempt to create an atheistic society
-
-<li>
-However, in order to consolidate their rule, they had to compromise with and appropriate beliefs that they had once excoriated
-
+<div id="outline-container-orge2fc6f0" class="outline-3">
+<h3 id="orge2fc6f0">Industrial capitalism</h3>
+<div class="outline-text-3" id="text-orge2fc6f0">
+<ul class="org-ul">
+<li>Ivan Vyshnegradskii, finance minister from 1887-1892 started a program to increase Russia's industrial output to counter a perception of relative decline</li>
+<li>This program was greatly expanded upon by his successor Sergei Witte (finance minister from 1892 to 1903)</li>
+<li>Witte hit upon the building of railroads as a way to stimulate economic growth
+<ul class="org-ul">
+<li>Increased amount of track from 30,600 to 56,500 km</li>
+<li>Completed the Trans-Siberian railroad</li>
+<li>While increased trackage didn't immediately lead to increased trade, it did stimulate the coal and steel industries of the Donbass</li>
+</ul></li>
+<li>Russia adopts the gold standard in 1897 in order to make itself more attractive to foreign investment</li>
+<li>The alliance with France leads to increased French investment in mining, metallurgy and engineering</li>
+<li>British investment was significant to the development of the Baku oil region and gold mining</li>
+<li>While Germany was seen as a strategic threat to Russia, German investment was significant as well</li>
+<li>State-backed industrialization was financed mainly by the sale of grain</li>
+<li>While the state was significant in Russia's industrialization, Russia also had a robust private sector focused mainly on consumer goods, textiles, and foodstuffs</li>
+<li>Although Russia was in the top 5 of overall industrial producers (behind the USA, Germany, Britain and France), it's production per-capita was much less than its peers</li>
+<li>Industrialization led to urbanization (though, at a slower pace than in other countries)
+<ul class="org-ul">
+<li>By 1913 St. Petersburg has 2.2 million residents, Moscow has 1.6 million residents, and there are over a hundred towns with over 50,000 people and over 20 with 100,000</li>
+<li>Much of the move to the cities was seasonal, with peasants moving to the city to work in the off-seasons and returning to the villages for harvests</li>
+<li>Urbanization put a severe strain on local governments and infrastructure
+<ul class="org-ul">
+<li>St. Petersburg was "the most unsanitary capital in Europe"</li>
+<li>Cholera epidemics</li>
+<li>In 1920, fewer than half of homes had water and sewage</li>
+</ul></li>
+<li>The lack of infrastructure was due to the lack of tax revenue for local municipal governments, combined with corruption and incompetence</li>
+<li>Moscow was an exception to the trend of overburdened civic infrastructure and incompetent local government
+<ul class="org-ul">
+<li>"Reasonable" water and sewage</li>
+<li>Electric street lights</li>
+<li>Trams</li>
+<li>Free health clinics</li>
+</ul></li>
+</ul></li>
+<li>The attitude of industrialists to the autocracy depended on their region and industrial sector
+<ul class="org-ul">
+<li>Textile manufacturers of the Moscow region were socially conservative, but their lack of dependence on state orders meant that they could and did advocate for political reform</li>
+<li>Textile manufacturers in Poland (around Łódź) were primarily German, and were more supportive of the autocracy</li>
+<li>St. Petersburg was home to mostly metal and engineering works - these industrialists were more concerned with preserving their influence over the government which gave them their orders than in reform</li>
+<li>The iron and steel works of the Donetsk region were "paternalistic at best, iron-fisted at worst" and very supportive of the autocracy</li>
+</ul></li>
+<li>Government industrial policy
+<ul class="org-ul">
+<li>Generally hand-off
+<ul class="org-ul">
+<li>Low taxes</li>
+<li>No income tax introduced until 1916</li>
+</ul></li>
+<li>However, there were many within the Interior Department, especially, who saw something unseemly and exploitative about making money from industry rather than agriculture</li>
+<li>That said, the government always took the side of employers in labor disputes, so in practice, the power of employers was near-absolute</li>
+</ul></li>
+<li>Working conditions
+<ul class="org-ul">
+<li>Universally terrible</li>
+<li>Workers worked 11 or 12 hour days</li>
+<li>Accidents were common and compensation for accidents was miserly</li>
+<li>Strikes and trade unions were illegal</li>
+</ul></li>
+<li>Industrialization and urbanization upset the system of social estates which had been used by the government to regulate society
+<ul class="org-ul">
+<li>Social estates
+<ul class="org-ul">
+<li>Nobility</li>
+<li>Clergy</li>
+<li>Merchants</li>
+<li>Townspeople</li>
+<li>Peasants</li>
+</ul></li>
+<li>Social estate status determined which educational and commercial opportunities were available to you
+<ul class="org-ul">
+<li><span class="underline">Like a caste system?</span></li>
+</ul></li>
+<li>While Alexander II had sought to end the system of social estates, his assassination led successor governments to try to strengthen it</li>
+</ul></li>
 </ul>
-<li>
-The lack of strong revolutionary impulses in the world today has affected how historians write about the Russian revolution
-
-<ul>
-<li>
-See Russian revolution as the initiator of a cycle of violence that culminated in Stalinism than a flawed attempt to create a better world
-
-<li>
-Russian revolution today is viewed as a historical cul-de-sac - Russia went from capitalism to communism and then back to capitalism
-
-<li>
-From the perspective of Vladimir Putin's Russia, it seems like the hardly anything has changed in Russian political cultures
-
-</ul>
-<li>
-So why should we study the Russian revolution
-
-<ul>
-<li>
-Offered by far the most radical challenge to the existing social order until that time
-
-<li>
-First serious challenge to capitalism
-
-<li>
-The current Russian government is a product of the Revolution and the Cold War that followed, so we need to understand the Revolution in order to understand the mindset of the current Russian government
-
-<li>
-We can learn lessons from how the ideals of the Revolution were corrupted by thirst for power, enthusiasm for violence and contempt for law
-
-</ul>
-</ul>
-
-
-<div id="Chapter 1: Roots of the Revolution: 1880s - 1905"><h2 id="Chapter 1: Roots of the Revolution: 1880s - 1905">Chapter 1: Roots of the Revolution: 1880s - 1905</h2></div>
-
-<ul>
-<li>
-Collapse of the tsarist regime was rooted in economic and social modernization
-
-<li>
-Pressures were greatly exacerbated by World War 1
-
-<li>
-As society modernized new social classes were created (industrial workers, commercial capitalists) that did not fit into the feudal system of estates
-
-<li>
-The pressures of this modernization, combined with military defeat against Japan, led to the 1905 revolution
-
-<li>
-The 1905 revolution was composed of the middle classes, a militant labor movement and a peasant revolt against the landed gentry
-
-<li>
-Forced Tsar Nicholas II to promise significant concessions and create a constitutional monarchy - October Manifesto
-
-<li>
-However, after the revolution had been suppressed, the Tsar reneged on his promises
-
-<li>
-The years after the Revolution, from 1907 to 1914, were called the "years of reaction", and were largely characterized by a stalemate between the new legislature (the Duma) and the tsarist government
-
-<ul>
-<li>
-In addition, the regime came under fire from conservative groups like the landed gentry and the church for the concessions that it did give
-
-<li>
-Even though there was political stalemate, there was reason to hope that revolution could be averted thanks to economic growth and military modernization
-
-</ul>
-<li>
-However, the outbreak of World War 1 put pressures on Russian society that it was not prepared to tolerate
-
-<ul>
-<li>
-The demands of total war strained the agricultural and industrial economies
-
-<li>
-Increased gap between the common people and the privileged classes
-
-<li>
-Combination of elite dissatisfaction with the management of the war combined with common people's dissatisfaction and economic privation and food shortages would lead to 1917 revolution that would overthrow the Romanov dynasty
-
-</ul>
-<li>
-Russia's development can be characterized as the colonization of a "boundless and inhospitable plain"
-
-<ul>
-<li>
-Russia lacks natural frontiers, which makes it vulnerable to invasion
-
-<li>
-Each invasion (Poles, Swedes, Napoleon, etc.) was repelled, but at increasing human and material cost
-
-<li>
-This led to the creation of an increasingly autocratic and imperial state
-
-</ul>
-<li>
-The state managed to rule its territory for large parts of its history by co-opting non-Russian local elites
-
-<li>
-However, economic development and imperialist ambitions on the parts of other European powers in the latter half of the 19th century put enormous strain on Russia's borders, leading to increasing centralization
-
-<li>
-While Britain, Germany, France, Austria-Hugary, Russia and the Ottoman Empire sought to maintain the fiction of "balance of power" through treaties and alliances, it became increasingly clear that the great powers were unequal in strength
-
-<li>
-As a result, great power relations in the years prior to 1914 were inherently risky, as each power sought to judge how strong the others actually were, and how likely each was to back up its resolutions with force
-
-<li>
-While Russia enjoyed international preeminence after the defeat of Napoleon, that aura of invincibility was shattered by its poor performance during the Crimean War (1853-1856)
-
-<ul>
-<li>
-Result: Russia was denied the right to a navy or to build fortifications on the Black Sea
-
-</ul>
-<li>
-As a result, tsar Alexander II launched a program of far-reaching economic and military reforms
-
-<ul>
-<li>
-Abolition of serfdom (1861)
-
-<li>
-Establishment of conscription and cadet (junker) schools
-
-<li>
-Judicial reforms - limited trial by jury (<em>How were trials carried out prior to this?</em>)
-
-<li>
-Establishment of local government institutions (<em>zemstvos</em>) and municipal dumas
-
-</ul>
-<li>
-If these reforms had been allowed to proceed, it is possible that revolution could have been averted
-
-<li>
-However, in 1881, Alexander II was assassinated by a member of the terrorist People's Will organization, and many of his reforms were reversed under his son, Alexander III
-
-<li>
-The reforms of Alexander II did little to bolster Russia's international influence
-
-<ul>
-<li>
-Russia's gains in the war of Russo-Turkish War of 1877-1878 were much reduced by the politicking of Otto Von Bismarck at the Congress of Berlin
-
-<li>
-Bismarck's actions underscored the threat posed to Russia by a unified and powerful Germany
-
-<li>
-This eventually led to the formation of an alliance with France, and France would remain allied with Russia against Germany until 1917
-
-</ul>
-<li>
-Although Russia was worried about the threat posed by Germany, it was actually attacked by Japan
-
-<li>
-Russo-Japanese War of 1904
-
-<ul>
-<li>
-Russia and Japan were rivals in Manchuria
-
-<li>
-Russia had recently inagurated the Trans-Siberian railway, which was designed to open up the Russian hinterlands to settlement
-
-<li>
-Russia pressured the Qing dynasty of China to allow it to build the China Eastern Railway as a spur line to connect the Russian base at Port Arthur with the Trans-Siberian Railway
-
-<li>
-This was viewed as a provocative move by the Japanese, who launched a surprise attack on the Russian fleet anchored at Port Arthur
-
-<li>
-Russia then sent its western fleet on a long (18,000 mile) voyage which ended with defeat at the battle of Tsushima
-
-<li>
-The defeat of two Russian fleets by an Asiatic power was humiliating and served to harden domestic political opposition to the tsar
-
-</ul>
-<li>
-The Russian empire was a vast conglomeration of different ethnicities and religions
-
-<ul>
-<li>
-Excluding Ukrainians, ethnic Russians were actually a minority (44%) of the empire
-
-<li>
-People were defined in terms of social estate and religion
-
-<li>
-There was also a distinction between Slavs and "inorodsty" ("person of other origin" - a term applied to non-Slavs living in Russia)
-
-</ul>
-<li>
-Historically, the empire had been managed by allowing local elites to rule the borderlands
-
-<ul>
-<li>
-Significant degree of religious tolerance, especially with regards to Islam
-
-<li>
-Many different local legal and judicial systems
-
-</ul>
-<li>
-However, as security concerns mounted, this diversity was increasingly seen as a problem
-
-<ul>
-<li>
-In the late 1800s there were increasing efforts to impose Russian as a standard language across the Empire
-
-<li>
-Especially hard crackdowns against Poles and Jews
-
-<li>
-Central Asia was ruled in an increasingly colonial manner with Russian overlords exerting more and more control over the "less civilized" peoples
-
-<li>
-That said, the Russian empire was still formally multi-ethnic, defining itself as "rossiskaia" (state containing all the peoples of the Russian lands) as opposed to "russkaia" (land of the Russian people)
-
-</ul>
-</ul>
-
-
-<div id="Chapter 1: Roots of the Revolution: 1880s - 1905-Autocracy and Orthodoxy"><h3 id="Autocracy and Orthodoxy">Autocracy and Orthodoxy</h3></div>
-
-<ul>
-<li>
-Tsar Nicholas II came to power in 1894 (after the death of Alexander III)
-
-<li>
-Nicholas thought of himself as a monarch governing my divine right
-
-<li>
-Even the Basic Law of 1906, ostensibly created to ensure a constitutional monarchy said that Nicholas II was an "autocratic and unrestricted monarch"
-
-<li>
-Nicholas II was also hostile to his own bureaucracy and sought the advice of holy men like Rasputin
-
-<li>
-Even though the Russian state had sweeping powers on paper, in practice it was quite weak
-
-<ul>
-<li>
-Narrow tax base
-
-<li>
-Limited material and human resources
-
-<li>
-Understaffed administration
-
-<li>
-Corruption
-
-<li>
-Inefficiency
-
-</ul>
-<li>
-These drawbacks had been noted by tsar Alexander II, who had sought to address them with reforms
-
-<li>
-However, these reforms were largely shelved after Alexander II's death
-
-<li>
-Nicholas II's two most talented advisors, Sergie Witte (Finance) and Peter Stolypin (Interior) both recognized that reform was necessary
-
-<li>
-Although many have likened pre-revolutionary Imperial Russia to a police state, this overstates the central authority of the state
-
-<ul>
-<li>
-The police did have wide ranging powers to arrest people for subversive activity
-
-<li>
-The Okhrana, the secret police, had agents in factories, institutions and revolutionary parties
-
-<li>
-However, there were not nearly enough police to turn these theoretical powers into an actual police state
-
-<li>
-A single constable, assisted by a few low-ranking officers, might find himself responsible for 4,700 sq. km. and anywhere between 50 and 100 thousand people
-
-<li>
-Wide powers were delegated to provincial governors by a central state that didn't have the bureaucratic capacity to execute its formal powers
-
-<li>
-Rather than building up an effective police force, the state turned to the army to quell uprisings as the developed
-
-</ul>
-<li>
-In practice, many parts of Imperial Russia effectively governed themselves, with little oversight from the central state
-
-<ul>
-<li>
-The new zemstvo institutions were supposed to maintain order after the emancipation of the serfs, but the central state did little to ensure that they were exercising leadership in a way approved by the government
-
-<li>
-At the township level, assemblies of heads of household, known as <em>skhod</em> were responsible for ensuring that local infrastructure was maintained and taxes were paid
-
-<li>
-Tsar Alexander III established the office of the <em>land captain</em>, an appointed representative of the autocracy
-
-<ul>
-<li>
-Oversaw the activities of the village and township assemblies
-
-<li>
-Had the authority to act as judge in certain civil and lesser criminal cases
-
-<li>
-Was widely reviled because the office of land captain displaced roles that had earlier been held by elected representatives of the villagers
-
-</ul>
-</ul>
-<li>
-Another pillar of social order was the Orthodox Church
-
-<ul>
-<li>
-Administered by the Holy Synod which had been subsumed into the imperial bureaucracy by Peter The Great
-
-<li>
-Led by Procurator Konstantin Pobedonotsev, an extreme reactionary, from 1880 to 1905
-
-<li>
-The Church held 3 million hectares of land and 1/3 primary schools in the empire
-
-<li>
-Over 40 thousand churches 50 thousand priests, 21 thousand monks and 70 thouand nuns
-
-<li>
-Although the Orthodox Church was the official state religion, there were substantial religious minorities in the Empire
-
-<ul>
-<li>
-Muslim minorities in Central Asia
-
-<li>
-Roman Catholics in Poland and Lithuania
-
-<li>
-Jews in the Western Provinces
-
-</ul>
-<li>
-While the church was never completely monolithic or unchanging the increasing secularism of the intelligentsia and the transition from a rural to an urban economy put great strains upon the church in the years before the revolution
-
-</ul>
-</ul>
-
-
-<div id="Chapter 1: Roots of the Revolution: 1880s - 1905-Popular Religion"><h3 id="Popular Religion">Popular Religion</h3></div>
-
-<ul>
-<li>
-Like all things in Russia, there was significant divergence between official religion and religion as it was actually practiced
-
-<li>
-Peasant religion was much more oriented towards warding off various demonic forces from the Devil, and also from various other spirits of woods and streams
-
-<li>
-Villages often had their own unofficial saints and icons above and beyond those officially recognized by the Church
-
-<li>
-While these unofficial icons and saints were occasionally labeled heresies, they were increasingly tolerated after 1905
-
-<li>
-Although popular religion was strongly traditionalist, it was not completely unchanging in the face of new technologies and social norms
-
-<ul>
-<li>
-Trains allowed many more people to make pilgrimages
-
-<li>
-Increasing literacy allowed people to read popular stories about saints and stories of miracles and healing
-
-<li>
-Cheap printing allowed the distribution of icons
-
-<li>
-Migration and schooling allowed a more individualized faith; not necessarily secularization
-
-</ul>
-<li>
-Popular religion also had a strong train of apocalyptic thought, due in part to the political and social upheavals that Russia was experiencing at this time
-
-</ul>
-
-
-<div id="Chapter 1: Roots of the Revolution: 1880s - 1905-Agriculture and Peasantry"><h3 id="Agriculture and Peasantry">Agriculture and Peasantry</h3></div>
-
-<ul>
-<li>
-Russia, at the turn of the 20th century, was an overwhelmingly agrarian society
-
-<li>
-Rural peasantry had a precarious existence
-
-<ul>
-<li>
-Population growth meant that more people had to farm the same amount of land
-
-<li>
-Extremely high child mortality - in 1905 fewer than half of children born reached the age of 5
-
-<li>
-A single harsh winter combined with a bad harvest could lead to widespread famine
-
-<li>
-Diseases such as measles and diptheria were endemic
-
-</ul>
-<li>
-As a result, village society was extremely conservative, in order to ensure the survival of the community
-
-<ul>
-<li>
-Villages were organized as communes with common ownership of land
-
-<li>
-Land was periodically redistributed among the villagers by a council consisting of all the village heads of household
-
-<li>
-In addition, this council decided planting and harvesting schedules and decided who would grow which crop
-
-<li>
-The council also acted as an interface with the larger bureaucracy of the state, making sure that taxes were paid and law and order were maintained
-
-</ul>
-<li>
-Village society was patriarchical, however, women could gain substantial informal power by dint of their household responsibilities and their primary role in arranging marriages
-
-<li>
-Another burden on the peasantry was the redemption payments that they owed the nobility in exchange for their freedom - renumeration payments were imposed by Alexander II when he eliminated serfdom
-
-<ul>
-<li>
-<em>bullshit, IMHO - it's not freedom if you have to pay for it</em>
-
-</ul>
-<li>
-Despite these burdens, however, there were indications that the quality of peasant life was improving around 1900
-
-<ul>
-<li>
-Healthy deposits in rural savings banks
-
-<li>
-Increases in agricultural yields that outstripped population growth
-
-<li>
-Increasing health of army conscripts
-
-<li>
-Increased productivity of commercial agriculture
-
-</ul>
-<li>
-Although life overall was (probably) improving for the peasantry, these gains were very unequally distributed, and indicators for e.g. the central black earth, and Volga provinces were in decline
-
-<li>
-The biggest change in pre-Revolution Russian agriculture were the reforms imposed by Peter Stolypin after the 1905 unrest
-
-<ul>
-<li>
-Allowed families to buy out their share of communal property and farm it as they pleased
-
-<li>
-Intended to create a class of conservative yeoman farmers who would be a base of support for the tsarist regime
-
-<li>
-<em>So does this mean that the kulaks were actually intended to be reactionary counterrevolutionaries?</em>
-
-<li>
-By 1914 15.9% of land had been privatized, at which point the strain of the war put an end to further domestic reforms
-
-</ul>
-<li>
-As capitalism took hold in the countryside, there was increasing social stratification among the peasantry
-
-<ul>
-<li>
-The richest peasants (usually with privatized land) were known as <em>kulaks</em> (fists)
-
-<li>
-Unclear how much socioeconomic mobility there was - some have argued that intergenerational socioeconomic mobility was high, since wealthy families would have lots of children who would subdivide and redistribute the wealth
-
-<li>
-Also unclear how to measure socioeconomic class, since land ownership was only one of many possible ways to be wealthy
-
-</ul>
-<li>
-If peasant life was improving, why was there so much unrest?
-
-<ul>
-<li>
-Peasants thought they'd been cheated in the process of abolishing serfdom
-
-<li>
-Nobles were owed 49 years of redemption payments
-
-<li>
-Actual amount of land the peasants received was less and of lower quality than the land they had farmed as serfs
-
-<li>
-Absentee landlords were an affront to the peasant ethic that only those who lived on and worked the land should own it
-
-<li>
-<em>I'm not going to lie - the peasantry was cheated by the abolition of serfdom</em>
-
-</ul>
-<li>
-Although nobles were compensated for the loss of their serfs, their fortunes still entered a steep decline around the turn of the century
-
-<ul>
-<li>
-While there were some nobles with large estates, a large number had farms smaller than 150 hectares
-
-<li>
-Moreover, the gentry was just as ill-equipped as the peasantry for the transition to capital-intensive commercial farming - nobles and peasants alike encountered the same issues getting financing
-
-</ul>
-<li>
-The tsarist state, needing educated soliders and industrial workers invested in teaching rural children how to read and write
-
-<ul>
-<li>
-Literacy increased to 21.1% by 1897, with 13.1% of women able to read and write as compared to 29.3% of men
-
-<li>
-Urban literacy significantly outpaced rural literacy, with 45% of urban dwellers able to read and write
-
-<li>
-Though literacy increased steadily in the years leading up to 1914, even in 1914 less then 20% of school-age children were actually enrolled in school
-
-<ul>
-<li>
-Many families felt that only the firstborn son needed functional literacy - education was strictly optional for the other children
-
-</ul>
-<li>
-While the state acknowledged the need for education, it also recognized that education could lead to free thinking and rebellion against the state
-
-<li>
-As a result, it closely monitored primary education to ensure that state propaganda was also being transmitted in addition to the knowledge of how to read and write
-
-</ul>
-</ul>
-
-
-<div id="Chapter 1: Roots of the Revolution: 1880s - 1905-Industrial capitalism"><h3 id="Industrial capitalism">Industrial capitalism</h3></div>
-
-<ul>
-<li>
-Ivan Vyshnegradskii, finance minister from 1887-1892 started a program to increase Russia's industrial output to counter a perception of relative decline
-
-<li>
-This program was greatly expanded upon by his successor Sergei Witte (finance minister from 1892 to 1903)
-
-<li>
-Witte hit upon the building of railroads as a way to stimulate economic growth
-
-<ul>
-<li>
-Increased amount of track from 30,600 to 56,500 km
-
-<li>
-Completed the Trans-Siberian railroad
-
-<li>
-While increased trackage didn't immediately lead to increased trade, it did stimulate the coal and steel industries of the Donbass
-
-</ul>
-<li>
-Russia adopts the gold standard in 1897 in order to make itself more attractive to foreign investment
-
-<li>
-The alliance with France leads to increased French investment in mining, metallurgy and engineering
-
-<li>
-British investment was significant to the development of the Baku oil region and gold mining
-
-<li>
-While Germany was seen as a strategic threat to Russia, German investment was significant as well
-
-<li>
-State-backed industrialization was financed mainly by the sale of grain
-
-<li>
-While the state was significant in Russia's industrialization, Russia also had a robust private sector focused mainly on consumer goods, textiles, and foodstuffs
-
-<li>
-Although Russia was in the top 5 of overall industrial producers (behind the USA, Germany, Britain and France), it's production per-capita was much less than its peers
-
-<li>
-Industrialization led to urbanization (though, at a slower pace than in other countries)
-
-<ul>
-<li>
-By 1913 St. Petersburg has 2.2 million residents, Moscow has 1.6 million residents, and there are over a hundred towns with over 50,000 people and over 20 with 100,000
-
-<li>
-Much of the move to the cities was seasonal, with peasants moving to the city to work in the off-seasons and returning to the villages for harvests
-
-<li>
-Urbanization put a severe strain on local governments and infrastructure
-
-<ul>
-<li>
-St. Petersburg was "the most unsanitary capital in Europe"
-
-<li>
-Cholera epidemics
-
-<li>
-In 1920, fewer than half of homes had water and sewage
-
-</ul>
-<li>
-The lack of infrastructure was due to the lack of tax revenue for local municipal governments, combined with corruption and incompetence
-
-<li>
-Moscow was an exception to the trend of overburdened civic infrastructure and incompetent local government
-
-<ul>
-<li>
-"Reasonable" water and sewage
-
-<li>
-Electric street lights
-
-<li>
-Trams
-
-<li>
-Free health clinics
-
-</ul>
-</ul>
-<li>
-The attitude of industrialists to the autocracy depended on their region and industrial sector
-
-<ul>
-<li>
-Textile manufacturers of the Moscow region were socially conservative, but their lack of dependence on state orders meant that they could and did advocate for political reform
-
-<li>
-Textile manufacturers in Poland (around Łódź) were primarily German, and were more supportive of the autocracy
-
-<li>
-St. Petersburg was home to mostly metal and engineering works - these industrialists were more concerned with preserving their influence over the government which gave them their orders than in reform
-
-<li>
-The iron and steel works of the Donetsk region were "paternalistic at best, iron-fisted at worst" and very supportive of the autocracy
-
-</ul>
-<li>
-Government industrial policy
-
-<ul>
-<li>
-Generally hand-off
-
-<ul>
-<li>
-Low taxes
-
-<li>
-No income tax introduced until 1916
-
-</ul>
-<li>
-However, there were many within the Interior Department, especially, who saw something unseemly and exploitative about making money from industry rather than agriculture
-
-<li>
-That said, the government always took the side of employers in labor disputes, so in practice, the power of employers was near-absolute
-
-</ul>
-<li>
-Working conditions
-
-<ul>
-<li>
-Universally terrible
-
-<li>
-Workers worked 11 or 12 hour days
-
-<li>
-Accidents were common and compensation for accidents was miserly
-
-<li>
-Strikes and trade unions were illegal
-
-</ul>
-<li>
-Industrialization and urbanization upset the system of social estates which had been used by the government to regulate society
-
-<ul>
-<li>
-Social estates
-
-<ul>
-<li>
-Nobility
-
-<li>
-Clergy
-
-<li>
-Merchants
-
-<li>
-Townspeople
-
-<li>
-Peasants
-
-</ul>
-<li>
-Social estate status determined which educational and commercial opportunities were available to you
-
-<ul>
-<li>
-<em>Like a caste system?</em>
-
-</ul>
-<li>
-While Alexander II had sought to end the system of social estates, his assassination led successor governments to try to strengthen it
-
-</ul>
-</ul>
-
-            </div>
-        </div>
-        <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
-    </body>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Rohit Patnaik</p>
+<p class="date">Created: 2019-01-22 Tue 20:06</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
 </html>
-
-

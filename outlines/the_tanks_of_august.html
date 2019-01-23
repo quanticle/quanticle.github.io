@@ -1,461 +1,478 @@
-<html>
-    <head>
-        <meta charset="utf-8">
-        <title>The Tanks of August </title>
-        <link href="..//page.css" rel="stylesheet">
-    </head>
-    <body>
-        <header class="page-header">
-            <div class="logo"><a href="../"><img src="..//logo.png" alt="quanticle.net logo" height="160"/></a></div>
-            <div class="header-text">
-                <div class="header-text-wrapper">
-                    <h1>The Tanks of August </h1>
-                </div>
-            </div>
-        </header>
-        <div class="content-container">
-            <div class="page-content">
-                
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- 2019-01-22 Tue 20:10 -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Tanks of August</title>
+<meta name="generator" content="Org mode">
+<meta name="author" content="Rohit Patnaik">
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
 
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<link href="/page.css" rel="stylesheet">
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2018 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="preamble" class="status">
+<header class="page-header">
+  <div class="logo"><a href="/"><img src="/logo.png" height="160"></a></div>
+  <div class="header-text">
+    <div class="header-text-wrapper">
+      <h1>quanticle.net</h1>
+    </div>
+  </div>
+</header>
+</div>
+<div id="content">
+<h1 class="title">The Tanks of August</h1>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
 <ul>
-<li>
-<a href="http://www.cast.ru/files/The_Tanks_of_August_sm_eng.pdf">The Tanks of August</a>
-
-</ul>
-
-<div id="Foreword"><h2 id="Foreword">Foreword</h2></div>
-
+<li><a href="#orga1befed">Foreword</a></li>
+<li><a href="#orge08c72d">Georgian Army Reform Under Saakashvili Prior To The 2008 Five Day War</a>
 <ul>
-<li>
-Anthology of 7 chapters
-
-<li>
-Details the Russo-Georgian War
-
-<ul>
-<li>
-Took place over a period of 5 days in August 2008
-
-<li>
-First comprehensive account of this short, but vicious war
-
-<li>
-The Russo-Georgian War defies those who would proclaim an "end of history", and claim that state-on-state conflict is no longer likely after the end of the Cold War
-
-<li>
-Produced by the Center for Analysis of Strategies and Technologies (CAST)
-
-<ul>
-<li>
-Moscow-based think-tank
-
-<li>
-Presents the Russian perspective on most matters
-
-<li>
-However, they still clearly address issues such as wartime atrocities, air and missile attacks on civilian targets, and Russian military losses
-
+<li><a href="#org8596f8d">Brief History of the Georgian Army Since 1991</a></li>
+<li><a href="#org8f05245">Georgian Army Priorities Under Saakashvili</a></li>
 </ul>
+</li>
 </ul>
-<li>
-Presents an ideal point of departure for future histories of the Russo-Georgian war
+</div>
+</div>
+<p>
+Source: <a href="http://www.cast.ru/files/The_Tanks_of_August_sm_eng.pdf">The Tanks of August</a>
+</p>
 
-<li>
-Book's contents
-
-<ul>
-<li>
-Lead essay describes the development of the Georgian armed forces from the formation of the state of Georgia in 1991 to the conflict in August 2008
-
-<ul>
-<li>
-Reveals the nature and perceived intent of Georgia's military modernization program
-
-<li>
-Assesses the impact of that program on the outcome of the ensuing war
-
+<div id="outline-container-orga1befed" class="outline-2">
+<h2 id="orga1befed">Foreword</h2>
+<div class="outline-text-2" id="text-orga1befed">
+<ul class="org-ul">
+<li>Anthology of 7 chapters</li>
+<li>Details the Russo-Georgian War
+<ul class="org-ul">
+<li>Took place over a period of 5 days in August 2008</li>
+<li>First comprehensive account of this short, but vicious war</li>
+<li>The Russo-Georgian War defies those who would proclaim an "end of history", and claim that state-on-state conflict is no longer likely after the end of the Cold War</li>
+<li>Produced by the Center for Analysis of Strategies and Technologies (CAST)
+<ul class="org-ul">
+<li>Moscow-based think-tank</li>
+<li>Presents the Russian perspective on most matters</li>
+<li>However, they still clearly address issues such as wartime atrocities, air and missile attacks on civilian targets, and Russian military losses</li>
+</ul></li>
+</ul></li>
+<li>Presents an ideal point of departure for future histories of the Russo-Georgian war</li>
+<li>Book's contents
+<ul class="org-ul">
+<li>Lead essay describes the development of the Georgian armed forces from the formation of the state of Georgia in 1991 to the conflict in August 2008
+<ul class="org-ul">
+<li>Reveals the nature and perceived intent of Georgia's military modernization program</li>
+<li>Assesses the impact of that program on the outcome of the ensuing war</li>
+</ul></li>
+<li>Second essay: detailed account of the military dimension of the war
+<ul class="org-ul">
+<li>Describes the war's course chronologically</li>
+<li>Assess the performance of the contending armies</li>
+<li>Highlights controversial issues such as military and civilian losses</li>
+<li>Demonstrates the striking continuities in Russian military's force structure from Soviet Union</li>
+</ul></li>
+<li>Third essay: impact of the war on the Russian and Georgian armed forces
+<ul class="org-ul">
+<li>Emphasizes changes in force structures</li>
+<li>Increasing importance of automated command and control</li>
+<li>Influence of new types of weaponry</li>
+</ul></li>
+<li>The next 4 essays cover
+<ul class="org-ul">
+<li>The nature, causes and effects of Russian aircraft losses during the war</li>
+<li>The nature and reasons for the Georgian Army's excessive personnel and equipment losses</li>
+<li>Post-war establishment of Russian bases inside Abkhazia and South Ossetia</li>
+<li>Russian and Allied losses during the war</li>
+</ul></li>
+</ul></li>
+<li>Above and beyond the specifics of the Russo-Georgian war, the book focuses on and analyzes the probable nature of military operations in the post-Cold War world
+<ul class="org-ul">
+<li>Politically, the war pitted the Russian federation, the successor to the Soviet Union against the new Republic of Georgia</li>
+<li>Russia perceived genuinely severe threats to its national security because the dissolution of the Soviet Union deprived it of strategic depth in key areas</li>
+<li>The newly formed Republic of Georgia seemed determined to sieze the territories of Abkhazia and South Ossetia, without consulting either the inhabitants of those regions or the Russian Federation</li>
+<li>The nature and conduct of the war closely resembles the Arab-Israeli war of 1967
+<ul class="org-ul">
+<li>Israel absorbed an Arab first strike, and the counterattacked and routed the Arab states in just six days</li>
+<li>Similarly, Russia absorbed a Georgian first strike, and then routed Georgian forces in just five days</li>
+<li>Just like Israel seized the Golan Heights, the Russians seized Abkhazia and South Ossetia and granted them independence</li>
+<li>Just like the Six-Day War presented a new IDF, capable of taking on the combined strength of its Arab neighbors, the Russo-Georgian war presented a new Russian Army, capable of holding its own against more modern opponents</li>
+</ul></li>
+</ul></li>
 </ul>
-<li>
-Second essay: detailed account of the military dimension of the war
+</div>
+</div>
 
-<ul>
-<li>
-Describes the war's course chronologically
-
-<li>
-Assess the performance of the contending armies
-
-<li>
-Highlights controversial issues such as military and civilian losses
-
-<li>
-Demonstrates the striking continuities in Russian military's force structure from Soviet Union
-
+<div id="outline-container-orge08c72d" class="outline-2">
+<h2 id="orge08c72d">Georgian Army Reform Under Saakashvili Prior To The 2008 Five Day War</h2>
+<div class="outline-text-2" id="text-orge08c72d">
+</div>
+<div id="outline-container-org8596f8d" class="outline-3">
+<h3 id="org8596f8d">Brief History of the Georgian Army Since 1991</h3>
+<div class="outline-text-3" id="text-org8596f8d">
+<ul class="org-ul">
+<li>Georgian Army was born when Georgia was still part of the Soviet Union</li>
+<li>December 20, 1990 &#x2013; Georgian authorities announced the formation of a "National Guard"</li>
+<li>April 30, 1991 &#x2013; Georgian authorities start recruiting for National Guard</li>
+<li>In the early '90s, the National Guard consisted of volunteers, often with no formal higher military education</li>
+<li>Suffered from lack of training and poor discipline</li>
+<li>Was eventually incorporated into the Ministry of Defense, but that incorporation was still its early stages at the end of the 1992-1993 war in Abkhazia</li>
+<li>Ministry of Defense was created in 1992, well after Georgia's declaration of independence</li>
+<li>11th brigade (1st brigade of the 1st corps) was created in the spring of 1992</li>
+<li>Other formations that took part in the 1992 war with Abkhazia were the 23rd Mechanized Infantry Brigade of the 2nd corps and various law enforcement agencies from the Interior Ministry</li>
+<li>Other (para)military forces fielded by Georgia in 1992 were:
+<ul class="org-ul">
+<li>Non-governmental paramilitary formations (most notably the Mkhedrioni militia)</li>
+<li>Zviadi militia, loyal to Georgia's deposed first president Zviad Gamaskhurdia</li>
+<li>These forces had even greater problems with indiscipline than the Georgian military</li>
+<li>Zviadi militia actually staged a mutiny against the Georgian military in the last days of the defense of Sukhumi</li>
+</ul></li>
+<li>The Georgian military, during the 1992 Abkhazian war, suffered from lack of unified military command, which prevented it from being able to concentrate forces where they were needed</li>
+<li>Also suffered from indisciplined commanders, who were more eager to find glory than follow orders</li>
+<li>After the initial defeat in Abkhazia, the Georgian state stepped up the reform of its military
+<ul class="org-ul">
+<li>Brought paramilitary groups to heel</li>
+<li>Zviadi loyalists were crushed</li>
+<li>Mkhedrioni militia was disbanded</li>
+<li>Other non-govermental militias were brought under (partial) government control</li>
+<li>National Guard's remit was shrunk to that of a reserve training force</li>
+</ul></li>
+<li>The speed of this reform process was held back by a number of limitations
+<ul class="org-ul">
+<li>Meager funding
+<ul class="org-ul">
+<li>Low pay for officers and enlisted soldiers</li>
+<li>No budget for maintenance or modernization</li>
+</ul></li>
+<li>Pervasive corruption</li>
+<li>Uncertain loyalties of Adjarian leader Aslan Abashidze</li>
+</ul></li>
+<li>However, there were a number of positive changes in the Georgian military and government
+<ul class="org-ul">
+<li>Growing foreign military assistance, most notably the United States' 64m dollar Georgia Train and Equip program (GTEP) 
+<ul class="org-ul">
+<li>Money was used to train the 1st Infantry Brigade (formerly 11th brigade)</li>
+<li>Also bought training and equipment for a number of other formations</li>
+<li>In addition, GTEP allowed Georgian officers to attend schools and training programs outside of Georgia, allowing them to professionalize</li>
+</ul></li>
+<li>In addition to training and money, the Georgian military also received direct transfers of military equipment from foreign powers
+<ul class="org-ul">
+<li>Received 10 UH-1 helicopters from the US</li>
+<li>Received L29 trainer jets from Ukraine</li>
+<li>Received a Project 206MR fast attack missile boat from Ukraine</li>
+</ul></li>
+</ul></li>
+<li>On the whole, the Georgian military had begun to reform and modernize under Shevardnadze, and that process only accelerated under Saakahsvili</li>
 </ul>
-<li>
-Third essay: impact of the war on the Russian and Georgian armed forces
+</div>
+</div>
 
-<ul>
-<li>
-Emphasizes changes in force structures
-
-<li>
-Increasing importance of automated command and control
-
-<li>
-Influence of new types of weaponry
-
+<div id="outline-container-org8f05245" class="outline-3">
+<h3 id="org8f05245">Georgian Army Priorities Under Saakashvili</h3>
+<div class="outline-text-3" id="text-org8f05245">
+<ul class="org-ul">
+<li>Saakashvili was elected in 2003, and immediately promulgated a number of documents spelling out the priorities for Army reform
+<ul class="org-ul">
+<li>National Security Concept</li>
+<li>Threat Assessment Document</li>
+<li>National Military Strategy</li>
+<li>Strategic Defense Review</li>
+<li>Defense Minister's Vision</li>
+</ul></li>
+<li>The National Security Concept outlined the following priorities and challenges:
+<ul class="org-ul">
+<li>Priorities:
+<ul class="org-ul">
+<li>Territorial integrity</li>
+<li>Stability in the Caucasus and Black Sea region</li>
+<li>Secure a role for Georgia as a transit corridor</li>
+</ul></li>
+<li>Challenges:
+<ul class="org-ul">
+<li>Threats to territorial integrity from Abkhazia and South Ossetia</li>
+<li>Spread of armed conflict from the Russian North Caucasus</li>
+<li>Military aggression from other states (considered unlikely) or from non-state actors (considered more likely)</li>
+<li>Terrorist attacks against key infrastructure and locations, such as pipelines and embassies</li>
+<li>Contraband and organized crime</li>
+<li>Short-term threat from Russian bases on Georgian soil, pending their withdrawal</li>
+</ul></li>
+</ul></li>
+<li>The Threat Assessment Document and National Military Strategy contained much the same priorities and challenges</li>
+<li>However the National Military Strategy also highlighted the Russian peacekeepers in Abkhazia and South Ossetia as a potential threat</li>
+<li>By 2007 the completion of Russian withdrawal from military bases in Georgia led a lowering of the assessment of the threat for large scale aggression in the Strategic Defense Review of that year</li>
+<li>The 2007 SDR laid out the following threat picture:
+<ul class="org-ul">
+<li>Large-scale aggression against Georgia (unlikely)</li>
+<li>Renewal of hostilities in the breakaway autonomies</li>
+<li>Spread of conflict from the North Caucasus</li>
+<li>Spread of conflict from the South Caucasus</li>
+<li>International terrorism</li>
+</ul></li>
+<li>Military planning was carried out with an eye towards which threats were the most likely and which threats would have the largest impact
+<ul class="org-ul">
+<li>From 2007 to 2012, renewal of hostilities in the breakaway autonomies was seen as the most likely threat and large-scale aggression was seen as the most dangerous</li>
+<li>From 2013 to 2015, international terrorism was seen as the most likely threat, and the spread of conflict from the North Caucasus as the most dangerous</li>
+<li>The 2007 SDR anticipated that the conflict over Abkhazia and South Ossetia would have been settled by 2012, and that both provinces would have been reintegrated into Georgia</li>
+<li>Another assumption was the Georgia would have become a NATO member by 2012, making the country safe from large-scale military aggression</li>
+</ul></li>
+<li>Although large-scale aggression from a foreign power (i.e. Russia) was seen as unlikely, preparations for such a scenario were a key part of Georgia's military planning</li>
+<li>In addition, NATO membership was seen as a bulwark against such aggression, as Georgia's ability to fend off such aggression were questionable</li>
+<li>In order to make Georgia more attractive as a NATO member, Georgia wished to integrate with NATO standards and make its military able to fight in NATO missions outside of Georgia
+<ul class="org-ul">
+<li>Doing so went against the need for operational self-sufficiency</li>
+<li>The difficulty this contradiction posed was compounded by the limited resources available</li>
+<li>Participation in NATO missions meant that Georgia had to reconfigure its armed forces into a relatively small, professional, lightly armed force</li>
+<li>Sending troops on foreign missions meant diverting resources from other military programs</li>
+</ul></li>
+<li>However, in order to face Abkhazia and South Ossetia, Georgia needed a large force, able to overmatch separatist forces in a classic or counterinsurgency clash</li>
+<li>In addition, preparations for defending against large scale aggression called for a large professional army, lots of heavy weapons, a large and well-trained reserve, and ancillary equipment (such as air-defense systems) that would be superfluous on NATO missions</li>
+<li>As a result, the Georgian military strategy called for its army to be able to fight both conventionally and unconventionally</li>
+<li>Georgian military strategy called for troops to switch to unconventional warfare as they were overrun, rather than retreat
+<ul class="org-ul">
+<li>Small size of country meant that there were few places to retreat to</li>
+<li>Past experience indicated that territory, once lost, was not easily regained</li>
+<li>The best way to deter an adversary was thought to be create a situation which would require high losses for uncertain chances of success</li>
+</ul></li>
+<li>Overall, the National Military Strategy (NMS)</li>
 </ul>
-<li>
-The next 4 essays cover
-
-<ul>
-<li>
-The nature, causes and effects of Russian aircraft losses during the war
-
-<li>
-The nature and reasons for the Georgian Army's excessive personnel and equipment losses
-
-<li>
-Post-war establishment of Russian bases inside Abkhazia and South Ossetia
-
-<li>
-Russian and Allied losses during the war
-
-</ul>
-</ul>
-<li>
-Above and beyond the specifics of the Russo-Georgian war, the book focuses on and analyzes the probable nature of military operations in the post-Cold War world
-
-<ul>
-<li>
-Politically, the war pitted the Russian federation, the successor to the Soviet Union against the new Republic of Georgia
-
-<li>
-Russia perceived genuinely severe threats to its national security because the dissolution of the Soviet Union deprived it of strategic depth in key areas
-
-<li>
-The newly formed Republic of Georgia seemed determined to sieze the territories of Abkhazia and South Ossetia, without consulting either the inhabitants of those regions or the Russian Federation
-
-<li>
-The nature and conduct of the war closely resembles the Arab-Israeli war of 1967
-
-<ul>
-<li>
-Israel absorbed an Arab first strike, and the counterattacked and routed the Arab states in just six days
-
-<li>
-Similarly, Russia absorbed a Georgian first strike, and then routed Georgian forces in just five days
-
-<li>
-Just like Israel seized the Golan Heights, the Russians seized Abkhazia and South Ossetia and granted them independence
-
-<li>
-Just like the Six-Day War presented a new IDF, capable of taking on the combined strength of its Arab neighbors, the Russo-Georgian war presented a new Russian Army, capable of holding its own against more modern opponents
-
-</ul>
-</ul>
-</ul>
-
-<div id="Georgian Army Reform Under Saakashvili Prior To The 2008 Five Day War"><h2 id="Georgian Army Reform Under Saakashvili Prior To The 2008 Five Day War">Georgian Army Reform Under Saakashvili Prior To The 2008 Five Day War</h2></div>
-
-<div id="Georgian Army Reform Under Saakashvili Prior To The 2008 Five Day War-Brief History of the Georgian Army Since 1991"><h3 id="Brief History of the Georgian Army Since 1991">Brief History of the Georgian Army Since 1991</h3></div>
-<ul>
-<li>
-Georgian Army was born when Georgia was still part of the Soviet Union
-
-<li>
-December 20, 1990 -- Georgian authorities announced the formation of a "National Guard"
-
-<li>
-April 30, 1991 -- Georgian authorities start recruiting for National Guard
-
-<li>
-In the early '90s, the National Guard consisted of volunteers, often with no formal higher military education
-
-<li>
-Suffered from lack of training and poor discipline
-
-<li>
-Was eventually incorporated into the Ministry of Defense, but that incorporation was still its early stages at the end of the 1992-1993 war in Abkhazia
-
-<li>
-Ministry of Defense was created in 1992, well after Georgia's declaration of independence
-
-<li>
-11th brigade (1st brigade of the 1st corps) was created in the spring of 1992
-
-<li>
-Other formations that took part in the 1992 war with Abkhazia were the 23rd Mechanized Infantry Brigade of the 2nd corps and various law enforcement agencies from the Interior Ministry
-
-<li>
-Other (para)military forces fielded by Georgia in 1992 were:
-
-<ul>
-<li>
-Non-governmental paramilitary formations (most notably the Mkhedrioni militia)
-
-<li>
-Zviadi militia, loyal to Georgia's deposed first president Zviad Gamaskhurdia
-
-<li>
-These forces had even greater problems with indiscipline than the Georgian military
-
-<li>
-Zviadi militia actually staged a mutiny against the Georgian military in the last days of the defense of Sukhumi
-
-</ul>
-<li>
-The Georgian military, during the 1992 Abkhazian war, suffered from lack of unified military command, which prevented it from being able to concentrate forces where they were needed
-
-<li>
-Also suffered from indisciplined commanders, who were more eager to find glory than follow orders
-
-<li>
-After the initial defeat in Abkhazia, the Georgian state stepped up the reform of its military
-
-<ul>
-<li>
-Brought paramilitary groups to heel
-
-<li>
-Zviadi loyalists were crushed
-
-<li>
-Mkhedrioni militia was disbanded
-
-<li>
-Other non-govermental militias were brought under (partial) government control
-
-<li>
-National Guard's remit was shrunk to that of a reserve training force
-
-</ul>
-<li>
-The speed of this reform process was held back by a number of limitations
-
-<ul>
-<li>
-Meager funding
-
-<ul>
-<li>
-Low pay for officers and enlisted soldiers
-
-<li>
-No budget for maintenance or modernization
-
-</ul>
-<li>
-Pervasive corruption
-
-<li>
-Uncertain loyalties of Adjarian leader Aslan Abashidze
-
-</ul>
-<li>
-However, there were a number of positive changes in the Georgian military and government
-
-<ul>
-<li>
-Growing foreign military assistance, most notably the United States' 64m dollar Georgia Train and Equip program (GTEP) 
-
-<ul>
-<li>
-Money was used to train the 1st Infantry Brigade (formerly 11th brigade)
-
-<li>
-Also bought training and equipment for a number of other formations
-
-<li>
-In addition, GTEP allowed Georgian officers to attend schools and training programs outside of Georgia, allowing them to professionalize
-
-</ul>
-<li>
-In addition to training and money, the Georgian military also received direct transfers of military equipment from foreign powers
-
-<ul>
-<li>
-Received 10 UH-1 helicopters from the US
-
-<li>
-Received L29 trainer jets from Ukraine
-
-<li>
-Received a Project 206MR fast attack missile boat from Ukraine
-
-</ul>
-</ul>
-<li>
-On the whole, the Georgian military had begun to reform and modernize under Shevardnadze, and that process only accelerated under Saakahsvili
-
-</ul>
-
-<div id="Georgian Army Reform Under Saakashvili Prior To The 2008 Five Day War-Georgian Army Priorities Under Saakashvili"><h3 id="Georgian Army Priorities Under Saakashvili">Georgian Army Priorities Under Saakashvili</h3></div>
-<ul>
-<li>
-Saakashvili was elected in 2003, and immediately promulgated a number of documents spelling out the priorities for Army reform
-
-<ul>
-<li>
-National Security Concept
-
-<li>
-Threat Assessment Document
-
-<li>
-National Military Strategy
-
-<li>
-Strategic Defense Review
-
-<li>
-Defense Minister's Vision
-
-</ul>
-<li>
-The National Security Concept outlined the following priorities and challenges:
-
-<ul>
-<li>
-Priorities:
-
-<ul>
-<li>
-Territorial integrity
-
-<li>
-Stability in the Caucasus and Black Sea region
-
-<li>
-Secure a role for Georgia as a transit corridor
-
-</ul>
-<li>
-Challenges:
-
-<ul>
-<li>
-Threats to territorial integrity from Abkhazia and South Ossetia
-
-<li>
-Spread of armed conflict from the Russian North Caucasus
-
-<li>
-Military aggression from other states (considered unlikely) or from non-state actors (considered more likely)
-
-<li>
-Terrorist attacks against key infrastructure and locations, such as pipelines and embassies
-
-<li>
-Contraband and organized crime
-
-<li>
-Short-term threat from Russian bases on Georgian soil, pending their withdrawal
-
-</ul>
-</ul>
-<li>
-The Threat Assessment Document and National Military Strategy contained much the same priorities and challenges
-
-<li>
-However the National Military Strategy also highlighted the Russian peacekeepers in Abkhazia and South Ossetia as a potential threat
-
-<li>
-By 2007 the completion of Russian withdrawal from military bases in Georgia led a lowering of the assessment of the threat for large scale aggression in the Strategic Defense Review of that year
-
-<li>
-The 2007 SDR laid out the following threat picture:
-
-<ul>
-<li>
-Large-scale aggression against Georgia (unlikely)
-
-<li>
-Renewal of hostilities in the breakaway autonomies
-
-<li>
-Spread of conflict from the North Caucasus
-
-<li>
-Spread of conflict from the South Caucasus
-
-<li>
-International terrorism
-
-</ul>
-<li>
-Military planning was carried out with an eye towards which threats were the most likely and which threats would have the largest impact
-
-<ul>
-<li>
-From 2007 to 2012, renewal of hostilities in the breakaway autonomies was seen as the most likely threat and large-scale aggression was seen as the most dangerous
-
-<li>
-From 2013 to 2015, international terrorism was seen as the most likely threat, and the spread of conflict from the North Caucasus as the most dangerous
-
-<li>
-The 2007 SDR anticipated that the conflict over Abkhazia and South Ossetia would have been settled by 2012, and that both provinces would have been reintegrated into Georgia
-
-<li>
-Another assumption was the Georgia would have become a NATO member by 2012, making the country safe from large-scale military aggression
-
-</ul>
-<li>
-Although large-scale aggression from a foreign power (i.e. Russia) was seen as unlikely, preparations for such a scenario were a key part of Georgia's military planning
-
-<li>
-In addition, NATO membership was seen as a bulwark against such aggression, as Georgia's ability to fend off such aggression were questionable
-
-<li>
-In order to make Georgia more attractive as a NATO member, Georgia wished to integrate with NATO standards and make its military able to fight in NATO missions outside of Georgia
-
-<ul>
-<li>
-Doing so went against the need for operational self-sufficiency
-
-<li>
-The difficulty this contradiction posed was compounded by the limited resources available
-
-<li>
-Participation in NATO missions meant that Georgia had to reconfigure its armed forces into a relatively small, professional, lightly armed force
-
-<li>
-Sending troops on foreign missions meant diverting resources from other military programs
-
-</ul>
-<li>
-However, in order to face Abkhazia and South Ossetia, Georgia needed a large force, able to overmatch separatist forces in a classic or counterinsurgency clash
-
-<li>
-In addition, preparations for defending against large scale aggression called for a large professional army, lots of heavy weapons, a large and well-trained reserve, and ancillary equipment (such as air-defense systems) that would be superfluous on NATO missions
-
-<li>
-As a result, the Georgian military strategy called for its army to be able to fight both conventionally and unconventionally
-
-<li>
-Georgian military strategy called for troops to switch to unconventional warfare as they were overrun, rather than retreat
-
-<ul>
-<li>
-Small size of country meant that there were few places to retreat to
-
-<li>
-Past experience indicated that territory, once lost, was not easily regained
-
-<li>
-The best way to deter an adversary was thought to be create a situation which would require high losses for uncertain chances of success
-
-</ul>
-<li>
-Overall, the National Military Strategy (NMS) 
-
-</ul>
-
-            </div>
-        </div>
-        <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
-    </body>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Rohit Patnaik</p>
+<p class="date">Created: 2019-01-22 Tue 20:10</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
 </html>
-
-

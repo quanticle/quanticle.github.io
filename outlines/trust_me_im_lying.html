@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- 2019-01-18 Fri 21:31 -->
+<!-- 2019-01-22 Tue 20:26 -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Trust Me I'm Lying: Confessions of a Media Manipulator (outline)</title>
@@ -159,6 +159,19 @@
   .footdef  { margin-bottom: 1em; }
   .figure { padding: 1em; }
   .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
   .inlinetask {
     padding: 10px;
     border: 2px solid gray;
@@ -178,7 +191,6 @@
   .org-svg { width: 90%; }
   /*]]>*/-->
 </style>
-<meta charset="utf-8">
 <link href="/page.css" rel="stylesheet">
 <script type="text/javascript">
 /*
@@ -244,37 +256,40 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org7577064">1. Book Details</a></li>
-<li><a href="#orgb0a1f26">2. Introduction</a></li>
-<li><a href="#orgf95d559">3. Chapter 1: Blogs Make The News</a></li>
-<li><a href="#orgb1addb3">4. Chapter 2: How To Turn Nothing Into Something In 3 Way-Too-Easy Steps</a></li>
-<li><a href="#orgf1e4985">5. Chapter 3: The Blog Con: How Publishers Make Money Online</a></li>
-<li><a href="#orgac54911">6. Chapter 4: Tactic 1: Bloggers Are Poor: Help Pay Their Bills</a></li>
-<li><a href="#org2371b13">7. Chapter 5: Tactic 2: Tell Them What They Want To Hear</a></li>
-<li><a href="#org74c5f7b">8. Chapter 6: Tactic 3: Give Them What Spreads, Not What's Good</a></li>
-<li><a href="#org1ac170c">9. Chapter 7: Tactic 4: Help Them Trick Their Readers</a></li>
-<li><a href="#orgd8600a0">10. Chapter 8: Tactic 5: Sell Them Something They Can Sell (Exploit the One-Off Problem)</a></li>
-<li><a href="#org36da5f2">11. Chapter 9: Tactic 6: Make It All About The Headline</a></li>
-<li><a href="#orgbf5f732">12. Chapter 10: Tactic 7: Kill 'Em With Pageview Kindness</a></li>
-<li><a href="#orgbcab610">13. Chapter 11: Tactic 8: Use The Technology Against Itself</a></li>
-<li><a href="#org9c87bbc">14. Chapter 12: Tactic 9: Just Make Stuff Up (Everyone Else Is Doing It)</a></li>
-<li><a href="#orgc22c4e0">15. Chapter 13: Irin Carmon, The Daily Show and Me: The Perfect Storm of How Toxic Blogging Can Be</a></li>
-<li><a href="#orgfde3485">16. Chapter 14: There Are Others: The Manipulator Hall of Fame</a></li>
-<li><a href="#orgbc53d25">17. Chapter 15: Slactivism Is Not Activism: Resisting The Time and Mind Suck of Online Media</a></li>
-<li><a href="#org03c8885">18. Chapter 16: Just Passing This Along: When No One Owns What They Say</a></li>
-<li><a href="#orgf7ebe3b">19. Chapter 17: Cyberwarfare: Battling It Out Online</a></li>
-<li><a href="#org76127df">20. Chapter 18: The Myth of Corrections</a></li>
-<li><a href="#orgda007a4">21. Chapter 19: The Twenty-First Century Degradation Ceremony</a></li>
-<li><a href="#org5ee3f98">22. Chapter 20: Welcome To Unreality</a></li>
-<li><a href="#org2eae996">23. Chapter 21: How To Read A Blog: An Update On Account of All The Lies</a></li>
-<li><a href="#org6fb10da">24. Conclusion: So&#x2026; Where To From Here?</a></li>
+<li><a href="#org685561e">Book Details</a></li>
+<li><a href="#org08ad5c5">Introduction</a></li>
+<li><a href="#org0e9449b">Chapter 1: Blogs Make The News</a></li>
+<li><a href="#org33e5c0d">Chapter 2: How To Turn Nothing Into Something In 3 Way-Too-Easy Steps</a></li>
+<li><a href="#orga2e1413">Chapter 3: The Blog Con: How Publishers Make Money Online</a></li>
+<li><a href="#org4512f36">Chapter 4: Tactic 1: Bloggers Are Poor: Help Pay Their Bills</a></li>
+<li><a href="#org9d718cb">Chapter 5: Tactic 2: Tell Them What They Want To Hear</a></li>
+<li><a href="#orga5dd91a">Chapter 6: Tactic 3: Give Them What Spreads, Not What's Good</a></li>
+<li><a href="#orgd65e35f">Chapter 7: Tactic 4: Help Them Trick Their Readers</a></li>
+<li><a href="#org625901a">Chapter 8: Tactic 5: Sell Them Something They Can Sell (Exploit the One-Off Problem)</a></li>
+<li><a href="#org38e1a9f">Chapter 9: Tactic 6: Make It All About The Headline</a></li>
+<li><a href="#org1873ce6">Chapter 10: Tactic 7: Kill 'Em With Pageview Kindness</a></li>
+<li><a href="#org3c16ac7">Chapter 11: Tactic 8: Use The Technology Against Itself</a></li>
+<li><a href="#orgf47094b">Chapter 12: Tactic 9: Just Make Stuff Up (Everyone Else Is Doing It)</a>
+<ul>
+<li><a href="#org0c4416b">Chapter 13: Irin Carmon, The Daily Show and Me: The Perfect Storm of How Toxic Blogging Can Be</a></li>
+</ul>
+</li>
+<li><a href="#org5c71f42">Chapter 14: There Are Others: The Manipulator Hall of Fame</a></li>
+<li><a href="#orgab9e3bd">Chapter 15: Slactivism Is Not Activism: Resisting The Time and Mind Suck of Online Media</a></li>
+<li><a href="#org4562ff1">Chapter 16: Just Passing This Along: When No One Owns What They Say</a></li>
+<li><a href="#orga444af9">Chapter 17: Cyberwarfare: Battling It Out Online</a></li>
+<li><a href="#org2f639fb">Chapter 18: The Myth of Corrections</a></li>
+<li><a href="#org70bbdfe">Chapter 19: The Twenty-First Century Degradation Ceremony</a></li>
+<li><a href="#org36c1e18">Chapter 20: Welcome To Unreality</a></li>
+<li><a href="#org26a01e8">Chapter 21: How To Read A Blog: An Update On Account of All The Lies</a></li>
+<li><a href="#orgcb72fea">Conclusion: So&#x2026; Where To From Here?</a></li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-org7577064" class="outline-2">
-<h2 id="org7577064"><span class="section-number-2">1</span> Book Details</h2>
-<div class="outline-text-2" id="text-1">
+<div id="outline-container-org685561e" class="outline-2">
+<h2 id="org685561e">Book Details</h2>
+<div class="outline-text-2" id="text-org685561e">
 <ul class="org-ul">
 <li>Title: Trust Me I'm Lying: Confessions of A Media Manipulator</li>
 <li>Author: Ryan Holiday</li>
@@ -285,9 +300,9 @@ for the JavaScript code in this tag.
 </div>
 
 
-<div id="outline-container-orgb0a1f26" class="outline-2">
-<h2 id="orgb0a1f26"><span class="section-number-2">2</span> Introduction</h2>
-<div class="outline-text-2" id="text-2">
+<div id="outline-container-org08ad5c5" class="outline-2">
+<h2 id="org08ad5c5">Introduction</h2>
+<div class="outline-text-2" id="text-org08ad5c5">
 <ul class="org-ul">
 <li>Ryan is a media manipulator</li>
 <li>Lies to the media so they can lie to you</li>
@@ -315,9 +330,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-orgf95d559" class="outline-2">
-<h2 id="orgf95d559"><span class="section-number-2">3</span> Chapter 1: Blogs Make The News</h2>
-<div class="outline-text-2" id="text-3">
+<div id="outline-container-org0e9449b" class="outline-2">
+<h2 id="org0e9449b">Chapter 1: Blogs Make The News</h2>
+<div class="outline-text-2" id="text-org0e9449b">
 <ul class="org-ul">
 <li>Politico's coverage of Tim Pawlenty
 <ul class="org-ul">
@@ -381,9 +396,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-orgb1addb3" class="outline-2">
-<h2 id="orgb1addb3"><span class="section-number-2">4</span> Chapter 2: How To Turn Nothing Into Something In 3 Way-Too-Easy Steps</h2>
-<div class="outline-text-2" id="text-4">
+<div id="outline-container-org33e5c0d" class="outline-2">
+<h2 id="org33e5c0d">Chapter 2: How To Turn Nothing Into Something In 3 Way-Too-Easy Steps</h2>
+<div class="outline-text-2" id="text-org33e5c0d">
 <ul class="org-ul">
 <li>"Trading up the chain"
 <ul class="org-ul">
@@ -493,9 +508,9 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-orgf1e4985" class="outline-2">
-<h2 id="orgf1e4985"><span class="section-number-2">5</span> Chapter 3: The Blog Con: How Publishers Make Money Online</h2>
-<div class="outline-text-2" id="text-5">
+<div id="outline-container-orga2e1413" class="outline-2">
+<h2 id="orga2e1413">Chapter 3: The Blog Con: How Publishers Make Money Online</h2>
+<div class="outline-text-2" id="text-orga2e1413">
 <ul class="org-ul">
 <li>Traffic is money
 <ul class="org-ul">
@@ -508,9 +523,7 @@ for the JavaScript code in this tag.
 <li>Fake news, real news, whatever gets the ad to load "wins"</li>
 <li>Blogs don't have much control over CPM, so they try to maximize pageviews</li>
 </ul></li>
-<li><p>
-Scoops are traffic
-</p>
+<li>Scoops are traffic
 <ul class="org-ul">
 <li>TMZ turned the art of getting scoops into a science
 <ul class="org-ul">
@@ -520,16 +533,13 @@ Scoops are traffic
 </ul></li>
 <li>Scoops and exclusives allowed TMZ to go from a no-name website to a $20 million a year franchise with its own syndicated TV show</li>
 <li>The price for all of this is publicizing a lot of "scoops" that turned out to be non-stories</li>
-<li>Scoops are hard to obtain, so a lot of blogs pretend that a story is exclusive to them, knowing the reader won't</li>
-</ul>
-<p>
-check other sources to verify that the exclusive is, in fact, exclusive
-</p>
+<li>Scoops are hard to obtain, so a lot of blogs pretend that a story is exclusive to them, knowing the reader won't check other sources to verify that the exclusive is, in fact, exclusive
 <ul class="org-ul">
 <li>Example: Gawker's coverage of Tom Cruise's involvement with Scientology</li>
 <li>Story was originally reported by Mark Ebner</li>
 <li>Gawker reported the story as if it were their own, even though they'd taken it from Mr. Ebner</li>
 <li>Fake scoops and exclusives aren't as much of a problem in older media - older media are trying to maintain a reputation, whereas blogs are trying to build publicity</li>
+</ul></li>
 </ul></li>
 <li>Using names to build a name
 <ul class="org-ul">
@@ -559,9 +569,9 @@ check other sources to verify that the exclusive is, in fact, exclusive
 </div>
 </div>
 
-<div id="outline-container-orgac54911" class="outline-2">
-<h2 id="orgac54911"><span class="section-number-2">6</span> Chapter 4: Tactic 1: Bloggers Are Poor: Help Pay Their Bills</h2>
-<div class="outline-text-2" id="text-6">
+<div id="outline-container-org4512f36" class="outline-2">
+<h2 id="org4512f36">Chapter 4: Tactic 1: Bloggers Are Poor: Help Pay Their Bills</h2>
+<div class="outline-text-2" id="text-org4512f36">
 <ul class="org-ul">
 <li>There are many ways to bribe people other than by handing them a stack of bills</li>
 <li>Find bloggers' incentives and co-opt them</li>
@@ -577,12 +587,7 @@ check other sources to verify that the exclusive is, in fact, exclusive
 <li>Example: blogger getting paid $60,000 needs to generate about 1.8 million pageviews per month, every month</li>
 </ul></li>
 <li>Twitter accounts are even more mercenary than bloggers - many high-follower twitter accounts can be paid to retweet anything</li>
-<li>The reason that bloggers and social media personalities are paid so little is because what they produce is of little</li>
-</ul>
-<p>
-or no value
-</p>
-<ul class="org-ul">
+<li>The reason that bloggers and social media personalities are paid so little is because what they produce is of little or no value</li>
 <li>Ripe for exploitation
 <ul class="org-ul">
 <li>If bloggers want to get rich or even just break even, they have to find other sources of revenue</li>
@@ -613,9 +618,9 @@ or no value
 </div>
 </div>
 
-<div id="outline-container-org2371b13" class="outline-2">
-<h2 id="org2371b13"><span class="section-number-2">7</span> Chapter 5: Tactic 2: Tell Them What They Want To Hear</h2>
-<div class="outline-text-2" id="text-7">
+<div id="outline-container-org9d718cb" class="outline-2">
+<h2 id="org9d718cb">Chapter 5: Tactic 2: Tell Them What They Want To Hear</h2>
+<div class="outline-text-2" id="text-org9d718cb">
 <ul class="org-ul">
 <li>Journalists rarely see or experience events firsthand</li>
 <li>They're entirely dependent on self-interested sources</li>
@@ -694,9 +699,9 @@ directly affects how bloggers treat the subject down the road
 </div>
 </div>
 
-<div id="outline-container-org74c5f7b" class="outline-2">
-<h2 id="org74c5f7b"><span class="section-number-2">8</span> Chapter 6: Tactic 3: Give Them What Spreads, Not What's Good</h2>
-<div class="outline-text-2" id="text-8">
+<div id="outline-container-orga5dd91a" class="outline-2">
+<h2 id="orga5dd91a">Chapter 6: Tactic 3: Give Them What Spreads, Not What's Good</h2>
+<div class="outline-text-2" id="text-orga5dd91a">
 <ul class="org-ul">
 <li>The chief driver of traffic is social media sharing</li>
 <li>If your story isn't shared, it's not generating revenue</li>
@@ -761,9 +766,9 @@ directly affects how bloggers treat the subject down the road
 </div>
 </div>
 
-<div id="outline-container-org1ac170c" class="outline-2">
-<h2 id="org1ac170c"><span class="section-number-2">9</span> Chapter 7: Tactic 4: Help Them Trick Their Readers</h2>
-<div class="outline-text-2" id="text-9">
+<div id="outline-container-orgd65e35f" class="outline-2">
+<h2 id="orgd65e35f">Chapter 7: Tactic 4: Help Them Trick Their Readers</h2>
+<div class="outline-text-2" id="text-orgd65e35f">
 <ul class="org-ul">
 <li>The best way to get traffic is to be evasive and misleading
 <ul class="org-ul">
@@ -797,9 +802,9 @@ directly affects how bloggers treat the subject down the road
 </div>
 </div>
 
-<div id="outline-container-orgd8600a0" class="outline-2">
-<h2 id="orgd8600a0"><span class="section-number-2">10</span> Chapter 8: Tactic 5: Sell Them Something They Can Sell (Exploit the One-Off Problem)</h2>
-<div class="outline-text-2" id="text-10">
+<div id="outline-container-org625901a" class="outline-2">
+<h2 id="org625901a">Chapter 8: Tactic 5: Sell Them Something They Can Sell (Exploit the One-Off Problem)</h2>
+<div class="outline-text-2" id="text-org625901a">
 <ul class="org-ul">
 <li>The current condition of online media is analogous to the era of the "yellow press"</li>
 <li>Overview of media history
@@ -910,9 +915,9 @@ directly affects how bloggers treat the subject down the road
 </div>
 </div>
 
-<div id="outline-container-org36da5f2" class="outline-2">
-<h2 id="org36da5f2"><span class="section-number-2">11</span> Chapter 9: Tactic 6: Make It All About The Headline</h2>
-<div class="outline-text-2" id="text-11">
+<div id="outline-container-org38e1a9f" class="outline-2">
+<h2 id="org38e1a9f">Chapter 9: Tactic 6: Make It All About The Headline</h2>
+<div class="outline-text-2" id="text-org38e1a9f">
 <ul class="org-ul">
 <li>For media that has to deal with the one-off problem, it all comes down to the headline</li>
 <li>Headline determines how many people click through to the story</li>
@@ -935,9 +940,9 @@ directly affects how bloggers treat the subject down the road
 </div>
 </div>
 
-<div id="outline-container-orgbf5f732" class="outline-2">
-<h2 id="orgbf5f732"><span class="section-number-2">12</span> Chapter 10: Tactic 7: Kill 'Em With Pageview Kindness</h2>
-<div class="outline-text-2" id="text-12">
+<div id="outline-container-org1873ce6" class="outline-2">
+<h2 id="org1873ce6">Chapter 10: Tactic 7: Kill 'Em With Pageview Kindness</h2>
+<div class="outline-text-2" id="text-org1873ce6">
 <ul class="org-ul">
 <li>The breakthrough for blogging as an industry was the ability to track pageviews</li>
 <li>Having hard pageview numbers allowed blogs to see which of their articles were doing well and which were flops</li>
@@ -1011,9 +1016,9 @@ directly affects how bloggers treat the subject down the road
 </div>
 </div>
 
-<div id="outline-container-orgbcab610" class="outline-2">
-<h2 id="orgbcab610"><span class="section-number-2">13</span> Chapter 11: Tactic 8: Use The Technology Against Itself</h2>
-<div class="outline-text-2" id="text-13">
+<div id="outline-container-org3c16ac7" class="outline-2">
+<h2 id="org3c16ac7">Chapter 11: Tactic 8: Use The Technology Against Itself</h2>
+<div class="outline-text-2" id="text-org3c16ac7">
 <ul class="org-ul">
 <li>Everything that blogs write is constrained by the structure of the medium</li>
 <li>This applies to all media, not just blogs</li>
@@ -1068,9 +1073,9 @@ directly affects how bloggers treat the subject down the road
 </div>
 </div>
 
-<div id="outline-container-org9c87bbc" class="outline-2">
-<h2 id="org9c87bbc"><span class="section-number-2">14</span> Chapter 12: Tactic 9: Just Make Stuff Up (Everyone Else Is Doing It)</h2>
-<div class="outline-text-2" id="text-14">
+<div id="outline-container-orgf47094b" class="outline-2">
+<h2 id="orgf47094b">Chapter 12: Tactic 9: Just Make Stuff Up (Everyone Else Is Doing It)</h2>
+<div class="outline-text-2" id="text-orgf47094b">
 <ul class="org-ul">
 <li>Bloggers have to find the "angle" on every story they write</li>
 <li>Don't have the luxury of spending time on a lead only to come up empty handed</li>
@@ -1095,12 +1100,10 @@ directly affects how bloggers treat the subject down the road
 </ul></li>
 </ul>
 </div>
-</div>
 
-
-<div id="outline-container-orgc22c4e0" class="outline-2">
-<h2 id="orgc22c4e0"><span class="section-number-2">15</span> Chapter 13: Irin Carmon, The Daily Show and Me: The Perfect Storm of How Toxic Blogging Can Be</h2>
-<div class="outline-text-2" id="text-15">
+<div id="outline-container-org0c4416b" class="outline-3">
+<h3 id="org0c4416b">Chapter 13: Irin Carmon, The Daily Show and Me: The Perfect Storm of How Toxic Blogging Can Be</h3>
+<div class="outline-text-3" id="text-org0c4416b">
 <ul class="org-ul">
 <li>The first half of the book covered how blogs can be manipulated</li>
 <li>Now we look at the consequences of that manipulation</li>
@@ -1155,10 +1158,11 @@ directly affects how bloggers treat the subject down the road
 </ul>
 </div>
 </div>
+</div>
 
-<div id="outline-container-orgfde3485" class="outline-2">
-<h2 id="orgfde3485"><span class="section-number-2">16</span> Chapter 14: There Are Others: The Manipulator Hall of Fame</h2>
-<div class="outline-text-2" id="text-16">
+<div id="outline-container-org5c71f42" class="outline-2">
+<h2 id="org5c71f42">Chapter 14: There Are Others: The Manipulator Hall of Fame</h2>
+<div class="outline-text-2" id="text-org5c71f42">
 <ul class="org-ul">
 <li>Shirley Sherrod controversy
 <ul class="org-ul">
@@ -1216,9 +1220,9 @@ directly affects how bloggers treat the subject down the road
 </div>
 </div>
 
-<div id="outline-container-orgbc53d25" class="outline-2">
-<h2 id="orgbc53d25"><span class="section-number-2">17</span> Chapter 15: Slactivism Is Not Activism: Resisting The Time and Mind Suck of Online Media</h2>
-<div class="outline-text-2" id="text-17">
+<div id="outline-container-orgab9e3bd" class="outline-2">
+<h2 id="orgab9e3bd">Chapter 15: Slactivism Is Not Activism: Resisting The Time and Mind Suck of Online Media</h2>
+<div class="outline-text-2" id="text-orgab9e3bd">
 <ul class="org-ul">
 <li>Most of the media you consume is optimized to distract you
 <ul class="org-ul">
@@ -1288,9 +1292,9 @@ directly affects how bloggers treat the subject down the road
 </div>
 </div>
 
-<div id="outline-container-org03c8885" class="outline-2">
-<h2 id="org03c8885"><span class="section-number-2">18</span> Chapter 16: Just Passing This Along: When No One Owns What They Say</h2>
-<div class="outline-text-2" id="text-18">
+<div id="outline-container-org4562ff1" class="outline-2">
+<h2 id="org4562ff1">Chapter 16: Just Passing This Along: When No One Owns What They Say</h2>
+<div class="outline-text-2" id="text-org4562ff1">
 <ul class="org-ul">
 <li>It's a common theme on social media for people to share things that they don't know are true</li>
 <li>You see this often on Twitter, with people saying retweet != endorsement
@@ -1371,9 +1375,9 @@ directly affects how bloggers treat the subject down the road
 </div>
 </div>
 
-<div id="outline-container-orgf7ebe3b" class="outline-2">
-<h2 id="orgf7ebe3b"><span class="section-number-2">19</span> Chapter 17: Cyberwarfare: Battling It Out Online</h2>
-<div class="outline-text-2" id="text-19">
+<div id="outline-container-orga444af9" class="outline-2">
+<h2 id="orga444af9">Chapter 17: Cyberwarfare: Battling It Out Online</h2>
+<div class="outline-text-2" id="text-orga444af9">
 <ul class="org-ul">
 <li>In the old days, companies hired PR professionals to help spread the word about new initiatives or new products</li>
 <li>Today, companies hire PR professionals to suppress false or misleading information</li>
@@ -1427,9 +1431,9 @@ directly affects how bloggers treat the subject down the road
 </div>
 </div>
 
-<div id="outline-container-org76127df" class="outline-2">
-<h2 id="org76127df"><span class="section-number-2">20</span> Chapter 18: The Myth of Corrections</h2>
-<div class="outline-text-2" id="text-20">
+<div id="outline-container-org2f639fb" class="outline-2">
+<h2 id="org2f639fb">Chapter 18: The Myth of Corrections</h2>
+<div class="outline-text-2" id="text-org2f639fb">
 <ul class="org-ul">
 <li>Iterative journalism is only possible because people believe that stories can be corrected after the fact</li>
 <li>The problem is that that belief is totally wrong</li>
@@ -1485,9 +1489,9 @@ directly affects how bloggers treat the subject down the road
 </div>
 </div>
 
-<div id="outline-container-orgda007a4" class="outline-2">
-<h2 id="orgda007a4"><span class="section-number-2">21</span> Chapter 19: The Twenty-First Century Degradation Ceremony</h2>
-<div class="outline-text-2" id="text-21">
+<div id="outline-container-org70bbdfe" class="outline-2">
+<h2 id="org70bbdfe">Chapter 19: The Twenty-First Century Degradation Ceremony</h2>
+<div class="outline-text-2" id="text-org70bbdfe">
 <ul class="org-ul">
 <li>The hiddden purpose of blogs in today's society is to dispense public punishments</li>
 <li>The degradation ceremony
@@ -1565,9 +1569,9 @@ directly affects how bloggers treat the subject down the road
 </div>
 </div>
 
-<div id="outline-container-org5ee3f98" class="outline-2">
-<h2 id="org5ee3f98"><span class="section-number-2">22</span> Chapter 20: Welcome To Unreality</h2>
-<div class="outline-text-2" id="text-22">
+<div id="outline-container-org36c1e18" class="outline-2">
+<h2 id="org36c1e18">Chapter 20: Welcome To Unreality</h2>
+<div class="outline-text-2" id="text-org36c1e18">
 <ul class="org-ul">
 <li>The current media ecosystem has created a state of unreality</li>
 <li>Fake and real can't be told apart easily</li>
@@ -1615,9 +1619,9 @@ directly affects how bloggers treat the subject down the road
 </div>
 </div>
 
-<div id="outline-container-org2eae996" class="outline-2">
-<h2 id="org2eae996"><span class="section-number-2">23</span> Chapter 21: How To Read A Blog: An Update On Account of All The Lies</h2>
-<div class="outline-text-2" id="text-23">
+<div id="outline-container-org26a01e8" class="outline-2">
+<h2 id="org26a01e8">Chapter 21: How To Read A Blog: An Update On Account of All The Lies</h2>
+<div class="outline-text-2" id="text-org26a01e8">
 <ul class="org-ul">
 <li>When a blog mentions a "tipster" or an anonymous source, they're probably being manipulated</li>
 <li>When a blog mentions that it's "hearing reports", that might just mean they saw a tweet on the topic</li>
@@ -1656,9 +1660,9 @@ directly affects how bloggers treat the subject down the road
 </div>
 </div>
 
-<div id="outline-container-org6fb10da" class="outline-2">
-<h2 id="org6fb10da"><span class="section-number-2">24</span> Conclusion: So&#x2026; Where To From Here?</h2>
-<div class="outline-text-2" id="text-24">
+<div id="outline-container-orgcb72fea" class="outline-2">
+<h2 id="orgcb72fea">Conclusion: So&#x2026; Where To From Here?</h2>
+<div class="outline-text-2" id="text-orgcb72fea">
 <ul class="org-ul">
 <li>It's a cliche now to hear journalists complaining about the news</li>
 <li>Whereas television turned everything it touched into entertainment and comedy, Internet journalism turns everything it touches into outrage</li>
@@ -1710,7 +1714,7 @@ directly affects how bloggers treat the subject down the road
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Rohit Patnaik</p>
-<p class="date">Created: 2019-01-18 Fri 21:31</p>
+<p class="date">Created: 2019-01-22 Tue 20:26</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
