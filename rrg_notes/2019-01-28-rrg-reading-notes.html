@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- 2019-01-28 Mon 13:48 -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>2019-01-28 RRG Notes</title>
+<meta name="generator" content="Org mode">
+<meta name="author" content="Rohit Patnaik">
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<meta charset="utf-8">
+<link href="/page.css" rel="stylesheet">
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2018 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="preamble" class="status">
+<header class="page-header">
+  <div class="logo"><a href="/"><img src="/logo.png" height="160"></a></div>
+  <div class="header-text">
+    <div class="header-text-wrapper">
+      <h1>Quanticle.net</h1>
+    </div>
+  </div>
+</header>
+</div>
+<div id="content">
+<h1 class="title">2019-01-28 RRG Notes</h1>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#orgd054687">The Tower</a>
+<ul>
+<li><a href="#orge0aa606">Part I</a></li>
+<li><a href="#orgbb02ed6">Part II</a></li>
+<li><a href="#org1378fa1">Part III</a></li>
+<li><a href="#org280bf2a">Part IV</a></li>
+<li><a href="#org7513b81">Part V</a></li>
+<li><a href="#orgd0c0449">Part VI</a></li>
+<li><a href="#org39e3c3f">Part VII</a></li>
+<li><a href="#orgb48166c">Part VIII</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgd054687" class="outline-2">
+<h2 id="orgd054687"><a href="https://hotelconcierge.tumblr.com/post/162571849189/the-tower">The Tower</a></h2>
+<div class="outline-text-2" id="text-orgd054687">
+</div>
+<div id="outline-container-orge0aa606" class="outline-3">
+<h3 id="orge0aa606">Part I</h3>
+<div class="outline-text-3" id="text-orge0aa606">
+<ul class="org-ul">
+<li>If you read the Bible, you'll see that the people of Babel didn't build tower of Babel to reach the heavens</li>
+<li>They built the tower as a symbol, to bring people together</li>
+<li><i>The Tower of Babel was the <b>first</b> Schelling Point</i></li>
+<li>When God descended to Earth to see what people were up to, he found that they were of one language, and thus there was nothing that they couldn't do</li>
+<li>So God scattered the people and gave them different languages, in order to weaken them</li>
+<li>God was scared</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgbb02ed6" class="outline-3">
+<h3 id="orgbb02ed6">Part II</h3>
+<div class="outline-text-3" id="text-orgbb02ed6">
+<ul class="org-ul">
+<li>The vast majority of amateur philosophy is just reinvention</li>
+<li>Your thoughts about the meaning of life and ethics, etc have already been written down, debated, and worked over, probably thousands of years ago</li>
+<li>That said, thinking about the questions of philosophy is still important &#x2013; it's still import to try to find the answer yourself, even if the answer you find is unsatisfactory, and isn't even original</li>
+<li>The question is: why don't people choose to be happy?
+<ul class="org-ul">
+<li>For example, take the wireheading scenario</li>
+<li>There exists a machine that will make you feel not just pleasure, but true happiness, forever</li>
+<li>The machine never stops working, has no side effects, and induces no tolerance, and isn't physically addictive in any way</li>
+<li>But once people start using it, no one ever stops
+<ul class="org-ul">
+<li><i>Okay, see this is Hotel Concierge trying to sneak a contradiction past us</i></li>
+<li><i>He's saying, denotatively, that the machine isn't addictive &#x2013; it's perfectly safe, you can stop at any time</i></li>
+<li><i>But connotatively, he's saying the exact opposite &#x2013; this machine is <b>incredibly</b> addictive, it is in fact the most addictive thing ever created, it makes black tar heroin look like black tea by comparison</i></li>
+<li><i>Now, both of these scenarios are logically valid. I can imagine a world where people hook themselves up to these machines and never stop. I can also imagine a world where people treat these machines as a sort of recreational drug &#x2013; they hook themselves up every once in a while, and then return to the "real world" afterwards. But these scenarios cannot be simultaneously true.</i></li>
+</ul></li>
+<li>Would you hook yourself up to such a machine?
+<ul class="org-ul">
+<li><i>Depends on which world I'm in</i></li>
+</ul></li>
+<li>Alternative formulation of this scenario: what if you were offered a free trip to a virtual reality paradise. However, upon your return, all memories of the trip are erased, all skills unlearned, etc.</li>
+<li>Would you still go?</li>
+<li>Both of these choices are fundamentally the same: ecstasy that leaves no trace, compared with bland but tangible reality</li>
+<li>If you would spend one year in the Matrix, why not two? Why not twenty? Why not the rest of your life
+<ul class="org-ul">
+<li><i>Because my life isn't a slippery slope fallacy</i></li>
+</ul></li>
+</ul></li>
+<li>These concerns aren't theoretical</li>
+<li>Kahneman has demonstrated that there's a big difference between the "experiencing self" and the "remembering self"</li>
+<li>Except Kahneman doesn't take the concept far enough
+<ul class="org-ul">
+<li>Kamikazes and suicide bombers don't die for their own remembering selves, they'll die for other remembering selves</li>
+<li>And this value has been valorized in one way or another since antiquity</li>
+<li>The remembering self doesn't want quality of life, it wants quality of death &#x2013; it wants a life that others will look back on and say was a good life</li>
+<li>The remembering self is entirely willing to sacrifice massive amounts of short term happiness for even a chance at a legacy</li>
+<li>Utilitarianism is really bad at capturing this impulse
+<ul class="org-ul">
+<li><i>Is it? Not all utilitarianism is hedonic utilitarianism!</i></li>
+</ul></li>
+</ul></li>
+<li>This ties into the notion of "memes" and "cultural evolution"
+<ul class="org-ul">
+<li>Memory is a collection of memes</li>
+<li>The remembering self is our record of working towards the interests of certain memes and against others</li>
+<li>Our "free will" is merely us choosing from among the memes that surround us</li>
+<li><i>Is this Jung? Is he restating Jung in different words, or is he pointing at something different?</i></li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org1378fa1" class="outline-3">
+<h3 id="org1378fa1">Part III</h3>
+<div class="outline-text-3" id="text-org1378fa1">
+<ul class="org-ul">
+<li>The first dichotomy, according to Freud, separates ego-instincts from object-instincts
+<ul class="org-ul">
+<li><i>Okay, but this is Freud, so we have approximately zero evidence that this corresponds to anything other than Freud's own analysis based on his own non-observations</i></li>
+</ul></li>
+<li>Ego-instincts are necessities
+<ul class="org-ul">
+<li>Examples:
+<ul class="org-ul">
+<li>Hunger</li>
+<li>Thirst</li>
+<li>Respiration</li>
+<li>Fatigue</li>
+<li>Crude sexual desire</li>
+</ul></li>
+<li>Newborns treat the entire world as an extension of their ego-instincts</li>
+</ul></li>
+<li>Object-instincts are that which develop as we realize our abilities and begin to direct them outwards
+<ul class="org-ul">
+<li>Freuds second dichotomy divides object instincts into to categories Eros: the love instinct and Thanatos: the death instinct</li>
+<li>Eros
+<ul class="org-ul">
+<li>Not just love but more like belonging and acceptance</li>
+<li>The feeling of being truly recognized and accepted by another</li>
+</ul></li>
+<li>Thanatos
+<ul class="org-ul">
+<li>Not death, but control - <i>ananke</i></li>
+<li><i>I don't know if he's using fancy Greek because it's legitimately a better way of expressing what he wants to express because he just likes the feeling of writing fancy Greek and lording it over his readers</i></li>
+<li>Self-destruction is the ultimate expression of control</li>
+<li>Thanatos is the compulsion to learn and control</li>
+</ul></li>
+</ul></li>
+<li>According to Freud, the id is what we want</li>
+<li>The superego chooses how we go about wanting</li>
+<li>How do we make those choices?</li>
+<li>At first, ananke drives development
+<ul class="org-ul">
+<li>The early developmental history of children is one of them assuming more and more control over themselves and their environment</li>
+</ul></li>
+<li>Then, once we learn object permanence and develop memory, we become subject to operant conditioning</li>
+<li>Operant conditioning is what allows social and civilizational memes to colonize our minds</li>
+<li>These inculcated memes cooperate and compete for the real estate of the mind</li>
+<li>This process of taking in memes and incorporating them into our existing mind is how semantic memory is created
+<ul class="org-ul">
+<li><i>Okay, this is all plausible, but I will note that his citations are to Wikipedia articles that have a bunch of flags on them for potential inaccuracy</i></li>
+<li><i>Who knows if any of what he's saying is even approximately true</i></li>
+</ul></li>
+<li>The final algorithm that governs our actions must simultaneously satisfy both Eros and Ananke to some extent in each moment
+<ul class="org-ul">
+<li><i>That is, from moment to moment, the id's desires and impulses can't be totally neglected</i></li>
+</ul></li>
+<li>However, the remembering self will use the superego's algorithm when looking back on its actions and assigning meaning to memories</li>
+<li>It's the superego, not the id that answers the question, "Did I do what I really wanted?"</li>
+<li>The remembering self doesn't really care which goal you pick, only that there is a goal
+<ul class="org-ul">
+<li>This is why minimum wage jobs are so unsatisfying</li>
+<li>No one cares if you do well</li>
+<li>If you screw up, there's no correction, you're just fired and replaced with the next willing person</li>
+</ul></li>
+<li>The way to a well-lived life is to pick a goal and pursue it
+<ul class="org-ul">
+<li>The role of adolescence is to look around, explore, and find a goal</li>
+<li>The role of adulthood is to switch from explore to exploit and push towards the goal that you've chosen</li>
+<li><i>I guess it would be beside the point here to say that modern adolescence is a cultural construction</i></li>
+<li><i>Yes, adolescence is culturally constructed, but that's the point &#x2013; our culture, for probably the first time in human history, allows the majority of people some kind of a choice in their life path</i></li>
+<li><i>As a result, we've come up with this new life phase &#x2013; adolescence &#x2013; to deal with the fact that you have to choose what you want to be/do in adulthood</i></li>
+</ul></li>
+<li>Yes, the goals are abitrary and meaningless, but the path to a well-remembered life is to have one</li>
+<li>Happiness and meaning &#x2013; sometimes they overlap and sometimes they conflict</li>
+<li>There's no right choice between happiness and meaning, but one should be careful to avoid the trap where one achieves neither
+<ul class="org-ul">
+<li>The id is terrible at long-term hedonism</li>
+<li>The default superego is full of malignant memes that will leave you miserable, and will also leave your autobiography incoherent</li>
+</ul></li>
+<li>The key word above is <i>default</i>
+<ul class="org-ul">
+<li>We all have some degree of protection from malignant memes, either through isolation or through positive memes that have been inculcated in us by parents or society</li>
+</ul></li>
+<li>However, most of us don't take enough precautions when dealing with new memes</li>
+<li>Judaism is interesting, as a religion, because it tries to enforce memetic hygiene through its many arbitrary rules and its strictures against proselytizing
+<ul class="org-ul">
+<li>Rules create an obstacle course that memes have to pass through before they're deemed acceptable</li>
+<li>Strictures against proselytizing reduce exposure to foreign memes</li>
+</ul></li>
+<li>A free flow of information reduces memetic hygiene &#x2013; it's the equivalent of a suppressed immune system</li>
+<li>Secular humanism is a motte-and-bailey
+<ul class="org-ul">
+<li>Milquetoast ideals</li>
+<li>Provide no guidance in day-to-day life</li>
+<li>Leave you vulnerable to whatever crypto-ideology is most virulent</li>
+<li><i>I think his argument is itself a motte-and-bailey</i></li>
+<li><i>Secular humanism has no answer to what you should do when someone slaps your girlfriend's ass at the club? Really? That seems like a real strawman</i></li>
+</ul></li>
+<li>With a free flow of information, ever meme attains its most virulent form
+<ul class="org-ul">
+<li>Free flow of information = low memetic defenses</li>
+<li>Thus the fastest, most virulent memes will attain the greatest success</li>
+<li><i>So Facebook isn't cancer&#x2026; it's AIDS</i></li>
+</ul></li>
+<li>Memetic selection is even less likely to induce cooperation between memes than natural selection
+<ul class="org-ul">
+<li>Unlike genes in natural selection, memes aren't spread together in chromosomes
+<ul class="org-ul">
+<li><i>Genes aren't spread together in chromosomes either &#x2013; check your eukaryote privilege!</i></li>
+<li><i>Bacterial genes can and do spread one at a time &#x2013; this is how we discovered CRISPR-Cas9</i></li>
+</ul></li>
+<li>A person can only spread one meme at a time, so there is a significant disincentive for memes to cooperate</li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org280bf2a" class="outline-3">
+<h3 id="org280bf2a">Part IV</h3>
+<div class="outline-text-3" id="text-org280bf2a">
+<ul class="org-ul">
+<li>References Gwern's <a href="https://www.gwern.net/Culture-is-not-about-Esthetics">Culture is not about Esthetics</a>
+<ul class="org-ul">
+<li>The argument in <i>Culture is not abot Esthetics</i> is that producing new fiction works should not be subsidized and may in fact be actually harmful</li>
+<li>People are primed towards novelty, and new fiction takes away from older works which are of significantly higher quality</li>
+<li>Every person has 500,000 hours &#x2013; shouldn't they spend those hours on what will bring them the most enjoyment?</li>
+<li>We shouldn't encourage the production of new fictional works, and indeed we should discourage it &#x2013; there is already too much fiction, and adding more to the pile only makes things worse</li>
+</ul></li>
+<li>There are some flaws with this argument
+<ul class="org-ul">
+<li>It assumes that you can rank art, along some kind of unified scale</li>
+<li>If people won't read sensationalist fiction, they'll read sensationalist non-fiction, and that's no better (in fact, it's probably worse)</li>
+<li>Moreover, what will all these people do in their spare time, if art is illegal? Art begets art, in reaction</li>
+<li>Fiction teaches moral lessons, insofar as it shows you how moral principles apply to everyday life, and allow you to imagine how you'd react in scenarios that you haven't yet encountered</li>
+<li>We face a lot moral dilemmas every time we interact with other humans, and modern literary fiction offers us a manual on how to navigate those dilemmas</li>
+<li>Modern works of art translate ancient principles into modern language, allow people to relate those principles to their times and circumstances</li>
+<li>Art is compressed communication</li>
+<li>The limitations of an artistic form strip out unnecessary information, and allow the artist to convey an impression of some kind of greater pattern to the viewer</li>
+<li>Art exists for its own sake, it exists to be understood</li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org7513b81" class="outline-3">
+<h3 id="org7513b81">Part V</h3>
+<div class="outline-text-3" id="text-org7513b81">
+<ul class="org-ul">
+<li>"Ease of having one's art understood" is the definition of privilege
+<ul class="org-ul">
+<li><i>Really? Because modern art is inscrutable as hell, and it's made and consumed by the most privileged people in society</i></li>
+</ul></li>
+<li>The academic notion of privilege fails because it emphasizes the experiencing self
+<ul class="org-ul">
+<li>As it turns out, most people are happy, regardless of their circumstances</li>
+<li>So you can't use happiness as a marker of privilege</li>
+</ul></li>
+<li>The remembering self is different
+<ul class="org-ul">
+<li>Although happiness saturates with income after about $75,000 in the US, "life satisfaction" does not</li>
+<li>Independent of happiness, wealth buys freedom from routine</li>
+<li>And just as wealth can be spent on ways to acquire new experiences, it can also be spent on ways to express those experiences in novel ways</li>
+<li>Upper class people are described as "cultured" because they know a lot of culture, and can describe their experiences by referencing cultural artifacts in ways that uncultured people cannot</li>
+</ul></li>
+<li>If the two parts of our lives are pleasure and being understood, then increasing wealth quickly saturates the former, but may never saturate the latter</li>
+<li>This means that money is good &#x2013; money buys freedom</li>
+<li>Absolute amounts of money, not just relative amounts matter, because money buys things and experiences that our remembering self can look back on as signifying a meaningful life
+<ul class="org-ul">
+<li><i>Is this true, though? Doesn't inflation eat away at much of this?</i></li>
+<li><i>At the very least the GDP figures he's talking about have to be inflation-adjusted GDP, otherwise the whole exercise is meaningless</i></li>
+</ul></li>
+<li>Belonging to the dominant race and sex grants the same sort of privilege as wealth, but by a different mechanism
+<ul class="org-ul">
+<li>Wealth makes it easy for you to speak the cultural language</li>
+<li>Being of the same race, gender, sexual orientation, etc, makes it easier for others to listen</li>
+</ul></li>
+<li>This ties into stereotypes
+<ul class="org-ul">
+<li>Stereotypes are necessary to function</li>
+<li>If we didn't rely on stereotypes, we'd all be borderline autistic in our everyday interactions</li>
+</ul></li>
+<li>Most racists are actually culturists &#x2013; they don't hate people because of their race, they hate people of a certain race because that race is associated with certain cultural characteristics
+<ul class="org-ul">
+<li>Race and gender are social constructs, but the characteristics that correlate with race and gender are real</li>
+<li>Until we can learn to speak pheromone, all our interactions will be mediated by stereotypes</li>
+<li>This is why the standard "don't be racist" framing fails &#x2013; you can't tell people to get rid of a stereotype without replacing it with a more benign stereotype</li>
+</ul></li>
+<li>Stereotypes and microaggressions (which are behaviors created from stereotypes) lead to harm, even they're positive</li>
+<li>Cause harm against the remembering self even if they don't cause harm against the experiencing self</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgd0c0449" class="outline-3">
+<h3 id="orgd0c0449">Part VI</h3>
+<div class="outline-text-3" id="text-orgd0c0449">
+<ul class="org-ul">
+<li>If globalization is the primary phenomenon of the 21st century, then immigration will be the defining political conflict</li>
+<li>Immigration used in a broad way &#x2013; talking about immigration of both people and ideas</li>
+<li>Stereotyping applies just as much to low-class whites as it does to other minorities
+<ul class="org-ul">
+<li>The "y'all" class</li>
+</ul></li>
+<li>At the core of the rebellion that led to Trump was a need for respect &#x2013; an acknowledgement that they are also human beings struggling for their values
+<ul class="org-ul">
+<li><i>To be honest, in the US, this conflict has been going on since at least the Civil War</i></li>
+<li><i>The distinction between the South and the North in the Civil War was that the North ended up fighting a war for principle, and the South ended fighting a war for tradition</i></li>
+<li><i>So I don't think this phenomenon is as new as he's claiming it to be</i></li>
+</ul></li>
+<li>When conservatives talk about "the Gay Agenda", they're not talking about a conspiracy of gay people to force people into homosexual relationships</li>
+<li>They're talking about the rhetoric that puts them on the "wrong side of history" &#x2013; rhetoric that claims that in a few years their objections will be irrelevant because they'll have been steamrolled by the grand tide of social progress
+<ul class="org-ul">
+<li><i>For an example of this, look at <a href="https://thingofthings.wordpress.com/2018/06/25/conservatives-as-moral-mutants/">Conservatives As Moral Mutants</a></i></li>
+<li><i>How much of this is the conservatives <b>actual</b> argument, and how much is the "obnoxious kind of steelmanning" that Ozy talks about in their post, <a href="https://thingofthings.wordpress.com/2016/08/09/against-steelmanning/">Against Steelmanning</a>?</i></li>
+<li><i>I'm asking because I've seen this argument posed elsewhere &#x2013; people whose (political/cultural/social/etc) ideas I disagree are <span class="underline">really</span> asking for respect! I have <b>not once</b> seen it posed by a member of the group that is being called out. In my experience, it's always been a way for apologists for the group that is being marginalized (for good or bad reasons) to oppose the marginalizaiton of that group</i></li>
+<li><i>To put it crudely, I will be convinced that conservative opposition to the "gay agenda" is "really about respect" when I hear it coming from someone wearing a MAGA hat</i></li>
+</ul></li>
+<li>This is especially relevant for the (<i>white</i>) working class, because in order to advance socially, they have to impress managers</li>
+<li>So for them, changing views on social issues are a direct threat to their economic livelihood
+<ul class="org-ul">
+<li><i>Eh, again, I'm wondering how much of this is true</i></li>
+<li><i>Lots of liberals hire workers whose values they don't share</i></li>
+<li><i>I think he's falling into the Bay Area trap of thinking that the world is more politicized than it actually is</i></li>
+</ul></li>
+<li>The specific way that the media has talked about race and culture has made the problem worse
+<ul class="org-ul">
+<li>Created a set of vague rules around "appropriation" and etiquette</li>
+<li>Loudly proclaimed that immigration is the end of white America</li>
+</ul></li>
+<li>The point is that the left wants to prevent assimilation</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org39e3c3f" class="outline-3">
+<h3 id="org39e3c3f">Part VII</h3>
+<div class="outline-text-3" id="text-org39e3c3f">
+<ul class="org-ul">
+<li>The easiest way to write "minority" characters is to make "a-racial" characters, and then use minority characters to play them
+<ul class="org-ul">
+<li>Prevents potentially embarrassing misunderstandings</li>
+<li>Allows the minority characters to be legible to a mainstream audience</li>
+</ul></li>
+<li>A better way to get minority characters is to hire minority writers</li>
+<li>But the cultural criteria used to judge whether those minority writers are good is same cultural criteria used to judge whether white writers are good</li>
+<li>This is how the upper-middle-class protects itself from change</li>
+<li>They concede that minorities will immigrate, but set the conditions of social advancement such that one has to adopt an upper-middle-class value system, mindset and mannerisms in order to advance economically and socially</li>
+<li>Affirmative action is good, but it tends to promote exactly the sorts of people who will perpetuate the upper-middle-class mindset
+<ul class="org-ul">
+<li>Half of African Americans oppose gay marriage, but you'll never see the upper-middle-class talking about that</li>
+<li><i>Except you totally will; you just have to look for it</i></li>
+</ul></li>
+<li>The debates about whose opinions should be heard at universities misses the point</li>
+<li>No matter who wins that debate, the university and the people who go to universities win because it reinforces the idea that the only valid place to form an opinion is a university</li>
+<li>Everyone understands that class is hereditary, but the strongest critiques of the the hereditary class system comes from those who benefit it the most</li>
+<li>The old aristocracy has transmuted itself into the "media elite"
+<ul class="org-ul">
+<li>Aristocrats used to be in the "service industry"
+<ul class="org-ul">
+<li><i>Wait, what? He's defining "service industry" as "any industry where the customer is right" and then using "writer, therapist, barber, sales" as his examples</i></li>
+<li><i>Are these all service-industry jobs? Or is he redefining words to connote that being courtier to a king is somehow analogous to working the sales floor at Best Buy</i></li>
+</ul></li>
+<li>Once the industrial revolution erodes the old social classes, these aristocrats form a "meta-service industry", which tells other people what is correct or incorrect to read or write</li>
+</ul></li>
+<li>This translates into schools, which are more concerned with teaching the correct answers to allow people to advance into the upper-middle-class than with teach practical skills such as how to cook or balance a checkbook</li>
+<li>Even if this doesn't translate into people reaching the upper-middle class, the main criterion for employment in the service industry is the ability to be inoffensive</li>
+<li><i>In this way, maybe schools are doing exactly what they ought to be doing &#x2013; training workers for jobs</i></li>
+<li>/If he is correct that the majority of jobs are going to be in the "service industry", then perhaps teaching kids to be inoffensive is exactly the sort of things that schools ought to be doing</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgb48166c" class="outline-3">
+<h3 id="orgb48166c">Part VIII</h3>
+<div class="outline-text-3" id="text-orgb48166c">
+<ul class="org-ul">
+<li>The neoreactionaries think that we are living in the end times</li>
+<li>Think that democracy is a memetic virus that's tearing its way through civilization, and that civilization will soon fall</li>
+<li>But the neoconservatives are wrong</li>
+<li>This sort of coming apart is what the Tower of Babel is an allegory for</li>
+<li>Civilization always comes together, and then it always comes apart</li>
+<li>There is no way to impose one culture, one value system on all of humanity</li>
+<li>There will always be people whose values are denied by that system, and they will always rebel</li>
+<li>The neoreactionaries ideal homogenous nation would be no different, day to day, than the United States
+<ul class="org-ul">
+<li><i>Or, at least, it wouldn't feel much different, day-to-day</i></li>
+</ul></li>
+<li>Moreover, real diversity has benefits</li>
+<li>The US has contributed far more to the world than homogenous ethno-states</li>
+<li>That contribution has occurred because of the US's diversity, not in spite of it</li>
+<li>However, just because this process of falling apart and coming together has occurred in the past, it doesn't mean that it will be pleasant to live through</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Rohit Patnaik</p>
+<p class="date">Created: 2019-01-28 Mon 13:48</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>
