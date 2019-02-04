@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- 2019-02-04 Mon 12:10 -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>2019-02-04 RRG Notes</title>
+<meta name="generator" content="Org mode">
+<meta name="author" content="Rohit Patnaik">
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<meta charset="utf-8">
+<link href="/page.css" rel="stylesheet">
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2018 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="preamble" class="status">
+<header class="page-header">
+  <div class="logo"><a href="/"><img src="/logo.png" height="160"></a></div>
+  <div class="header-text">
+    <div class="header-text-wrapper">
+      <h1>Quanticle.net</h1>
+    </div>
+  </div>
+</header>
+</div>
+<div id="content">
+<h1 class="title">2019-02-04 RRG Notes</h1>
+
+<div id="outline-container-org6af4220" class="outline-2">
+<h2 id="org6af4220"><a href="https://www.givingwhatwecan.org/post/2016/03/four-things-you-already-agree-with-effective-altruism/">Four Things You Already Agree With (that mean you're probably on board with effective altruism)</a></h2>
+<div class="outline-text-2" id="text-org6af4220">
+<ul class="org-ul">
+<li>Four ideas you probably already agree with
+<ul class="org-ul">
+<li><i>I have learned to be very suspicious when someone says that an idea is self-evident</i></li>
+<li>It's important to help others
+<ul class="org-ul">
+<li>When people are in need and we can help them we should</li>
+<li><i>And we already fail the self-evident test</i></li>
+<li><i>The capacity to help implies the obligation to help? Really? You just made that leap without any justification whatsoever.</i></li>
+</ul></li>
+<li>People are equal
+<ul class="org-ul">
+<li>Everyone has an equal claim to being happy, healthy, fulfilled and free</li>
+<li><i>Do they? I mean, I believe that they do, but I know that neoreactionaries would strongly disagree</i></li>
+<li><i>Heck, not even neoreactionaries &#x2013; most people would agree that criminals, for example, have given up their right to be free</i></li>
+</ul></li>
+<li>Helping more is better than helping less
+<ul class="org-ul">
+<li>We should save more lives, help people live longer, and help people live happier lives</li>
+<li><i>The difficulty comes when those goals conflict</i></li>
+<li>Imagine if you have enough medicine to save 20 people, and no reason to conserve &#x2013; would anyone choose to save only some of the people, instead of all 20</li>
+<li><i>Yeah! Lots of people, in practice, would choose to withold medicine rather than give it to someone who was "undeserving", where "undeserving" can be defined as anything from, "Is a murderer," to "Is of the wrong ethnic group."</i></li>
+</ul></li>
+<li>Our resources are limited
+<ul class="org-ul">
+<li>We can only spend a certain amount of our resources on charity without causing strain on our own resources</li>
+<li>Choosing to spend time or money on one option is implicitly choosing to <b>not</b> spend it on other options</li>
+</ul></li>
+</ul></li>
+<li>These four ideas are pretty uncontroversial
+<ul class="org-ul">
+<li><i>The more you say that, the less I believe it</i></li>
+</ul></li>
+<li>In fact, defending the opposite positions would probably be difficult and uncomfortable:
+<ul class="org-ul">
+<li>Helping others isn't morally required or even that good</li>
+<li>It's okay to value people differently based on arbitrary differences like race, gender, ability, etc</li>
+<li>It doesn't matter if some people die even if it doesn't cost anything to save their lives</li>
+<li>We have unlimited resources</li>
+<li><i>Okay, I'm not Obormot, but even I can come up with adequate defenses of the first three</i>
+<ul class="org-ul">
+<li><i>Helping others isn't morally required, or even that good</i>
+<ul class="org-ul">
+<li><i>Is helping others really the most moral thing you could be doing?</i></li>
+<li><i>What about paying attention to your own moral development?</i></li>
+<li><i>Maybe the most moral thing you could be doing is improving your personal moral worth, by living a particular lifestyle, or venerating God</i></li>
+</ul></li>
+<li><i>It's okay to value people differently based on arbitrary differences like race, gender, ability, etc</i>
+<ul class="org-ul">
+<li><i>Whether someone is or is not related to me is an "arbitrary difference", but you are <b>insane</b> if you believe that someone will give a stranger equal weight to their brother/sister</i></li>
+<li><i>And we can scale that up &#x2013; is it wrong to favor your cousin over a stranger? Is it wrong to favor your neighbor over a stranger? Is it wrong to favor someone from your town over a stranger? Is it wrong to favor someone from your country over a stranger from a foreign land?</i></li>
+<li><i>I might be committing the is-ought fallacy here, but I think it's definitely <b>not</b> self-evident that it's wrong to value people differently based upon "arbitrary differences", when the <b>vast majority</b> of people in the world do exactly just that</i></li>
+</ul></li>
+<li><i>It doesn't matter if some people die even if it doesn't cost anything to save their lives</i>
+<ul class="org-ul">
+<li><i>We live in a country which still practices the death penalty</i></li>
+<li><i>Not everyone has an absolute right to life</i></li>
+<li><i>If a convicted murderer on death row gets prostate cancer, which will kill him in 35 years, is it worth investing resources to treat the cancer when the murderer's execution is scheduled for 5 years from now?</i></li>
+</ul></li>
+</ul></li>
+</ul></li>
+<li>If these four ideas embody important values, then the way we're thinking about doing good is probably totally wrong</li>
+<li>In order to be true to the value above, we need to think about how we can help the most people with the resources that we have</li>
+<li>The difference in impact between causes is <b>huge</b> &#x2013; the most impactful charities can have hundreds of times of the impact of the least impactful
+<ul class="org-ul">
+<li>It's the difference between helping one person and helping hundreds of people, for the same amount of money</li>
+<li><i>Okay, but how are you defining "impact"</i></li>
+<li><i>Is it lives saved?</i></li>
+<li><i>What about a charity that brings art resources to people living in poverty?</i></li>
+</ul></li>
+<li>A charity chosen at random is probably not making as much impact as the most effective charities
+<ul class="org-ul">
+<li><i>There's a bit of confusion going on here between charities and cause areas</i></li>
+<li><i>A charity devoted to the arts might reach ten times fewer people than AMF, but that's because the arts charity is in a different cause area</i></li>
+<li><i>If you're going to compare charities, and claim that the best charities reach tens or hundreds of times as many people as a randomly chosen charity, you need to make sure that you're comparing a randomly chosen charity to the best charity within that cause area</i></li>
+</ul></li>
+<li>The charities that we donate to are, in effect, chosen at random &#x2013; we choose charities based upon what we have exposure to</li>
+<li>Every worthy cause should be on the table
+<ul class="org-ul">
+<li>Climate justice</li>
+<li>Animal sanctuaries</li>
+<li>Preventing easily treatable but unpronounceable diseases in places we've never heard of and will probably never visit</li>
+</ul></li>
+<li>Trying to be cause neutral is really difficult
+<ul class="org-ul">
+<li>It's hard to not favor causes that have had a personal impact on you or your family</li>
+<li><i>Well, maybe that difficulty is a sign that your "self-evident" axioms really aren't all that self-evident</i></li>
+</ul></li>
+<li>However, if we care about treating people equally, we should care about treating their experiences equally</li>
+<li>We need to treat <span class="underline">all</span> death and suffering as a tragedy, not just the death and suffering that we happen to see
+<ul class="org-ul">
+<li><i>Man, I understand why rationalists have such problems with anxiety now</i></li>
+</ul></li>
+<li>Effective altruism is a way to better uphold the values that you already have
+<ul class="org-ul">
+<li><i>Uh&#x2026; no</i></li>
+<li><i>Effective altruism is a way to change my values into a particular form of utilitarianism, which seems geared to give me an anxiety disorder</i></li>
+</ul></li>
+<li>EA asks us to face up to some hard choices, but we're making those choices anyway, whether we think about them or not</li>
+<li>Even though it might feel difficult to not donate to a charity that seems worthy, you should always remember that you're trading off causes against one another</li>
+<li><i>Standard pitch for donating mosquito nets goes here</i></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org679cab8" class="outline-2">
+<h2 id="org679cab8"><a href="http://dragice.fr/utilitarianism/faq.html#WHATIS">What Is Utilitarianism</a></h2>
+<div class="outline-text-2" id="text-org679cab8">
+<ul class="org-ul">
+<li>Utilitarianism is a collection of philosophical positions which have 5 major characteristics in common</li>
+<li>Utilitarianism is the doctrine that the morally right thing to do is that which maximizes <span class="underline">Utility</span></li>
+<li>Characteristics utilitarianism
+<ul class="org-ul">
+<li>Universalism
+<ul class="org-ul">
+<li>Moral principles are universal</li>
+<li>Same moral standards apply to all people and all situations</li>
+<li>Most philosophies since the Enlightenment have been universalist</li>
+<li>The utility of all people is important, and is in fact assumed to be equally important</li>
+<li>However, many people hold that the utility of people who are close to one, such as family and friends, matters more than the utility of people far away</li>
+</ul></li>
+<li>Consequentialism
+<ul class="org-ul">
+<li>What matters, morally speaking, is the consequences of actions</li>
+<li>Actions aren't inherently good or bad in and of themselves, they are good or bad based upon their outcomes</li>
+<li>This is a fairly controversial point &#x2013; many people hold that there are actions which are wrong, regardless of their consequences</li>
+</ul></li>
+<li>Welfarism
+<ul class="org-ul">
+<li>Good consequences are that which improve the well-being of specific people</li>
+<li>Well being is defined subjectively, and the definition differs between specific utilitarian philosophies</li>
+<li>A belief opposed to welfarism would hold that there are principles which are important, even if they don't benefit anyone in the particular situation being discussed</li>
+</ul></li>
+<li>Aggregation
+<ul class="org-ul">
+<li>Utilitarianism is an aggregative philosophy</li>
+<li>What is good overall is the aggregation of what is good for each and every individual</li>
+<li>Aggregation is controversial, as it implies that the welfare of different people can always be compared</li>
+</ul></li>
+<li>Maximization
+<ul class="org-ul">
+<li>Utilitarianism is the most famous maximalist philosophy</li>
+<li>Holds that if something is good, then it is better to have more of it</li>
+<li>A non-maximalist philosophy would hold that it can be wrong to do something even if it would reduce the total amount of wrong in the world</li>
+</ul></li>
+</ul></li>
+<li>Given these characteristics, utilitarianism holds that
+<ul class="org-ul">
+<li>Morality of actions is solely judged by how those actions maximize utility</li>
+<li>Utility is the welfare of individual people from the perspective of those people</li>
+<li>One person's welfare is as important as another's</li>
+</ul></li>
+<li>Non-utilitarian philosophies hold that
+<ul class="org-ul">
+<li>Actions can be right or wrong regardless of their consequences</li>
+<li>Some consequences are good, even if they do not increase the welfare of any individual</li>
+<li>We should promote welfare in some way other than maximization</li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org503becd" class="outline-2">
+<h2 id="org503becd"><a href="https://www.utilitarian.net/singer/by/199704--.htm">The Drowning Child and the Expanding Circle</a></h2>
+<div class="outline-text-2" id="text-org503becd">
+<ul class="org-ul">
+<li>Imagine you're walking past a shallow pond and you see a child has fallen in</li>
+<li>Do you have an obligation to rescue the child, even though it would result in your clothes getting ruined and you being late to school/work?</li>
+<li>Most people would answer yes</li>
+<li>Does it make a difference if the child is far away, in another country</li>
+<li>If you can save a life at a trivial cost to yourself, don't you have the obligation to do so?</li>
+<li>At this point, most people challenge the practicalities
+<ul class="org-ul">
+<li>Can we be sure that the donation will actually get to those in need?</li>
+<li>Isn't the real problem something else, like growing world population</li>
+</ul></li>
+<li>Hardly anyone, however, challenges the underlying ethics
+<ul class="org-ul">
+<li><i>I'll challenge the underlying ethics</i></li>
+<li><i>I do maintain that it makes a difference that the person whom you're trying to save is in another country</i></li>
+</ul></li>
+<li>The 20th century is the first century in which it's been possible to speak of a global community and global responsibility</li>
+<li>For most of human history, there was simply no possible way for a person to make a difference for someone else living hundreds or thousands of miles away</li>
+<li>Advances in communication and transportation have changed that</li>
+<li>It's now possible to see and affect lives that are halfway across the world</li>
+<li>Not only is it possible, we are affecting the lives of others and the natural world in which we live
+<ul class="org-ul">
+<li>Ozone depletion</li>
+<li>Global warming</li>
+<li>The actions of a person in Los Angeles can have deleterious effects on a person in Adelaide</li>
+</ul></li>
+<li>The modern world is also lacking in meaning and fulfillment &#x2013; capitalism's only message is consume, and earn more to consume more</li>
+<li>We cannot see it as our end to acquire more and leave behind an ever larger heap of waste</li>
+<li>Identifying with other, larger goals lends meaning to our lives, and reconciles ethics with self interest</li>
+<li>If we can identify our self-interest with the larger interests of humanity and the natural world as a whole, then we are freed from the need to consume ever more in order to get ahead of our peers</li>
+<li><i><a href="https://www.greaterwrong.com/posts/M8zgMmNCfpQxaKo8Y/some-reservations-about-singer-s-child-in-the-pond-argument#comment-GBLvB7JjtPYEYaq8y">LessWrong discussion of this essay</a></i>
+<ul class="org-ul">
+<li><i>The primary objection seems to be that Singer, through some inductive sleight of hand, has turned a definite, limited obligation into an indefinite unlimited obligation</i></li>
+<li><i>It's one thing to say that one day you come across a drowning child, and you're obligated to ruin your clothes in order to save him/her</i></li>
+<li><i>It's quite another thing to say, "Every day, when you walk past this pond, a different child is drowning, and every day, you jump in, without regard to your own clothes and needs in order to save this child."</i></li>
+<li><i><a href="http://wiki.preventconnect.org/River-Story/">The Upstream Parable</a> (linked from the aforesaid LW discussion)</i></li>
+</ul></li>
+<li><i>Aside from the points raised in the LessWrong discussion, I find it funny that Singer is criticizing capitalism</i>
+<ul class="org-ul">
+<li><i>Like it or not, China's adoption of capitalism lifted something like 300,000,000 people out of poverty and into a middle-class lifestyle</i></li>
+<li><i>I have yet to see a charity that has lifted even 3,000,000 people out of poverty</i></li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org8b4c9b9" class="outline-2">
+<h2 id="org8b4c9b9"><a href="https://ea.greaterwrong.com/posts/toAMJ3cWQiWDheaKD/if-you-want-to-disagree-with-effective-altruism-you-need-to">If you want to disagree with effective altruism, you need to disagree with one of these three claims</a></h2>
+<div class="outline-text-2" id="text-org8b4c9b9">
+<ul class="org-ul">
+<li>Effective altruism is often motivated by referring to Peter Singer's pond argument</li>
+<li>This is a mistake
+<ul class="org-ul">
+<li>Associates EA with international development</li>
+<li>Makes it appear that if you can refute the pond argument, you can refute the arguments for EA</li>
+</ul></li>
+<li>EA is justified by the "general pond argument"
+<ul class="org-ul">
+<li>The original pond argument is:
+<ul class="org-ul">
+<li>If you can help others a great deal without sacrificing something of similar significance, you ought to do it</li>
+<li>We can help the global poor a great deal by giving to effective charities</li>
+<li>Therefore, we ought to give to effective charities until it becomes a great sacrifice</li>
+</ul></li>
+<li>This leads to the objection of wondering whether international aid really helps the global poor</li>
+<li>However, one can deny the importance of international aid, and still accept the importance of EA</li>
+<li>As long as there are some actions which benefit others a great deal, but which cost ourselves little, EA will be important</li>
+<li>This leads to the "general pond argument"
+<ul class="org-ul">
+<li>As long as there are actions which benefit others a great deal, but which cost us little, we should do them</li>
+<li>Some of these actions are not widely taken</li>
+<li>We can find out about these actions using evidence and reason</li>
+<li>Therefore, there are cost-effective and highly beneficial actions which we could be taking, but are not
+<ul class="org-ul">
+<li><i>Is he just assuming the conclusion?</i></li>
+<li><i>His first premise implies that these "pond-like" actions exist</i></li>
+<li><i>His second premise outright states that some of these actions are not widely taken</i></li>
+<li><i>So his conclusion is literally, "Cost effective and highly beneficial actions exist, and are not taken, because my premises state as much"</i></li>
+</ul></li>
+<li>The mission of effective altruism is find these actions and funnel resources towards them</li>
+</ul></li>
+</ul></li>
+<li>Why do we think there are going to be lots of these cost-effective actions?
+<ul class="org-ul">
+<li>Global inequality
+<ul class="org-ul">
+<li>College graduates in developed countries are 100 times as rich as the global poor</li>
+<li>That means that these people could do 100 times as much good by helping the poor than by helping themselves, just by transferring their income</li>
+<li><i>Wait, what? How does that follow? Did you just assume that outcomes scale linearly with money?</i></li>
+<li>Moreover, there are probably ways of helping that are more efficient than income transfer, so in reality the ratio is probably greater than 100x</li>
+<li><i>Are there actually such ways helping? A lot of economics research has shown that if you want to help the poor, straight cash transfers are probably the best way</i></li>
+</ul></li>
+<li>Moral concern for animals
+<ul class="org-ul">
+<li>Animals have no political or economic power</li>
+<li>Historically, people have not cared about animals' interests</li>
+<li>By doing something simple like going vegetarian, you personally prevent about 100 animals from being killed each year</li>
+</ul></li>
+<li>The ability to affect the future
+<ul class="org-ul">
+<li>There will be many more people living in the future than are alive today</li>
+<li>If you believe that we should have moral concern for future generations and believe that our actions today can affect them, then there relatively small actions that you could take today, which would have massive consequences for future generations</li>
+<li><i>The problem there is determining which actions. There are lots of actions which <b>seem</b> good, but which have deleterious second or third order consequences</i>
+<ul class="org-ul">
+<li><i>For example: opposing sweatshop labor</i></li>
+<li><i>The first order consequence is good, but if the company closes the sweatshop rather than comply with better calls for better working conditions, people often end up going back to subsistence farming, which leaves them less well off</i></li>
+<li><i>So, yes, I agree that there are small actions that you could take today which will leave future generations much better off. The problem is determining what those small actions are</i></li>
+</ul></li>
+</ul></li>
+<li>The possibility of leverage
+<ul class="org-ul">
+<li>If you focus on finding the best ways to help others, you can often find ways of doing good which are more effective than just doing good things yourself</li>
+<li>If you think some action A is good, then you can probably get 10 people to do A
+<ul class="org-ul">
+<li><i>Whaaaaaaaa? No, that does not follow at all! Has this dude ever tried to organize anything? It absolutely does not follow that just because some action is good, you can get 10 people to do the good action with you</i></li>
+</ul></li>
+</ul></li>
+<li>Poor existing methods
+<ul class="org-ul">
+<li>Many current attempts to do good aren't very strategic or evidence-based</li>
+<li>There are probably ways to do good which are 10 or even 100 times better than what people normally focus on</li>
+<li><i>Again, the argument jumps far beyond what the evidence supports</i></li>
+<li><i>I agree that current ways to do good aren't necessarily very strategic</i></li>
+<li><i>That does <b>not</b> imply that the "best" ways to do good, however "best" is defined, are 10 or 100 times better than current methods</i></li>
+</ul></li>
+</ul></li>
+<li>How <i>not</i> to refute the importance of effective altruism
+<ul class="org-ul">
+<li>To disagree with effective altruism, you need to disagree with one of the parts of the "general pond argument"</li>
+<li>Most critiques of EA fail to hit the mark</li>
+<li>Common failure modes
+<ul class="org-ul">
+<li>Equating effective altruism with utilitarianism
+<ul class="org-ul">
+<li>EA rests on a much weaker moral claim than utilitarianism</li>
+<li>EA merely says that you ought to do actions that are a great benefit to others with little cost to yourself</li>
+<li>In contrast utilitarianism says that you ought to do an action that's a major sacrifice, as long as it does slightly more good to others</li>
+<li>This is a much stronger claim</li>
+<li><i>Is it? It seems to me that the difference between EA and utilitarianism is a mere difference in degree, not a difference in kind</i></li>
+<li>Utilitarianism also denies that anything matters except welfare and that it's okay to violate rights in favor of the greater good</li>
+<li><i>What? You're straw-manning utilitarianism here. There are variants of utilitarianism which do admit the notion of inviolable rights</i></li>
+<li><i>Heck, I'm <b>not</b> a utilitarian, nor am I especially supportive of EA, and even I don't strawman utilitarianism like this</i></li>
+</ul></li>
+<li>Arguing that a specific action is not cost-effective and high-benefit
+<ul class="org-ul">
+<li>This is not a general critique of EA</li>
+<li>It's a contribution to help EA find the best missions to support</li>
+</ul></li>
+<li>Saying that EAs think you should only support charities that have randomized controlled evidence behind them
+<ul class="org-ul">
+<li>RCTs are just a tool</li>
+<li>There are probably other ways to identify effecitive charities</li>
+</ul></li>
+</ul></li>
+</ul></li>
+<li>What types of criticism might hit the mark
+<ul class="org-ul">
+<li>Deny the moral claim
+<ul class="org-ul">
+<li>Implies that you would let a child drown in a pond in front of you</li>
+<li><i>You monster</i></li>
+</ul></li>
+<li>Show that there's an important moral difference between saving the child drowning in the pond and all the other cost-effective actions to save human life that you could be taking
+<ul class="org-ul">
+<li>This is much more difficult than showing there's a difference between any specific action (like donating to charities) and saving the child in the pond</li>
+<li><i>Wait, how does this claim follow?</i></li>
+<li><i>I don't have to show that all possible EA supported actions are different than saving a child drowning in the shallow pond, I just have to show that the all the proposed EA supported actions are different than saving a child drowning in the pond</i></li>
+<li><i>Otherwise, the claim becomes merely, "There exists some other action which is equally cost effective and morally obligatory as saving a child from drowning in a pond," which is a much weaker claim.</i></li>
+<li><i>It's a motte-and-bailey argument. The motte is, "There exists at least one way of helping people which is very cost effective." The bailey is, "Go donate to AMF, or the worm charity, or wild-animal suffering research, because it is that way."</i></li>
+</ul></li>
+<li>Accept that effective altruism is correct, but deny that the effective altruism movement will do much good
+<ul class="org-ul">
+<li><i>Porque no los dos? EA is incorrect <b>and</b> the movement won't end up doing much good</i></li>
+</ul></li>
+</ul></li>
+<li>Conclusion
+<ul class="org-ul">
+<li>Discuss a wider range of actions than just donating to international health charities</li>
+<li>If we can communicate the idea that there exist cost-effective ways to save lives then we can make the case for EA in a much more robust fashion than by focusing on specific actions</li>
+</ul></li>
+<li><i>My thoughts</i>
+<ul class="org-ul">
+<li><i>Not only did this not address any of the objections from the discussion of Singer's pond argument on LessWrong, it managed to introduce new weaknesses</i></li>
+<li><i>That's some next level failure at logical reasoning</i></li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org718373c" class="outline-2">
+<h2 id="org718373c"><a href="http://mindingourway.com/on-caring/">On Caring</a></h2>
+<div class="outline-text-2" id="text-org718373c">
+<ul class="org-ul">
+<li>It's difficult to feel the size of large numbers</li>
+<li>A billion feels just a bit bigger than a million, even though it's a thousand times bigger</li>
+<li>This is related to scope insensitivity</li>
+<li>It matters because sometimes the things you care about are really numerous</li>
+<li>Billions of people live in squalor, with hundreds of millions of them deprived of basic needs and/or dying from disease</li>
+<li>Even though the vast majority of them are out of sight, I still care about them
+<ul class="org-ul">
+<li><i>Why?</i></li>
+<li><i>This is a legitimate question &#x2013; why do you care? It just seems like a really good way of giving yourself anxiety issues</i></li>
+<li><i>Moreover, what moral force makes it <b>your</b> responsibility to help them?</i></li>
+</ul></li>
+<li>Knowing that, Nate Soares cares about every single individual on the planet</li>
+<li>The problem is that the human brain is simply incapable of taking the amount of caring it can feel and scaling it up to encompass the entire planet
+<ul class="org-ul">
+<li><i>Maybe that's a sign that you shouldn't be doing that</i></li>
+</ul></li>
+<li>Caring about the world isn't about having a gut-feeling that corresponds to the level of suffering in the world</li>
+<li>It's about doing the right thing anyway, even without having that feeling</li>
+<li>We're playing for incredibly high stakes
+<ul class="org-ul">
+<li>Billions of people suffering today</li>
+<li>Trillions or quadrillions of people who will exist in the future</li>
+</ul></li>
+<li>When faced with stakes like these, your internal heuristics completely fail to grasp the situation
+<ul class="org-ul">
+<li><i>But here's the thing: let's say that your internal heuristics <b>do</b> grasp the situation</i></li>
+<li><i>Let's say that you <b>are</b> capable of feeling the entirety of human suffering</i></li>
+<li><i>What does that get you?</i></li>
+<li><i>Won't that just leave you a non-functional wreck, sobbing every minute of every day, because some peasant in Africa stepped on a nail and is now dying of tetanus?</i></li>
+</ul></li>
+<li>Saving one life feels just as good as saving the entire world
+<ul class="org-ul">
+<li><i>Saving one life actually probably feels better than saving the entire world, at least that's the impression I get from the interviews with Stanislav Petrov</i></li>
+</ul></li>
+<li>There's a mental shift that happens when you internalize scope insensitivity
+<ul class="org-ul">
+<li>Notice that most charitable donations are made in a social context</li>
+<li>We agree that people should donate to charity, but when we see someone give <span class="underline">everything</span> to charity, we think they're crazy</li>
+</ul></li>
+<li>When some people internalize scope insensitivity, they freeze up
+<ul class="org-ul">
+<li>See that there's no way that they can do anything to affect the world's problems</li>
+<li>Freeze up, since there are so many problems and so little time to affect them</li>
+<li><i>Honestly, his description of Daniel's thought process reads more like the description of a mental breakdown or anxiety attack</i></li>
+<li><i><a href="https://i.pinimg.com/originals/99/31/1b/99311bdb0950b348b0ba6fca983b9512.gif">Literally this t-shirt</a></i></li>
+</ul></li>
+<li>Most of us go through life understanding that we should care about people far away, but failing to care</li>
+<li>But this is an error &#x2013; we should donate despite not caring</li>
+<li>There is no way you can care enough to use "care" as a motivation to be altruistic</li>
+<li>So, if you can't use how much you care as a heuristic and you can't use social pressure as a heuristic, what do you do?
+<ul class="org-ul">
+<li>Not sure yet</li>
+<li>GiveWell, MIRI, FHI, etc are all efforts at answering this question</li>
+</ul></li>
+<li>It's easy to look at virtuous people and conclude that they must have cared more than we did</li>
+<li>But that's probably not the case
+<ul class="org-ul">
+<li><i>Uh, it actually probably is</i></li>
+<li><i>This is Nate Soares typical-minding again &#x2013; look, dude, just because you're an uncaring, unfeeling, perfectly rational and 100% Effective robot, doesn't mean that everyone is</i></li>
+<li><i>Martin Luther King? He <b>cared</b> about the plight of black people in the Jim Crow South. He cared, and he was <b>angry</b>. That's what motivated him to go out there every day, and put his life on the line, day in and day out, to try to get reforms pushed through</i></li>
+<li><i>Same with Mandela, Gandhi, Mother Teresa, etc. They all cared. None of them did this, "Oh, I can't possibly care enough, but I'm going to do the right thing anyway," dance that Nate is describing</i></li>
+</ul></li>
+<li>Nobody can care enough to comprehend the problems that we face
+<ul class="org-ul">
+<li><i>Sure, no one person can care enough. But maybe if enough people care just a little bit, then change can occur</i></li>
+<li><i>In my view, the biggest obstacle to real improvement in people's lives in the developing world isn't that strangers in West don't care enough about them</i></li>
+<li><i>In my view, the biggest obstacle is a mindset that today must be like yesterday and yesterday must be like tomorrow. Once people start caring, not about the world, but about themselves and their own situations, change proceeds rapidly</i></li>
+</ul></li>
+<li>Instead of relying on caring, we should rely on doing the multiplication, and then doing what the math tells us to do despite not caring</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Rohit Patnaik</p>
+<p class="date">Created: 2019-02-04 Mon 12:10</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>
