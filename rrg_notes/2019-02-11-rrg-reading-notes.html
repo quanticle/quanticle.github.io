@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- 2019-02-11 Mon 00:44 -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>2019-02-11 RRG Notes</title>
+<meta name="generator" content="Org mode">
+<meta name="author" content="Rohit Patnaik">
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<link href="/page.css" rel="stylesheet">
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2018 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="preamble" class="status">
+<header class="page-header">
+  <div class="logo"><a href="/"><img src="/logo.png" height="160"></a></div>
+  <div class="header-text">
+    <div class="header-text-wrapper">
+      <h1>Quanticle.net</h1>
+    </div>
+  </div>
+</header>
+</div>
+<div id="content">
+<h1 class="title">2019-02-11 RRG Notes</h1>
+
+<div id="outline-container-org3bb6e89" class="outline-2">
+<h2 id="org3bb6e89"><a href="https://www.ecoshock.org/transcripts/greer_on_collapse.pdf">How Civilizations Fall: A Theory of Catabolic Collapse</a></h2>
+<div class="outline-text-2" id="text-org3bb6e89">
+</div>
+<div id="outline-container-orga739dd2" class="outline-3">
+<h3 id="orga739dd2">Introduction</h3>
+<div class="outline-text-3" id="text-orga739dd2">
+<ul class="org-ul">
+<li>The collapse of complex human societies is a poorly understood phenomenon
+<ul class="org-ul">
+<li>Most proposed explanations fail to describe causative mechanisms</li>
+<li>Rely on ad-hoc hypotheses based upon the specifics of the civilization</li>
+<li>Make essentially mystical claims (like all civilizations having natural lifespans like biological organisms)</li>
+</ul></li>
+<li>Tainter (1988) proposed a general theory of collapse
+<ul class="org-ul">
+<li>Complex societies break down when increasing complexity result in negative marginal returns</li>
+<li>Decrease in sociopolitical complexity yields net benefits to people in the society</li>
+<li><i>How do you define sociopolitical complexity?</i></li>
+<li>While this theory has strengths, it does not model the temporal aspect of civilizational breakdown</li>
+<li>While Tainter maintains that this process takes place over a period of decades, many of the examples that he cites take place over a period of centuries</li>
+<li>The shifts are often a progressive disintegration that takes place over centuries rather than a rapid shift from an unsustainable state to a sustainable one</li>
+<li>The fall of the Western Roman Empire is even more difficult to square with Tainter's theory
+<ul class="org-ul">
+<li>Series of crises each leading to a loss of social complexity</li>
+<li>Temporary sustainability at a less complex level</li>
+<li>In many cases the level of sociopolitical complexity after the collapse of the Roman empire was lower than level of sociopolitical complexity that had been present prior to the area's inclusion in the Roman empire</li>
+<li>Britain, for example, had a flourishing Iron-age society prior to its conquest by Rome, but after Rome's fall, Britain was depopulated, impoverished and politically chaotic for centuries</li>
+<li><i>Broader question: why should we even talk about the collapse of the Roman empire?</i></li>
+<li><i>I get that it's romantic and fun to think about, but why do we think that the collapse of Rome is at all applicable to modern civilization?</i></li>
+<li><i>Moreover, empires can collapse without necessarily decreasing sociopolitical complexity: look at the fading of the great empires of the 19th century</i></li>
+<li><i>Or the replacement of the Byzantines by the Ottomans</i></li>
+<li><i>Or, to go back in time, the breakup of Alexander's empire and it's eventual division between Rome and the Parthian Persians</i></li>
+</ul></li>
+<li>An alternative model based on perspectives from human ecology offers a more effective way to understand the collapse process
+<ul class="org-ul">
+<li>Theory of catabolic collapse</li>
+<li>Models collapse as a self-reinforcing cycle of decline</li>
+<li>Driven by interactions between:
+<ul class="org-ul">
+<li>Resources</li>
+<li>Capital production</li>
+<li>Waste</li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org1183c61" class="outline-3">
+<h3 id="org1183c61">The Human Ecology of Collapse</h3>
+<div class="outline-text-3" id="text-org1183c61">
+<ul class="org-ul">
+<li>At the highest level of abstraction, each human society involves 4 elements
+<ul class="org-ul">
+<li>Resources
+<ul class="org-ul">
+<li>Naturally occurring factors in the environment</li>
+<li>Have not yet been extracted and incorporated into the society's flows of energy and material</li>
+<li>Examples:
+<ul class="org-ul">
+<li>Natural resources, such as metal ores, petroleum, etc</li>
+<li>Soil fertility</li>
+<li>Human resources &#x2013; people who could work, but who are not yet working</li>
+<li>Scientific discoveries which can be made by the society's methods of research, but which have not been made</li>
+</ul></li>
+<li>This is a radical oversimplification of resources</li>
+<li>Necessary to allow us to discern large scale patterns</li>
+<li><i>I don't know. It seems like this overbroad definition of resources tries to define anything that can be used or discovered once as a "resource"</i></li>
+<li><i>I'm not sure that's correct, especially with regards to scientific discoveries</i></li>
+</ul></li>
+<li>Capital
+<ul class="org-ul">
+<li>Consists of everything that has been incorporated into society's flows of energy and material but which is still capable of further use</li>
+<li>Tools, buildings, machinery, productive farmland</li>
+<li>Also includes social capital such as economic systems and social organization</li>
+</ul></li>
+<li>Waste
+<ul class="org-ul">
+<li>All factors that have been completely incorporated into a society's flows of energy and material, but which are no longer capable of further use</li>
+<li>Worn out tools</li>
+<li>Laborers at the end of their lives</li>
+<li>Information that is garbled or lost</li>
+</ul></li>
+<li>Production
+<ul class="org-ul">
+<li>Process by which existing capital and resources are combined to create new capital and waste</li>
+<li>Resources and existing capital can, to some extent, be substituted for one another, but the substitution is not 1:1 and the relationship is nonlinear</li>
+<li>As the use of resources approaches zero, maintaining any given level of production requires exponential increases in the use of capital</li>
+<li><i>Seems like a motte-and-bailey argument</i></li>
+<li><i>Yes, <b>technically</b> this is true, if you count things like sunlight and wind as resources &#x2013; the sun will eventually burn out, etc</i></li>
+<li><i>However, I get the feeling that this is not what the author intends to mean</i></li>
+<li><i>As a concrete example, what would Greer make of car batteries, which have been in a completely closed cycle for some time now?</i></li>
+<li>In any given society, resources and capital enter the production process, and new capital and waste exit the production process</li>
+</ul></li>
+</ul></li>
+<li>The maintenance of a steady state requires the formation of new capital from production to equal waste from production and capital</li>
+<li><i>I'm deliberately leaving the equations out because I'm not at all convinced that any of the things the author is talking about can be quantified in the way that he intends</i></li>
+<li>Societies which expand produce more capital than is necessary to maintain existing stocks</li>
+<li>This becomes a self-reinforcing cycle &#x2013; <span class="underline">anabolic cycle</span>
+<ul class="org-ul">
+<li>More capital than is necessary to maintain existing stocks is produced</li>
+<li>This capital allows the production of even more capital</li>
+<li>Positive feedback cycle results</li>
+</ul></li>
+<li>The self-reinforcing part of an anabolic cycle is limited by two factors
+<ul class="org-ul">
+<li>Resource depletion:
+<ul class="org-ul">
+<li>All resources have a replenishment rate and a depletion rate
+<ul class="org-ul">
+<li>Replenishment rate is the rate at which resources are replenished <span class="underline">or</span> the rate at which new resources are found to substitute for the existing resources</li>
+<li>Depletion rate is the rate at which resources are consumed</li>
+</ul></li>
+<li>Resources that are consumed faster than they are replenished become depleted and must be replaced by capital to maintain production</li>
+<li>Because of the nonlinear substitutability of capital and resources, an exponential amount of new capital is required to replace the depleted resource
+<ul class="org-ul">
+<li><i>Once again, I'm not quite sure what he's talking about with regards to "capital" and "resource", but I'm suspicious</i></li>
+<li><i>Resource depletion is totally a thing, and things like declines in soil fertility and loss of rainfall (leading to a decline in the replenishment rate of water) have caused civilizations to collapse</i></li>
+<li><i>However, that's a far more straightforward model than what he's proposing here &#x2013; you don't need to model things in terms of abstract resources, capital, waste and production to realize that if your civilization was reliant on 36-40" of rainfall per year, and now you're in a mode of receiving 22" of rainfall a year, you're in trouble</i></li>
+</ul></li>
+</ul></li>
+<li>Inherent relation between capital and waste
+<ul class="org-ul">
+<li>As capital stocks rise, the amount of production required to maintain the existing capital stocks also rises
+<ul class="org-ul">
+<li>Increased waste of capital outside of the production process</li>
+<li>Increased waste of capital in the production of replacement capital</li>
+</ul></li>
+<li><i>This seems&#x2026; non-obvious</i></li>
+<li><i>He asserts that as capital stocks rise, the amount of capital converted to waste outside of production also rises proportionally</i></li>
+<li><i>This, specifically, is a non-obvious assertion to make</i></li>
+<li><i>To go back to his example with regards to food waste &#x2013; yes, food spoilage increases if food production increases and nothing else changes</i></li>
+<li><i>But in practice, people find ways of converting the food into other forms or develop new forms of food storage and preservation that allow them to hang on to the surplus</i></li>
+<li><i>All of what he's saying is true at a given level of efficiency, but efficiency isn't fixed</i></li>
+</ul></li>
+</ul></li>
+<li>When an anabolic cycle ends, a society faces a choice between two strategies:
+<ul class="org-ul">
+<li>Move to a steady state where new capital production is equal to maintenance production, and depletion rate is equal to replenishment rate
+<ul class="org-ul">
+<li>Requires social controls to keep capital stocks down to a level where maintenance costs can be met from current production</li>
+<li>Requires difficult collective choices, but as long as resource availability remains stable, controls on capital production remain in place, and society escapes major exogenous shocks, this process can be maintained indefinitely
+<ul class="org-ul">
+<li><i>But this will never happen. A state of stable resource availability, long-term controls on capital production and no major exogenous shocks is a state that has never occurred in this world. What he's describing is more akin to the world from dystopian fiction. <span class="underline">Handmaid's Tale</span> springs to mind</i></li>
+<li><i>In reality, there are always exogenous shocks which make this strategy nonviable</i></li>
+<li><i>Remember, exogenous shocks can be positive as well as negative</i></li>
+<li><i>Moreover, this is a recipe for stagnation</i></li>
+</ul></li>
+</ul></li>
+<li>Prolong the anabolic cycle
+<ul class="org-ul">
+<li>New technology</li>
+<li>Military conquest</li>
+<li>Other means</li>
+<li>Since increasing production leads to increasing capital stocks (which inherently increases waste), this means that maintenance production must increase</li>
+<li>Thus a society that attempts to prolong its anabolic cycle must increase its production at an ever increasing rate</li>
+<li>This leads to problems with resource depletion</li>
+</ul></li>
+<li><i>Okay, so far this is nothing more than a re-hash of the Marxist critique of capitalism, with more algebra</i></li>
+<li><i>Moreover, I continue to be frustrated that he doesn't consider efficiency. He thinks that an increase in production necessarily requires an increase in input resources, when oftentimes that isn't the case</i></li>
+<li><i>Finally, all of this is meaningless without a discussion of what the actual values of these limits are</i>
+<ul class="org-ul">
+<li><i>Remember: <a href="https://www.greaterwrong.com/posts/5wMcKNAwB6X4mp9og/that-alien-message">Finite doesn't mean small</a></i></li>
+</ul></li>
+<li><i>What's amazing is that this paper, so far, has managed to combine some of the worst habits of both conventional <b>and</b> Marxist economics</i></li>
+</ul></li>
+<li>If an attempt to maintain a steady state fails, society enters a contractionary phase, which may take one of two forms:
+<ul class="org-ul">
+<li>A society that uses resources at or below replenishment rates enters a <span class="underline">maintenance crisis</span>
+<ul class="org-ul">
+<li>Capital cannot be maintained and turns into waste</li>
+<li>Physical capital is destroyed or spoiled</li>
+<li>Human populations decline in number</li>
+<li>Large scale social organizations splinter into smaller, more economical ones</li>
+<li>Information is forgotten or lost</li>
+<li>However, because resources are not depleted, maintenance crises tend to be self-limiting</li>
+</ul></li>
+<li>A society that uses resources beyond their replenishment rates enters a <span class="underline">depletion crisis</span>
+<ul class="org-ul">
+<li>Key features of maintenance crises are amplified by the effects of resource depletion</li>
+<li>Resource depletion reduces society's ability to produce new capital, just as maintenance requires more and more new capital production</li>
+<li>This results in a <span class="underline">catabolic cycle</span>, where new capital production remains below production required for maintenance, even as both decline</li>
+<li>While catabolic cycles may occur in maintenance crises, they tend to be self-limiting</li>
+<li>However, in a depletion crisis, catabolic cycles accelerate to <span class="underline">catabolic collapse</span>, where new capital production approaches zero and most of society's production is converted to waste</li>
+<li><i>I don't understand why catabolic collapse can't occur in a maintenance crisis</i></li>
+<li><i>The ability to convert resources into capital is governed by one's existing capital</i></li>
+<li><i>So if a maintenance crisis results in the destruction of capital, then one's ability to convert resources into capital is also affected, which leads to collapse</i></li>
+<li><i>According to Greer, knowledge is capital. Having resources available doesn't help you if you don't know they're available and don't know what to do with them once you've discovered them</i></li>
+</ul></li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgad05f8d" class="outline-3">
+<h3 id="orgad05f8d">Testing The Model</h3>
+<div class="outline-text-3" id="text-orgad05f8d">
+<ul class="org-ul">
+<li><i>Let the cherry-picking begin</i></li>
+<li>The two types of collapse are ideal types</li>
+<li>Most actual collapses occur in a range between these two</li>
+<li>Maintenance crises
+<ul class="org-ul">
+<li>Kachin societies of Burma
+<ul class="org-ul">
+<li>Cycle from relatively centralized to decentralized forms without significant losses in physical, human or information capital</li>
+</ul></li>
+<li>Historical China
+<ul class="org-ul">
+<li>Repeated cycles of unification and split into warring states</li>
+<li>The sustainability of traditional Chinese agriculture meant that replenishment was high, and that any collapse was self-limiting</li>
+<li><i>This is Chinese propaganda, by the way</i></li>
+<li><i>While there are continuities among the Chinese civilizations, there are also significant differences</i></li>
+<li><i>The Chinese government likes to say that they are an "unbroken 5000 year old civilization", but it's not clear that this is supported by historiography</i></li>
+<li><i>Moreover, every nationalistic government says this &#x2013; this is no different than Mussolini tracing Italian heritage back to Rome, Islamic fundamentalists tracing their heritage back to Muhammad, or British nationalists tracing their heritage back to pre-Christian druids</i></li>
+</ul></li>
+</ul></li>
+<li>Catabolic collapse
+<ul class="org-ul">
+<li>Western Roman Empire
+<ul class="org-ul">
+<li>The Mediterranean society at the core of the empire was based on readily replenished resources</li>
+<li>However, the empire itself was the product of military expansionism and easily depleted resources
+<ul class="org-ul">
+<li><i>Like what?</i></li>
+<li><i>The problem with resource depletion theories of Roman collapse is that they very rarely mention which resources were depleted</i></li>
+</ul></li>
+<li>After Rome's initial expansion (i.e. conquest of Gaul and Britain) all the remaining conquests were either resource-poor (Germans) or empires capable of defending themselves (Parthians)
+<ul class="org-ul">
+<li><i>Wrong! Rome totally conquered the Parthians and extracted <b>significant</b> amounts of tribute from them</i></li>
+<li><i>He might be thinking of the Sassanid Persians, who were the successors to the Parthians, and who managed to kill one Emperor on the field of battle and capture another</i></li>
+<li><i>That's a pretty huge miss, though, given that the Sassanid Persians were hundreds of years later than the Parthians</i></li>
+</ul></li>
+<li>The collapse of Rome has an instructive feature which presents further support to the model
+<ul class="org-ul">
+<li>In AD 297 Diocletian divided the empire into Eastern and Western halves</li>
+<li><i>Diocletian did no such thing</i></li>
+<li><i>What Diocletian did was establish a second base of government, closer to the war front, so as to better manage his military campaigns against the Sassanid Persians</i></li>
+<li><i>It was not at all his intent to divide the empire</i></li>
+<li>With the death of Theodosius I in AD 395, coordination between the eastern and western halves of the Roman empire effectively ceased</li>
+<li>The Western Roman Empire produced only a third of the revenue of the Eastern Roman Empire, but had much more territory to defend</li>
+<li>The split essentially allowed the Eastern Roman Empire to convert large amounts of high-maintenance capital into waste, thus bringing its maintenance costs below its rate of new capital production</li>
+<li>Further conquests by Muslim Empires also reduced the Eastern Roman Empire's new capital requirements</li>
+<li>As a result, the Eastern Roman Empire survived for nearly a millenium longer than its Western counterpart</li>
+</ul></li>
+<li><i>My problem with this is that it falls into the Gibbons trap of explaining the fall of Rome</i></li>
+<li><i>It's all about what <b>Rome</b> did</i></li>
+<li><i>However, later historiography and archaeology has shown that Rome was not an all-powerful actor brought low by its own decadence and weakeness (Gibbons) or by its territorial over-extension (Greer)</i></li>
+<li><i>There were external demographic shifts &#x2013; there was a massive population increase along the Rome/Germany border, due to migration from what is now Russia</i></li>
+<li><i>The Sassanid Persians replaced the Parthians, causing Rome to face its first near-peer military threat since Fabius defeated Hannibal</i></li>
+<li><i>There were climatic shifts, which made it more difficult for Egypt and the Black Sea colonies to produce grain</i></li>
+<li><i>And even in the face of all this, Rome managed to plow forward for nearly 500 years</i></li>
+</ul></li>
+<li>Lowland Classic Maya
+<ul class="org-ul">
+<li>Mayan population and agriculture grew beyond a level that could be supported by the nutrient-poor soils of the Yucatan lowlands</li>
+<li>Mayan polities created massive building projects which did not contribute to further production</li>
+<li>The result was a rolling collapse over two centuries, in which urban centers were abandoned to the jungle and populations declined preciptously</li>
+<li>The Lowland Classic Maya collapse was preceded by at least two other similar breakdowns</li>
+<li>Unclear whether these were maintenance crises preceding the final catabolic collapse or whether there's some other explanation</li>
+<li><i>The problem with using the Maya as evidence is that there's so little knowledge about them, and what little evidence there is can be interpreted in such a broad range of ways</i></li>
+<li><i>The Lowland Classic Maya are an archaeological Rorscharch Test &#x2013; they have evidence for whatever pet theory you want to push</i></li>
+<li><i>It's like talking about the Minoan (Linear A) people</i></li>
+<li><i>Another theory about the Mayan collapse is that it was a change in rainfall patterns which doomed them, much like a change in rainfall patterns doomed the Pueblo peoples</i></li>
+</ul></li>
+</ul></li>
+<li>Features of long-lasting societies often have measures to reduce the growth of capital
+<ul class="org-ul">
+<li>Aspects of the potlatch economy</li>
+<li>Ritual deposition of prestige metalwork by Bronze and Iron-age peoples of Western Europe</li>
+<li><i>Once again, I'm not certain what Greer means by "capital" &#x2013; the things that were deposited by Bronze and Iron-age peoples in Western Europe were things like jewelry</i></li>
+<li><i>Jewelry is "capital" according to Greer, but it's not what most other people would consider to be capital</i></li>
+<li>While these features often have other meanings to the societies which adopt them, the fact that socities that adopt them survive for long periods of time means that societies that adopt these practices tend to survive for longer periods of time that socities that don't</li>
+<li><i>Do they? How long did these bronze and iron-age societies survive?</i></li>
+<li><i>A lot of the "sustainable" practices of Native American society are actually relatively recent inventions (i.e. 150-200 years old) that were thought to be ancient because of the "noble savage" myths that Europeans imposed upon the societies they encountered</i></li>
+<li><i>It's not clear that these practices were actually sustainable over a period of thousands of years &#x2013; they don't have the track record to prove that</i></li>
+</ul></li>
+<li><i>Okay, so Greer has talked about the big hits (Rome, Maya)</i></li>
+<li><i>But what about the <a href="https://en.wikipedia.org/wiki/Late_Bronze_Age_collapse">Late Bronze Age Collapse</a></i></li>
+<li><i>More broadly, what separates an empire from a civilization?</i>
+<ul class="org-ul">
+<li><i>Did Greek civilization collapse, or was it subsumed into the later Roman civilization?</i></li>
+<li><i>Did Roman civilization collapse, or was it subsumed into the later Byzantines empire</i></li>
+<li><i>This is more pertinent question for China, where its various dynastic collapses and conquests straddle the border between empires forming and dying, and total civilizational collapse</i></li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orga1d324d" class="outline-3">
+<h3 id="orga1d324d">Conclusion: Collapse As A Succession Process</h3>
+<div class="outline-text-3" id="text-orga1d324d">
+<ul class="org-ul">
+<li>Even within the social sciences, the process by which complex societies give way to smaller and simpler societies has been described with the language of literary tragedy</li>
+<li>This is understandable, given the cultural and human costs involved, but it conflates description of the facts with a value judgment</li>
+<li>A less problematic approach is to use the concept of ecological succession</li>
+<li>Succession describes the process by which an area not yet occupied by biological organisms is colonized by a series of <span class="underline">seres</span>, or biotic complexes, which each sere being replaced by a later one until a stable self-perpetuating climax community is reached
+<ul class="org-ul">
+<li><i>Okay, except that the entire concept of a "climax community" has been pretty well rejected by later ecologists</i></li>
+<li><i>The notion that nature progresses towards an ideal "climax" is an example of anthropomorphic fallacy that was created by early ecologists at the turn of the 20th century</i></li>
+<li><i>Later ecological research as shown that so-called "climax" ecologies are often much less stable than they appear and shift unpredictably between a number of equilibria, since they're chaotic systems</i></li>
+<li><i>There's also the fact that this is warmed over Hegel/Marx. Socialism is inevitable because it is the k-selected ecological successor to r-selected capitalism</i></li>
+</ul></li>
+<li>Earlier seres tend to use r-selected reproductive strategies, maximizing the rate of resource acquisition, while later seres tend to use k-selected strategies, maximizing the efficiency of resource utilization</li>
+<li>While human socities cannot be directly compared to biological seres, there are certain similarities</li>
+<li>However, unlike other species, humans can change their strategies &#x2013; the same humans can be r-selected in one culture and k-selected in another</li>
+<li><i>And they are! Look at the steep declines in birthrates in India and China, for example. China's total-fertility rate has fallen from something like 6 to 1.7!</i></li>
+<li><i>And it's tempting to say that that was because of the one-child policy but:</i>
+<ol class="org-ol">
+<li><i>India has experienced a similar decline in birthrate, without imposing any such policy</i></li>
+<li><i>China relaxed its one-child policy quite some time ago, and birthrates didn't go up</i></li>
+</ol></li>
+<li><i>There's a subtext here that capitalism is bad, that capitalism is an r-selected strategy, but in reality, capitalist economic development has been the #1 cause of declining birthrates in the world</i></li>
+<li><i>At the top, he calls out other theories of civilizational collapse for making "mystical" claims, but honestly, I don't find his theory to be any less mystical than the theories he criticizes</i></li>
+<li><i>Sure, it's incorrect to compare civilizations to individual biological entities&#x2026; that doesn't make it correct to compare them to ecologies</i></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Rohit Patnaik</p>
+<p class="date">Created: 2019-02-11 Mon 00:44</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>
