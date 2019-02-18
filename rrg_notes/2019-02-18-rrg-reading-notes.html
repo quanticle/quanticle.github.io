@@ -1,0 +1,1096 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- 2019-02-18 Mon 14:19 -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>2019-02-18 RRG Notes</title>
+<meta name="generator" content="Org mode">
+<meta name="author" content="Rohit Patnaik">
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<meta charset="utf-8">
+<link href="/page.css" rel="stylesheet">
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2018 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        displayAlign: "center",
+        displayIndent: "0em",
+
+        "HTML-CSS": { scale: 100,
+                        linebreaks: { automatic: "false" },
+                        webFont: "TeX"
+                       },
+        SVG: {scale: 100,
+              linebreaks: { automatic: "false" },
+              font: "TeX"},
+        NativeMML: {scale: 100},
+        TeX: { equationNumbers: {autoNumber: "AMS"},
+               MultLineWidth: "85%",
+               TagSide: "right",
+               TagIndent: ".8em"
+             }
+});
+</script>
+<script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
+</head>
+<body>
+<div id="preamble" class="status">
+<header class="page-header">
+  <div class="logo"><a href="/"><img src="/logo.png" height="160"></a></div>
+  <div class="header-text">
+    <div class="header-text-wrapper">
+      <h1>Quanticle.net</h1>
+    </div>
+  </div>
+</header>
+</div>
+<div id="content">
+<h1 class="title">2019-02-18 RRG Notes</h1>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#org569b70c">Prospecting For Gold</a></li>
+<li><a href="#org422941b">How To Compare different global problems in terms of impact</a></li>
+<li><a href="#org00e3f2a">Four Focus Areas of Effective Altruism</a></li>
+<li><a href="#orgf48841a">Why We Can't Take Expected Value Estimates Literally Even When They're Unbiased</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org569b70c" class="outline-2">
+<h2 id="org569b70c"><a href="https://www.effectivealtruism.org/articles/prospecting-for-gold-owen-cotton-barratt/">Prospecting For Gold</a></h2>
+<div class="outline-text-2" id="text-org569b70c">
+<ul class="org-ul">
+<li>Gold, in this metaphor, is a proxy for whatever we truly value</li>
+<li>We can notice that some people manage to accomplish a lot more of what we altruistically value</li>
+<li>What is it that gives some people better opportunities than others?</li>
+<li>How can we go and find opportunities like that?</li>
+<li>Techniques for finding gold
+<ul class="org-ul">
+<li>Why are we using "gold" as a metaphor</li>
+<li>Put the focus on means, rather than ends</li>
+<li><i>The problem is that the ends you pursue will dictate your means, to a large extent</i></li>
+<li>Replace big, complex values with a very simple thing that we can maximize</li>
+<li><i>And to me, that's the problem with utilitarianism and EA &#x2013; it replaces a very complex set of human values with a simple stand-in which can be maximized</i></li>
+</ul></li>
+<li>Gold is unevenly spread
+<ul class="org-ul">
+<li>Value, like literal gold is unevenly spread
+<ul class="org-ul">
+<li><i>The original form of this sentence was, "Gold, like literal gold is unevenly spread," which is quite possibly the most confusing sentence I've read this week</i></li>
+</ul></li>
+<li>We should work to find the seams where gold is rich</li>
+</ul></li>
+<li>Heavy-tailed distributions
+<ul class="org-ul">
+<li>If I want to figure out the average height, I can sample 5 random people and get a pretty good idea of what the global average height is
+<ul class="org-ul">
+<li><i>His sampling procedure for finding heights is pretty dubious</i></li>
+<li><i>If you sample a random 5 people, I'm not sure that your estimate of the mean height will actually be that good</i></li>
+<li><i>One of the things that Kahneman brings up in Thinking Fast and Slow is that people, even trained statisticians, always underestimate how large a sample they need in order to achieve a given level of statistical power</i></li>
+</ul></li>
+<li>However, if I want an estimate of how much gold there is in the world, sampling 5 random places isn't going to give me a good idea
+<ul class="org-ul">
+<li>Quite possibly none of the places I'll sample have gold, and then I'll think there's no gold in the world</li>
+<li>Possibly one of the places I'll sample will have a lot of gold, and then I'll think there's a lot of gold in the world</li>
+<li><i>That's not how statistics works!</i></li>
+<li><i>You know gold (real or metaphorical) is rare</i></li>
+<li><i>You know that a n = 5 is a pathetically small sample size</i></li>
+<li><i>So if you sample 5 random locations, why would you expect that to tell you anything about how much gold there is in the world? C'mon, this is basic Bayes</i></li>
+</ul></li>
+<li>Gold follows a heavy-tailed distribution
+<ul class="org-ul">
+<li>Most places have no gold</li>
+<li>Some places have a massive amount of gold</li>
+<li>There's a long tail, where the probabilities aren't dying off very fast, where even vast amount of gold have a non-negligible probability</li>
+</ul></li>
+<li>In the case of a normal distribution, value is spread evenly in most places, and the important thing is to get to as many places as possible</li>
+<li>In the case of a heavy tailed distribition, most places have a small amount of value, and a few locations have value that dwarfs all the other locations combined</li>
+<li>The important thing is to get to the right places</li>
+<li>We know that literal gold follows a heavy-tailed distribution</li>
+<li>Does the same apply to opportunities to do good?
+<ul class="org-ul">
+<li>When we look at the world, we see heavy tailed distributions in a lot of places</li>
+<li>Heavy-tailed distributions arise naturally in complex systems with lots of interactions</li>
+<li>Given that the world is a complex place with lots of interactions, we should expect that many of distributions we encounter to be heavy-tailed</li>
+<li>We can also directly look at opportunities to do good
+<ul class="org-ul">
+<li>Let's say that we care about solving hunger</li>
+<li>We could give to famine relief and try to stop hunger today</li>
+<li>But, it's probably more effective to focus on figuring out what to do if agriculture collapses
+<ul class="org-ul">
+<li><i>Okay, this is EA in a nutshell</i></li>
+<li><i>Want to keep people from starving? You <b>could</b> give people food or subsidize better agricultural practices or whatever. But, actually, it's far more <b>effective</b> to focus on &lt;speculative scenario where all agriculture collapses&gt;</i></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul></li>
+<li>Heavy-tailed property in opportunities for good
+<ul class="org-ul">
+<li>We can look at data on developing world health interventions</li>
+<li>We see a distribution where the most effective intervention is roughly 10,000 times more effective than the least effective intervention</li>
+<li>The interesting thing about knowing that distributions are heavy-tailed is that it gives us some counterintuitve notions about the value of interventions</li>
+<li>Before we knew anything about distributions, if we'd been told that an intervention was at the 90th percentile, we'd think it's pretty good</li>
+<li>But if we know it's a heavy tailed distribution, where most of the value is at the 99th percentile, then that knowledge can make the 90th percentile intervention look worse by comparison</li>
+<li>Another thing that comes out of heavy-tailed distributions is that naive empiricism doesn't work</li>
+<li>You can't just try a bunch of different things and see which ones work best, because you don't have the time or resources to try enough things to find that 99th percentile intervention that's 10,000 times as good as the lowest performing intervention</li>
+</ul></li>
+<li>To maximize gold, want&#x2026;
+<ul class="org-ul">
+<li>If we want to extract the most gold, we need
+<ul class="org-ul">
+<li>A place where there is a lot of gold</li>
+<li>The right tools for extracting that gold</li>
+<li>The right people using those tools</li>
+</ul></li>
+<li>This analogy applies to altruism
+<ul class="org-ul">
+<li>Measure effectiveness of cause area (find the a place where we can have outsize impact)</li>
+<li>Measure effectiveness of intervention (find an intervention that will realize the outsize impact)</li>
+<li>Measure the ability of the team or organization to implement that intervention (find the right people to put the intervention in place)</li>
+</ul></li>
+</ul></li>
+<li>Value is roughly multiplicative
+<ul class="org-ul">
+<li>The value from an intervention is the product of effectiveness of cause area x effectiveness of intervention x ability of the team</li>
+<li>If we find a good team working in an ineffective area, it might make sense to not support them</li>
+<li>Similarly, if we find an ineffective team working in a highly impactful area, it might make sense to not support them and encourage another team to start working in that area</li>
+</ul></li>
+<li>Recognizing gold
+<ul class="org-ul">
+<li>A nice property of real gold is that when you dig it up, it's pretty easy to determine that it's real gold</li>
+<li>Altruistic value isn't the same &#x2013; often have to infer the presence of value by using other tools</li>
+</ul></li>
+<li>Running out of easy gold
+<ul class="org-ul">
+<li>Real gold mining runs into the problem of diminishing returns</li>
+<li>As more gold is extracted from an area, it requires more and more effort to get the remnants</li>
+<li>We see this in EA interventions
+<ul class="org-ul">
+<li>Now that the Gates Foundation is funding mass vaccinations, adding additional funding to mass vaccination isn't going to be as cost-effective</li>
+<li>The 101st book on Superintelligence isn't going to be as impactful as the first book
+<ul class="org-ul">
+<li><i>Actually, is this true?</i></li>
+<li><i>If the 101st book contains the solution to the AI safety problem, it's entirely possible that it would be as impactful as the first, which laid out the problem</i></li>
+</ul></li>
+</ul></li>
+</ul></li>
+<li>How do we find the right cause areas?
+<ul class="org-ul">
+<li><span class="underline">Scale</span>: all else being equal, we want to go to places where there is a lot of good that can be done, as opposed to only a little bit</li>
+<li><span class="underline">Tractability</span>: we want to go to places where we can make more progress per unit of work</li>
+<li><span class="underline">Uncrowdedness (neglectedness)</span>: We want to go to an area where there is still low-hanging fruit, if possible</li>
+<li>Ideally, we'd want to be in a place that was all three &#x2013; large scale, easily tractable, completely neglected</li>
+<li>However, that combination never occurs in the real world</li>
+<li>So how can we trade off among the three</li>
+<li>The value of extra work can be expressed by the following equation:
+\[
+        \frac{dU}{dW} = \frac{dU}{\%dS} \times \frac{\%dS}{\%dW} \times \frac{\%dW}{dW}
+    \]
+<ul class="org-ul">
+<li>\(\dfrac{dU}{dW}\) represents the value of the next unit of marginal effort</li>
+<li>The first term on the right represents the value of a little bit of the solution</li>
+<li>The second term represents the elasticity of progress with work &#x2013; how much closer to a solution does additional work get you</li>
+<li>The final term is a measure of uncrowdedness that cancels to one over the total amount of work being done</li>
+</ul></li>
+<li>This equation is a more precise version of the scale, uncrowdedness and tractability framework that people have been talking about for years
+<ul class="org-ul">
+<li><i>But is it really?</i></li>
+<li><i>This is one thing that economics gets very wrong: just because you write an equation and typeset it in LaTeX doesn't mean your thinking has become more clear</i></li>
+<li><i>Really any equation that trades off scale, tractability and crowdedness would do &#x2013; the real question is how do you measure scale, tractability and crowdedness?</i></li>
+</ul></li>
+<li>Applying this framework:
+<ul class="org-ul">
+<li>Helping a bee: fails the scale test &#x2013; ultimately an individual bee isn't that important and no matter now much you help it, you've only helped one bee</li>
+<li>Perpetual motion: would be fantastic to have, but it's not a tractable problem &#x2013; we'd need to significantly revise physics to make it happen</li>
+<li>Climate change: massive scale, and is tractable (i.e. doesn't require any major scientific breakthroughs) but it's a huge cause area that gets attention from millions of people
+<ul class="org-ul">
+<li>Not clear that the next dollar will do anything special</li>
+</ul></li>
+</ul></li>
+</ul></li>
+<li>Absolute and marginal priority
+<ul class="org-ul">
+<li>Given two areas which both satisfy the scale/tractability/uncrowdedness framework, we have to decide where the next dollar of spending or next hour of labor must go</li>
+<li>We need to track both absolute spending and marginal spending</li>
+<li>As individuals or small groups, we should think in terms of marginal spending and marginal impact &#x2013; how much work will <b>my</b> dollar or hour of labor do?</li>
+<li>As societies, we should think in terms of absolute impact &#x2013; how much spending should there be in total on a cause area</li>
+<li><i>Okay, but you realize that a society is composed of individuals and small groups, right?</i></li>
+<li><i>If individuals and small groups are thinking of marginal impact, while society "as a whole" is thinking of total resource allocation, how do those competing priorities get adjudicated?</i></li>
+<li><i>More explicitly, how does society get individuals and small groups to work on a project that has low marginal impact (like climate change) but which requires a large amount of resources for progress to occur?</i></li>
+</ul></li>
+<li>Long-term gold
+<ul class="org-ul">
+<li>Oftentimes there are technologies that unlock a lot of value in the short run, but destroy some value in the process</li>
+<li>There are other technologies which operate more slowly but which are more efficient and allow you to extract more value in the long run</li>
+<li>Many philosophers like Nick Bostrom argue that we should improve our decision making skills as a society before developing technologies that might threaten the long-run viability of civilization</li>
+<li><i>This discussion highlights another problem with the gold analogy</i></li>
+<li><i>Gold is finite &#x2013; there's only so much of it in the earth</i></li>
+<li><i>If you find a way to destroy some of it or render it unusable, then it's gone</i></li>
+<li><i>I'm not sure that the value he's talking about is like that</i></li>
+</ul></li>
+<li>Working together
+<ul class="org-ul">
+<li>EA is fortunate in that most people who are in the EA movement have pretty similar values</li>
+<li>Widespread agreement on what the most important goals are</li>
+<li>We need to make sure we're getting people to go to where they can do the most good</li>
+</ul></li>
+<li>Comparative advantage
+<ul class="org-ul">
+<li><i>Can we please have a rule against using Harry Potter examples</i></li>
+<li>Don't just focus on where you're absolutely the best, focus on where you have a comparative advantage</li>
+<li>Maybe the most effective thing for you to be doing is the thing you're second best at, because there's someone else who's also pretty good at doing the thing you're best at, but no one else who can do the thing you're second best at</li>
+</ul></li>
+<li>Comparative advantage at multiple levels
+<ul class="org-ul">
+<li>Comparative advantage applies at the group level as well as at the individual level</li>
+<li>Different organizations or groups may be better placed to take advantage of different opportunities</li>
+<li>Another thing that we need to consider is comparative advantage might vary with time &#x2013; we might be better positioned to do something now than people in the past or future</li>
+<li>Can we influence which problems people in the future work on, compounding our impact?</li>
+</ul></li>
+<li>Building a map together
+<ul class="org-ul">
+<li>All of us have small parts of the the model that tells us where real value is</li>
+<li>We need mechanisms like peer review or Wikipedia's review process to help us aggregate and filter everyone's intuitions on where the most value is</li>
+<li>As the EA movement grows, this aggregation and filtering will become more important</li>
+<li>As we get more resources, it becomes more important that those resources get used wisely</li>
+</ul></li>
+<li>Good local norms
+<ul class="org-ul">
+<li>We need to have good norms to ensure the spread of good ideas</li>
+<li>Pay attention to why we believe things
+<ul class="org-ul">
+<li>Do you believe things because it's what you've been told or because you've worked out the reasoning for yourself?</li>
+<li>Not that you working something out yourself is necessarily a strong reason for you to believe it: it's entirely possible that you've made a mistake</li>
+<li>But you should know why you believe something and be able to communicate that why to others
+<ul class="org-ul">
+<li><i>This is why citations are important, and it makes me sad that the community devalues them</i></li>
+</ul></li>
+</ul></li>
+<li>Shortening the chain
+<ul class="org-ul">
+<li>Go back to original sources</li>
+<li>When people tell you that they read a claim on a website, go to the website and check it out</li>
+<li>Going back and verifying that the original sources for a claim are correct can make you more robustly confident in the claim</li>
+<li><i>Hence citations</i></li>
+</ul></li>
+<li>Disagreement is an opportunity to learn
+<ul class="org-ul">
+<li>When you find yourself talking to someone who has a point of view that's unlikely to be correct, try to figure out how they came to that point of view</li>
+<li>Not only is it polite, it also helps you build a deeper picture of the evidence that you do have</li>
+<li><i>This runs into diminishing returns quickly</i></li>
+<li><i>It's fascinating to meet the first young-earth creationist, global warming denier, or the person wh think that 9/11 was inside job</i></li>
+<li><i>By the time you've met the tenth, there really isn't much more you can learn</i></li>
+</ul></li>
+</ul></li>
+<li>Retrospective: What I believe and Why
+<ul class="org-ul">
+<li>Why should we believe Owen?</li>
+<li>Heavy tailed distributions
+<ul class="org-ul">
+<li>The fact that many distributions are heavy tailed is a fairly well established property</li>
+<li>Heavy-tailed isn't a binary property &#x2013; there's a whole continuum of distributions from standard gaussian to heavy-tailed</li>
+</ul></li>
+<li>Digression: Altruistic market efficiency
+<ul class="org-ul">
+<li><i>Side-note: never ever put digressions in the conclusion of your talk</i></li>
+<li>One thing that comes up in financial markets is that people start out by exploring a lot of different ways to make money</li>
+<li>Most of those ways kind of suck, but a few work really well</li>
+<li>Then everyone rushes in to those few ways and they stop working as well</li>
+<li>In effect, efficient allocation of resources makes the distribution less heavy-tailed</li>
+<li>Is this a factor for EA?
+<ul class="org-ul">
+<li>While EA has heavy-tailed distributions, the EA market isn't all that efficient</li>
+<li>We don't have the feedback loops or ways of calculating effect that would allow market-like mechanisms to operate
+<ul class="org-ul">
+<li>Part of the EA project is working out ways of calculating effect to allow charities to get feedback from their interventions</li>
+</ul></li>
+</ul></li>
+</ul></li>
+<li>Factoring cost effectiveness
+<ul class="org-ul">
+<li>This is a simple point &#x2013; not really space for it to be wrong</li>
+<li><i>I'm not sure that it is that obvious &#x2013; he seems to be taking it as a given that the value from a given cause area is multiplicative based upon the effectiveness of the cause area, the effectiveness of the intervention and the ability of the team</i></li>
+<li><i>What if it's not? What if the effectiveness of the team is only an additive factor?</i></li>
+<li>There might be more variation among some of the dimensions (effectiveness of cause area, effectiveness of intervention, and effectiveness of team) than others</li>
+</ul></li>
+<li>Diminishing returns
+<ul class="org-ul">
+<li>Some areas have diminishing returns, but other areas might actually have increasing returns to scale</li>
+<li>Returns to scale probably apply more at the organization scale than at the domain scale</li>
+</ul></li>
+<li>Scale, tractability, uncrowdedness
+<ul class="org-ul">
+<li>It's obvious that all three of these matter</li>
+<li>It's obviously correct that this factorization is correct
+<ul class="org-ul">
+<li><i>I don't think it's obvious at all</i></li>
+</ul></li>
+<li>Does the factorization break things up into things that are easier to measure?</li>
+<li>It does match up with an informal framework that people have been using for years, so it's probably good
+<ul class="org-ul">
+<li><i>I don't know about that either &#x2013; one of the nice properties of informal frameworks is that people can choose to <b>stop</b> using them when they don't work any more</i></li>
+<li><i>You turn Scale Tractability Uncrowdedness into a mathematical framework, slap a nice three-letter abbreviation on it (STU, or better STuC), and then people are going to find that they have to justify everything in terms of scale, tractability, and uncrowdedness, even when those aren't necessarily the correct metrics to be using</i></li>
+</ul></li>
+</ul></li>
+<li>Absolute and marginal priorities
+<ul class="org-ul">
+<li>This is also a fairly trivial point</li>
+<li>It's easy to understand that some things requiring more spending overall won't necessarily benefit that much from my additional dollar</li>
+</ul></li>
+<li>Differential progress
+<ul class="org-ul">
+<li>The argument checks out and it's appeared in a few academic papers</li>
+<li>However, it is counterintuitive, and we should give it more scrutiny</li>
+<li><i>I'm amused that out of all the counterintuitive notions in the presentation, he chooses to highlight as counterintuitive the only concept which I didn't find counterintuitive</i></li>
+<li><i>That said, I do agree that it should be subject to more scrutiny &#x2013; I didn't like the analogy</i>
+<ul class="org-ul">
+<li><i>I'm still not clear what "dynamite" maps to in the analogy</i></li>
+<li><i>Concrete examples of fast technology that destroyed long term value vs. slow technology that preserved long term value would be good to have</i></li>
+</ul></li>
+</ul></li>
+<li>Comparative advantage
+<ul class="org-ul">
+<li>Comparative advantage is a standard idea from economics</li>
+<li>The new thing here is adding a time component to the comparative advantage calculation</li>
+</ul></li>
+<li>Aggregating knowledge
+<ul class="org-ul">
+<li>We all want better ways of aggregating knowledge</li>
+<li>The question is can we actually build those better ways</li>
+</ul></li>
+<li>Stating reasons for beliefs
+<ul class="org-ul">
+<li>This is another common-sense thing</li>
+<li>There are, of course, costs to stating why you believe something
+<ul class="org-ul">
+<li>Slows down communication</li>
+<li>Makes the community more off-putting to newcomers</li>
+<li><i>I think these are all costs worth bearing</i></li>
+<li><i>If EA is serious about its mission: finding the most effective interventions and allocating resources towards them, it makes sense to be absolutely rigorous in making sure that the interventions that are found are actually those which are most worthy</i></li>
+<li><i>Otherwise why should I believe GiveWell over my own intution?</i></li>
+</ul></li>
+</ul></li>
+</ul></li>
+<li>Conclusion
+<ul class="org-ul">
+<li>We need to be careful about aiming at the right things</li>
+<li>We need to spread broadly the knowledge of how to find the right things to aim at</li>
+<li>It's important that we think about these things now, when the community is still in its early days, so we can get these norms established before it becomes difficult to do so</li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org422941b" class="outline-2">
+<h2 id="org422941b"><a href="https://80000hours.org/articles/problem-framework/">How To Compare different global problems in terms of impact</a></h2>
+<div class="outline-text-2" id="text-org422941b">
+<ul class="org-ul">
+<li>How do you figure out which area is most effective to focus on?</li>
+<li>What problem you choose to focus on is the biggest determinant of the social impact you have with your career</li>
+<li>Framework:
+<ul class="org-ul">
+<li>Scale</li>
+<li>Neglectedness</li>
+<li>Solvability</li>
+<li>Personal fit</li>
+</ul></li>
+<li>Introducing how we define the factors
+<ul class="org-ul">
+<li>Ultimately, what we want to know is the expected good that will result from the next unit of resources invested in a problem</li>
+<li>This is hard to estimate, so we break it down into components that we can estimate individually
+<ul class="org-ul">
+<li><i>I literally facepalmed at this: "Here is a hard thing that we don't know how to estimate. By breaking it down into three smaller things, which we also don't know how to estimate, we have made the problem more tractable</i></li>
+<li>Scale: (good done/% of problem solved)</li>
+<li>Solvability: (% of problem solved / % increase in resources)</li>
+<li>Neglectedness: (% increase in resources / extra person or $)
+<ul class="org-ul">
+<li><i>Credit here for explaining the equation from the previous post better</i></li>
+<li><i>I can see how the neglectedness thing makes sense &#x2013; it's literally "How much of an increase does the next person or dollar represent?"</i></li>
+</ul></li>
+<li>The nice thing about breaking it down this way is that if you multiply Scale, Solvability and Neglectedness, you get (good done) / (extra person or $)</li>
+</ul></li>
+<li>Finally, add a bonus factor for suitability, when attempting to decide which problems <span class="underline">you</span> should work on</li>
+</ul></li>
+<li>Defining a problem carefully
+<ul class="org-ul">
+<li>Make sure you have a clear definition of the scope of the problems you're comparing</li>
+<li>Example: "global health"
+<ul class="org-ul">
+<li>Which diseases</li>
+<li>Which countries</li>
+</ul></li>
+<li>Note that narrowly described problems tend to look better than broad problems</li>
+<li>Problems can be made to look more or less pressing by altering their definitions</li>
+</ul></li>
+<li>Creating a (logarithmic) scale
+<ul class="org-ul">
+<li>There are often huge differences between cause areas on the metrics listed above</li>
+<li>Using a logarithmic scale allows us to take the logarithm of each metric and then add them together instead of multiplying them all</li>
+<li>When comparing the cost-effectiveness of various problems, you can look at the differences of their log scores</li>
+</ul></li>
+<li>How to assess scale
+<ul class="org-ul">
+<li>Definition of scale: if we solved this problem, how much would the world improve?
+<ul class="org-ul">
+<li>Measure scale in terms of its effect on well-being (in terms of QALYs)</li>
+<li>Scale can be increased by
+<ul class="org-ul">
+<li>Affecting more people</li>
+<li>Having a greater impact</li>
+</ul></li>
+<li>If you have different values, you can plug that in to your definition of "scale"</li>
+</ul></li>
+<li>Measuring scale
+<ul class="org-ul">
+<li>Measuring scale is difficult, especially when considering the long-term and indirect effects of solving a problem</li>
+<li>Example: what was the impact of Einstein's discovery of relativity?
+<ul class="org-ul">
+<li>It would have been difficult to assess the impact of the theory of relativity in 1916, but that doesn't mean that breakthroughs in physics don't matter</li>
+</ul></li>
+<li>To make wide-ranging comparisons between problems, you need to turn to "yardsticks" for scale
+<ul class="org-ul">
+<li>One commonly used yardstick in economics is GDP (although GDP certainly has problems of its own)</li>
+<li>Another yardstick proposed by Bostrom is whether an action increases or reduces existential risk</li>
+</ul></li>
+</ul></li>
+<li>The process of measuring scale is most difficult when you're comparing across yardsticks
+<ul class="org-ul">
+<li><i>How much does a particular health intervention lower existential risk?</i></li>
+<li>These tradeoffs are also most susceptible to worldview and value judgements</li>
+<li>There are big disagreements over how much to value the future, how much to value animals, etc.</li>
+</ul></li>
+<li><i>I don't disagree with the methodology, but I do find their examples illustrative</i></li>
+<li><i>Turning 10,000 people vegan ranks as a 2. Saving 3 lives ranks as a 0</i></li>
+<li><i>So turning 10,000 people vegan ranks as being literally 100x more beneficial than saving 3 human lives &#x2013; and really, that's the most stereotypical EA calculation I've seen</i></li>
+</ul></li>
+<li>How to assess neglectedness
+<ul class="org-ul">
+<li>How many people or dollars are currently being allocated to the problem?</li>
+<li>Why is it important?
+<ul class="org-ul">
+<li>Often, after a large amount of resources have been devoted to a problem, you'll hit diminishing returns</li>
+<li>For example, mass vaccination is a very effective intervention, but goverments have already poured massive amounts of money into vaccination programs</li>
+<li>Neglectedness also allows us to determine which problems are "most pressing"</li>
+<li>If there's a new problem that no one has worked on yet, it might turn out to be more solvable than previously thought</li>
+</ul></li>
+<li>How to assess it
+<ul class="org-ul">
+<li>A challenge - direct vs. indirect effort
+<ul class="org-ul">
+<li>Often there's a lot of money being spent on efforts that are indirectly working on the problem or working on adjacent problems</li>
+<li>For example: there's not a lot of money being spent on anti-aging research directly, but there <b>is</b> a lot of money being spent on biomedical research more broadly</li>
+<li>Even though the money spent on the indirect effort may not be as well-targeted as the money spent on the direct effort, there might be so much more money spent on the indirect effort that the indirect spending is responsible for most of the progress in the cause area</li>
+<li>To go back to the example, the indirect spending on medical research is probably responsible for most of the progress on anti-aging</li>
+<li>Indirect efforts are often difficult to measure and score &#x2013; for this reason 80,000 hours only scores direct efforts on a problem</li>
+<li>This isn't as much of a problem as it appears because this is adjusted for when we measure solvability (tractability)</li>
+</ul></li>
+<li>More tips on how to assess
+<ul class="org-ul">
+<li>Rather than trying to assess neglectedness directly, you can think about questions like:
+<ul class="org-ul">
+<li>Why hasn't this already been addressed by markets and/or governments</li>
+<li>Is this a new field or a field that's at the intersection of two disciplines (for research)</li>
+<li>If you don't work on this problem, how likely is it that someone else will step in to work on the problem</li>
+<li>If you work on this problem, will you learn more about how pressing it is in comparison to other problems</li>
+</ul></li>
+</ul></li>
+<li>It's important to assess scale and neglectdness together</li>
+<li>We care about the ratio of scale to neglectedness &#x2013; we want the biggest problem that also has the least amount of resources devoted to it</li>
+<li>If several kinds of input are being dedicated to a problem, assess neglectedness by the lowest value among the different kinds of input</li>
+</ul></li>
+</ul></li>
+<li>How to assess how solvable a problem is
+<ul class="org-ul">
+<li>Definition: if we doubled the amount of direct effort on this problem, what fraction of the remaining problem would we expect to solve?</li>
+<li>Why is it important
+<ul class="org-ul">
+<li>Even if a problem is hugely important and highly neglected, there might not be very much we can do about it</li>
+<li>Example: aging
+<ul class="org-ul">
+<li>Huge in scale</li>
+<li>Highly neglected &#x2013; 2/3s of global ill-health is some form of aging</li>
+<li>However, direct research on aging is neglected because researchers believe that it's very hard to solve</li>
+</ul></li>
+</ul></li>
+<li>How to assess it
+<ul class="org-ul">
+<li>Are there cost-effective interventions for making progress on this problem with rigorous evidence behind them</li>
+<li>Are there promising but unproven interventions which can be cheaply tested?</li>
+<li>Are there theoretical arguments that progress should be possible (such as a good track record in a related area?)</li>
+<li>Are there interventions that could make a huge contribution to solving the problem, even if they're unlikely to work?</li>
+</ul></li>
+<li>Looking to find the best interventions to make progress on the problem, and then evaluate them on
+<ul class="org-ul">
+<li>Potential upside</li>
+<li>Likelihood of upside</li>
+</ul></li>
+<li>Take a Bayesian approach to evaluating both factors</li>
+<li>Prior is that any given intervention isn't very effective</li>
+<li>Challenges in assessment
+<ul class="org-ul">
+<li>Solvability is the hardest of the three areas to assess because it requires anticipating the future</li>
+<li>In some cases we can use the cost-effectiveness of existing techniques</li>
+<li>In other cases, we have to use judgment calls</li>
+<li>Use an "expected value" approach to scoring &#x2013; this allows us to judge incremental approaches and radical approaches using the same yardstick</li>
+<li>Problems for which most of the work is being performed indirectly will likely be solved more slowly through an increase in direct work &#x2013; many promising approaches have been tried by other groups and found wanting</li>
+</ul></li>
+</ul></li>
+<li>What do the summed scores mean
+<ul class="org-ul">
+<li>We can sanity-check our scores by adding them up and converting them back into a measure of actual impact from one additional person working on the problem</li>
+<li>Don't put weight on the figures specifically, instead use the scores to make relative comparisons</li>
+</ul></li>
+<li>How to assess personal fit
+<ul class="org-ul">
+<li>Within a field, top performers have 10 to 100 times as much impact as the median performer</li>
+<li><i>I mean, this might be true for research, but I'm not sure how applicable this is for other domains</i></li>
+<li>It's important to choose a field that you'll like and be good at</li>
+<li>Definition
+<ul class="org-ul">
+<li>Given your skills, resources, knowledge, connection and passions, how likely are you to excel in this area?</li>
+</ul></li>
+<li>How can it be assessed?
+<ul class="org-ul">
+<li>What's your most valuable career capital? Is it especially relevant to one problem and not others</li>
+<li>How motivated do you expect to be if you worked on this problem?</li>
+<li>What specific roles could you take in this problem and do you expect you'd excel at them?</li>
+</ul></li>
+<li>Personal fit matters more for some kinds of altruism than others
+<ul class="org-ul">
+<li>If you're planning to contribute directly, it matters a lot</li>
+<li>If you're planning on donating money, to matters less</li>
+</ul></li>
+</ul></li>
+<li>Other factors for assessing career opportunities
+<ul class="org-ul">
+<li>Also need to consider the other factors in the career framework
+<ul class="org-ul">
+<li>How influential a role can you get?</li>
+<li>How much career capital can you get?</li>
+<li>The value of information of working on this options</li>
+</ul></li>
+</ul></li>
+<li>How should we interpret the results?
+<ul class="org-ul">
+<li>Using this framework, we can add together the scores for scale, neglectedness and solvability to get a rough idea of which problems are most important</li>
+<li>These scores are imprecise and adding them together only increases the uncertainty because each of the scores has its own error</li>
+<li>If the difference in scores is 4 or larger, one problem is clearly more important than the other</li>
+<li>If the difference is 3 or smaller, it's a close call</li>
+</ul></li>
+<li>How does this compare with ordinary cost-effectiveness analysis
+<ul class="org-ul">
+<li>An alternative approach is to compare the cost-effectiveness of past interventions against a problem</li>
+<li>When comparing problems in two different domains, convert their cost-effectiveness with a conversion factor (which adds uncertainty)</li>
+<li>The difficulty with cost-benefit analysis is that it's very difficult in many circumstances
+<ul class="org-ul">
+<li>Political advocacy &#x2013; circumstances are constantly shifting</li>
+<li>Original research &#x2013; no one knows how long it will take to make a new discovery</li>
+<li>Any field in which interventions are unknown or poorly studied</li>
+</ul></li>
+</ul></li>
+<li>Advantages and disadvantages of quantitative problem prioritization
+<ul class="org-ul">
+<li>Benefits of going through process from above
+<ul class="org-ul">
+<li>Explicitly quantifying outcomes can help you notice large, robust differences in effectiveness that might be difficult to notice qualitatively</li>
+<li>Helps avoid scope neglect</li>
+<li>Going through the process tests your understanding of a problem by forcing you to be explicit about your assumptions</li>
+<li>Can help others understand and critique your reasoning</li>
+</ul></li>
+<li>Disadvantages
+<ul class="org-ul">
+<li>High levels of uncertainty</li>
+<li>Different assumptions can greatly alter the outcomes of the analysis</li>
+<li>Danger of being misled by an incomplete model where it would have been better to go with qualitative analysis or common sense</li>
+</ul></li>
+<li>Don't use this model alone, combine wit with other forms of evidence</li>
+</ul></li>
+<li>Conclusion
+<ul class="org-ul">
+<li>Difficult to measure effectiveness precisely, but the large differences between problems means that even inaccurate measurements can be a useful guide</li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org00e3f2a" class="outline-2">
+<h2 id="org00e3f2a"><a href="https://ea.greaterwrong.com/posts/pfbLKnJmDKYSPPCEW/four-focus-areas-of-effective-altruism">Four Focus Areas of Effective Altruism</a></h2>
+<div class="outline-text-2" id="text-org00e3f2a">
+<ul class="org-ul">
+<li>EAs tend to be:
+<ol class="org-ol">
+<li>Globally altruistic &#x2013; care about people equally regardless of location</li>
+<li>Value consequences &#x2013; value causes according to their consequences, whether those consequences are happiness, health, justice, etc.</li>
+<li>Try to do as much good as possible &#x2013; don't want to do some good, want to do as much good as possible</li>
+<li>Think scientifically and quantitatively &#x2013; use numbers to figure out what is the most good</li>
+<li>Be willing to make significant life changes in order to be significantly more altruistic
+<ul class="org-ul">
+<li>Change which charities they support financially</li>
+<li>Change careers</li>
+<li>Spend significant chunks of time investigating which causes are most cost-effective</li>
+<li>Make other significant life changes</li>
+</ul></li>
+</ol></li>
+<li>Despite this, EAs tend to be fairly diverse and focus on a variety of causes</li>
+<li>These causes tend to cluster in 4 groups
+<ol class="org-ol">
+<li>Poverty reduction
+<ul class="org-ul">
+<li>Economic benefit, better health, better education</li>
+<li>Major organizations
+<ul class="org-ul">
+<li>GiveWell &#x2013; most rigorous research on charitable causes, especially with regards to poverty reduction and global health</li>
+<li>GoodVentures &#x2013; works closely with GiveWell</li>
+<li>The Life You Can Save &#x2013; encourages people to pledge a fraction of their income to effective charities</li>
+<li>Giving What We Can &#x2013; does some charity evaluation and enocourages people to donate 10% of their income to effective charities</li>
+<li>In addition some major foundations, such as the Bill and Melinda Gates Foundation fund many of the most cost-effective interventions in the developing world</li>
+</ul></li>
+<li>In the future, EAs might focus on economic, political or research infrastructure changes that might achieve poverty reduction more directly</li>
+<li>GiveWell Labs and The Vannevar Group are beginning to evaluate the likely cost-effectiveness of these measures</li>
+</ul></li>
+<li>Meta-effective altruism
+<ul class="org-ul">
+<li>Raising awareness of EA</li>
+<li>Helping EAs reach their potential</li>
+<li>Doing research to decide which areas EAs should focus on</li>
+<li>Major organizations
+<ol class="org-ol">
+<li>80,000 hours &#x2013; highlights the importance of helping the world through one's career</li>
+<li>Center for Applied Rationality (CFAR) &#x2013; trains people in rationality skills, but are especially focused on the application of rational thought to altruism</li>
+<li>Leverage Research &#x2013; focuse on growing and empowering the EA movement
+<ul class="org-ul">
+<li>Hosts the EA summit</li>
+<li>Organizes the THINK student group network</li>
+<li>Searches for mind hacks which can make EAs more effective</li>
+</ul></li>
+</ol></li>
+<li>Most EA organizations spend some time on growing the EA movement, even if it's not their primary focus</li>
+</ul></li>
+<li>The Far Future
+<ul class="org-ul">
+<li>Many EAs value future people as much as currently living people</li>
+<li>Therefore, the vast majority of value is found in the astronomical numbers of people who could contribute in the far future</li>
+<li>Focus on efforts to capture some of these benefits by reducing existential risk</li>
+<li>Major organizations
+<ol class="org-ol">
+<li>Future of Humanity Institute at Oxford University &#x2013; main hub for research on existential risk mitigation</li>
+<li>Machine Intelligence Research Institute &#x2013; focuses on doing the research necessary to build Friendly AI, which could make the future far better off</li>
+</ol></li>
+<li>Other groups also study existential risks
+<ul class="org-ul">
+<li>NASA searches for asteroids that could be an existential threat</li>
+<li>Many organizations, such as GCRI study worst-case scenarios for climate change or nuclear warfare</li>
+</ul></li>
+</ul></li>
+<li>Animal suffering
+<ul class="org-ul">
+<li>Reducing animal suffering in cost-effective ways</li>
+<li>Animals vastly outnumber humans</li>
+<li>Growing numbers of scientists believe that animals consciously experience pleasure and suffering</li>
+<li>The primary organization in this field is Effective Animal Activism</li>
+<li>Major thinkers in this area include Peter Singer, David Pierce and Brian Tomasik</li>
+</ul></li>
+</ol></li>
+<li>Other focus areas
+<ul class="org-ul">
+<li>Effective environmental altruism
+<ul class="org-ul">
+<li>Environmental movement is large and well known</li>
+<li>However not many EAs take environmentalism as the most important thing for them to be working on</li>
+</ul></li>
+</ul></li>
+<li>EAs should go out of their way to cooperate and learn from each other, even when they're working in different focus areas</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgf48841a" class="outline-2">
+<h2 id="orgf48841a"><a href="https://blog.givewell.org/2011/08/18/why-we-cant-take-expected-value-estimates-literally-even-when-theyre-unbiased/">Why We Can't Take Expected Value Estimates Literally Even When They're Unbiased</a></h2>
+<div class="outline-text-2" id="text-orgf48841a">
+<ul class="org-ul">
+<li>There are some organizations which criticize GiveWell on its preference for strong evidence over high "expected value"</li>
+<li>Critique is based on the role of non-formalized intuitions in GiveWell's decision-making</li>
+<li>The problem with this critique is that expected value is often based on a formula whose inputs are guesses or very rough estimates</li>
+<li>Any estimate made along these lines needs to be adjusted with a "Bayesian prior"</li>
+<li>This adjustment can rarely be made with an explicit formal calculation</li>
+<li>Most formal attempts to do so, even when they're making significant negative adjustments, are not making nearly as much an adjustment as they ought to be making in order to be consistent with the proper Bayesian approach</li>
+<li>This is why, even though recommendations are grounded in relevant facts, calculations and quantifications, they still have a strong dose of intuition</li>
+<li>Generally, GiveWell prefers to recommend areas where there is strong evidence that donations can do some good rather than weak evidence that donations can do a lot of good</li>
+<li>This preference is inconsistent with expected-value approaches which don't include Bayesian adjustments</li>
+<li>The approach we oppose: "explicit expected value" (EEV) decisionmaking
+<ul class="org-ul">
+<li>The EEV approach generally involves an argument of the form:
+<ul class="org-ul">
+<li>Each dollar spent on program P has an estimated value V</li>
+<li>This estimate is extremely rough and unreliable, but it's unbiased (as likely to be too pessimistic as too optimistic)</li>
+<li>Therefore V represents the per-dollar expected value of P</li>
+<li>I don't know how good charity C is at implementing program P, but even if it wastes 75% of its money, its per-dollar expected value is 25% of V, which is still excellent</li>
+</ul></li>
+<li>Examples of EEV decision-making
+<ul class="org-ul">
+<li>Deworm the World
+<ul class="org-ul">
+<li>Spends 74% of its funding on technical assistance and scaling up deworming programs</li>
+<li>Even if we assess the charity on that 74%, it would still do well in QALYs/DALYs saved</li>
+</ul></li>
+<li>Back of the Envelope Guide To Charity
+<ul class="org-ul">
+<li>Donating to political advocacy for foreign aid is between 8x and 22x as good as a donation to VillageReach</li>
+</ul></li>
+<li>X-risk charities must be the best ones to support, because the value of saving the human race is so high that "any imaginable probability of success" would lead to a higher expected value than the others
+<ul class="org-ul">
+<li><i>As one of my friends said &#x2013; these people look at the logic behind Pascal's Mugging and say, "One person's modus tollens is another person's modus ponens"</i></li>
+</ul></li>
+<li>Pascal's Mugging is the reductio-ad-absurdium of this sort of reasoning</li>
+</ul></li>
+<li>The general problem with the EEV approach is that it doesn't incorporate a preference for better-grounded evidence over rougher estimates</li>
+<li>Ranks charities/actions solely based on their expected value, ignoring differences in the robustness of the expected value calculations</li>
+</ul></li>
+<li>Informal objections to EEV decisionmaking
+<ul class="org-ul">
+<li>Nothing in EEV penalizes ignorance or poorly grounded estimates</li>
+<li>Because of this, a world in which people acted on EEV would be problematic in a number of ways
+<ul class="org-ul">
+<li>Nearly all altruists would put their resources toward people they knew little about, rather than helping themselves, their families, or their communities
+<ul class="org-ul">
+<li><i>Peter Singer would say that's a feature, not a bug, since the communities most effective altruists live in are in rich countries, and thus don't need help</i></li>
+</ul></li>
+<li>In such a world, once an action is decided to have high EEV, there is little or no incentive to engage in costly sceptical inquiry into the actual value of the action</li>
+</ul></li>
+<li>Giving based on EEV seems to create bad incentives
+<ul class="org-ul">
+<li>Doesn't allow rewarding charities based on transparency</li>
+<li>Charities would have every incentive to announce that they were focusing on the highest expected value programs without disclosing the details on how they were focusing on these programs</li>
+<li><i>Or, worse, disclosing everything and then accompanying it with rationalizations around how e.g. "our marketing budget has high expected value, because it might recruit the researcher who makes the next breakthrough, so it's totally worth it"</i></li>
+</ul></li>
+<li>Basing your decisions on EEV analysis leaves you vulnerable to Pascal's Mugging &#x2013; a tiny probability of a huge positive or negative outcome can dominate your decisionmaking, in ways that violate common sense</li>
+</ul></li>
+<li>Simple example of a Bayesian approach vs. an EEV approach
+<ul class="org-ul">
+<li>Beer Advocate ranks beers using a bayesian approach</li>
+<li>A new beer added to the site has a score of 3.66 (the average score of all beers on the site)</li>
+<li>As it accumulates reviews, the score is updated using a bayesian approach</li>
+<li>As the number of reviews grows, the formula's "confidence" in the quality of the beer grows and the beer's score asymptotically approaches its "true" score</li>
+<li>However, there are few problems with this approach
+<ul class="org-ul">
+<li>Judgment call in which prior to use &#x2013; is it really reasonable to assume that a beer is average until proven otherwise?</li>
+<li>BA also has a minimum number of reviews required before a beer can be scored &#x2013; the choice of this value is a judgment call</li>
+<li>The basic approach is much more straightforward than estimating how much good a charity does</li>
+<li>For charities, it's often not clear what the reference class should be or what your priors should be set to</li>
+</ul></li>
+</ul></li>
+<li>Applying Bayesian adjustments to cost-effectiveness estimates of donations, actions, etc.
+<ul class="org-ul">
+<li>Giving What We Can and Back of the Envelope Guide to Philanthropy both use forms of EEV in arguing for their recommendations</li>
+<li>Propose a model in which we log-normally distribute estimate error around the "cost-effectiveness" estimate, with a mean of no-error</li>
+<li>Prior distribution of for cost-effectiveness is normally (or log-normally) distributed as well</li>
+<li>The more one feels confident in one's estimate for what one's action should be, the smaller the variance of the "estimate error"</li>
+<li>Effects:
+<ul class="org-ul">
+<li>A reliable estimate causes the Bayesian adjusted conclusion to end up very close to the estimated value</li>
+<li>When the estimate is relatively unreliable (large confidence intervals), the Bayesian adjustment causes the estimate to have virtually no effect on the final view</li>
+</ul></li>
+<li>The takeaway is that having the mid-point of a cost-effectiveness estimate is not enough, you need to understand the sources of estimate error and the degree of estimate error relative to the degree of variation in the estimated cost-effectiveness of various interventions</li>
+</ul></li>
+<li>Pascal's Mugging
+<ul class="org-ul">
+<li>Non-bayesian approaches to Pascal's Mugging say that, even if the analysis is wrong, are you certain that it's 99.99&#x2026;% wrong?</li>
+<li>However in many of these cases, the lion's share of variance in estimated expected value is coming from estimate error</li>
+<li>A Bayesian adjustment would divide the expected value of the action by the estimate of the error in the expected value</li>
+<li>The larger the expected value, the larger the estimated error, so extremely large EEV actions should end up affecting your choices the least</li>
+</ul></li>
+<li>Generalizing the Bayesian approach
+<ul class="org-ul">
+<li>One needs to quantify both the appropriate prior for cost-effectiveness and the strength/confidence of an effectiveness estimate in order to quantify estimated cost-effectiveness</li>
+<li>However, when it comes to giving, reasonable quantifications of these things usually aren't possible</li>
+<li>To have a prior, you need to have a reference class and reference classes are debatable</li>
+<li>Our brains process a huge amount of information to come up with priors from intuition</li>
+<li>Attempting to formalize this reduces the amount of information you process, degrading the quality of your priors</li>
+<li>When formulas are too rough, the loss of information outweighs the gains in transparency</li>
+<li>Incorrect approaches to Bayesian estimates
+<ul class="org-ul">
+<li>"I have a weak or uninformative prior, so I can take rough estimates literally"
+<ul class="org-ul">
+<li>You have more information than you think you do</li>
+<li>Even a sense of the consequences to actions in your own life gives you an "outside view" and a starting probability distribution for estimating the consequences to actions</li>
+</ul></li>
+<li>Making "downward adjustments" to an EEV estimate
+<ul class="org-ul">
+<li>How do you tell whether the downward adjustment has the correct relationship to the weakness of the estimate, the strength of the prior and the distance of the estimate of the prior</li>
+<li>As an extreme example, in the Pascal's Mugging case, applying a 99.99% downward estimate seems reasonable, but in fact the correct Bayesian adjustment is <b>much</b> larger</li>
+</ul></li>
+</ul></li>
+<li>Heuristics used judge whether prior-based adjustments are correct
+<ul class="org-ul">
+<li>The more action is asked of me, the more evidence I require
+<ul class="org-ul">
+<li>Significant actions require more evidence than trivial actions</li>
+</ul></li>
+<li>Pay attention to how much of the variation in estimates is likely to be driven by true variation rather than estimate error
+<ul class="org-ul">
+<li>When an estimate is so rough that estimation error occurs for the bulk of the observed variation, a proper Bayesian approach involves applying a massive discount to the estimate</li>
+</ul></li>
+<li>Put more weight on conclusions which seem to be supported by multiple lines of analysis, preferably unrelated to one another
+<ul class="org-ul">
+<li>The less correlated the estimates, the greater the decline in the variance of estimate of error</li>
+<li>Diversified reasons for believing something lead to more robust beliefs</li>
+</ul></li>
+<li>Be hesitant to embrace arguments which have anti-common-sense implications (unless the evidence behind these claims is strong)
+<ul class="org-ul">
+<li>Too weak priors can lead to many seemingly absurd beliefs</li>
+<li>Remove incentive for investigating strong claims</li>
+</ul></li>
+<li>The prior for charity should be generally skeptical
+<ul class="org-ul">
+<li>Giving well is conceptually pretty difficult</li>
+<li>The more we dig on cost-effectiveness estimates the more unwarranted optimism we discover</li>
+<li>Optimistic priors incentivize giving to opaque charities, which violates common sense</li>
+<li>Look for charities with strong evidence of effectiveness and reasonably high cost-effectiveness over charities with weaker evidence and very-high cost-effectiveness</li>
+</ul></li>
+</ul></li>
+</ul></li>
+<li>Conclusion
+<ul class="org-ul">
+<li>Any giving approach that relies on estimated expected value is flawed</li>
+<li>Thus when aiming to maximize positive impact, it's not advisable to make giving decisions based solely on explicit formulas</li>
+<li>Proper Bayesian adjustments are important and difficult to formalize</li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Rohit Patnaik</p>
+<p class="date">Created: 2019-02-18 Mon 14:19</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>
