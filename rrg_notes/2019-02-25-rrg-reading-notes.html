@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- 2019-02-25 Mon 16:06 -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>2019-02-25 RRG Notes</title>
+<meta name="generator" content="Org mode">
+<meta name="author" content="Rohit Patnaik">
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<meta charset="utf-8">
+<link href="/page.css" rel="stylesheet">
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2019 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="preamble" class="status">
+<header class="page-header">
+  <div class="logo"><a href="/"><img src="/logo.png" height="160"></a></div>
+  <div class="header-text">
+    <div class="header-text-wrapper">
+      <h1>Quanticle.net</h1>
+    </div>
+  </div>
+</header>
+</div>
+<div id="content">
+<h1 class="title">2019-02-25 RRG Notes</h1>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#orga947e2c">Famine, Affluence and Morality</a></li>
+<li><a href="#org29a3143">Global Health and Development</a></li>
+<li><a href="#orgb971f66">Givewell's Criteria for Top Charities</a></li>
+<li><a href="#org1cb854b">Givewell's Updated Top Charities For Giving Season 2018</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orga947e2c" class="outline-2">
+<h2 id="orga947e2c"><a href="https://www.utilitarian.net/singer/by/1972----.htm">Famine, Affluence and Morality</a></h2>
+<div class="outline-text-2" id="text-orga947e2c">
+<ul class="org-ul">
+<li>As Peter Singer writes this essay, in November of 1971, people are dying in East Bengal from lack of food, shelter and medical care</li>
+<li>These deaths are not unavoidable</li>
+<li>Unfortunately, people have not made the necessary decisions to avoid these deaths</li>
+<li>Overall there has been a total lack of response to the crisis in East Bengal</li>
+<li>No government has given the sort of massive aid that would enable the refugees to survive for more than a few days</li>
+<li>Even though Britain is among the top givers of aid to East Bengal, the amount it has given is less than 1/30th the amount it has spent on the Concorde</li>
+<li>Australia, another top contributor to Bangladesh, has contributed less than 1/12 the cost of the new Sydney Opera House</li>
+<li>There is nothing unique about the Bangladeshi situation, other than its magnitude</li>
+<li>The way that people in relatively affluent countries react to situations like the Bangladeshi crisis cannot be justified</li>
+<li>First assumption: is that death from lack of food, shelter, medical care, etc. is bad</li>
+<li>Second assumption: if it is in our power to prevent something bad from happening, without thereby sacrificing anything of comparable moral importance, we ought, morally, to do it.
+<ul class="org-ul">
+<li><i>The <b>real</b> assumption is that preventing bad things in in our power</i></li>
+<li><i>In practice, Goodhart is eternal, and by attempting to prevent bad things, you often make other bad things happen (or, equivalently, slow good things from happening)</i></li>
+</ul></li>
+<li>These principles seem uncontroversial, but if they were acted upon, they would immensely change the world
+<ul class="org-ul">
+<li>Doesn't matter if the person you can help is 10 yards away or 10,000 miles away</li>
+<li>Doesn't matter if you're the only person who can help or among millions of people who could help</li>
+</ul></li>
+<li>Why should we refuse to take distance into account when choosing whom we can help
+<ul class="org-ul">
+<li>If we accept any principles of impartiality or universalizability, we cannot discriminate against someone merely because they are far away from us</li>
+<li>In theory, it might be possible to argue that you know the needs of the person who is closer to you more, and thus are better positioned to help someone who is close to you</li>
+<li>However, swift communication and transportation have largely obviated that argument</li>
+<li><i>I don't think they have</i></li>
+<li><i>I think that swift communication gives the illusion of understanding, and allows people to overconfidently intervene in affairs that they don't fully understand</i></li>
+<li><i>Then, when those interventions end up creating a local backlash, these well-meaning interventionists stand back and ask, "Why do they hate us? We were only trying to help.</i></li>
+<li><i>Example: <a href="http://www.spiegel.de/international/spiegel/spiegel-interview-with-african-economics-expert-for-god-s-sake-please-stop-the-aid-a-363663.html">food aid to Africa</a></i></li>
+<li><i>Also, how accepted is universalizability as a philosophical principle?</i></li>
+</ul></li>
+<li>Why shouldn't it matter that there are millions of others in the same position?
+<ul class="org-ul">
+<li>The fact that others have done nothing says nothing about our moral obligations</li>
+<li>If everyone gave 5 pounds sterling to the Bengal Refugees Relief Fund, there would be no crisis in Bengal</li>
+<li>However, because others won't give 5 pounds, you're obligated to give more, since by giving more, you can do more good</li>
+<li>So why doesn't this become an indefinite obligation?
+<ul class="org-ul">
+<li>Very few people are likely to give substantial amounts</li>
+<li>Therefore, shouldn't everyone who is giving give as much as possible, even to the point of immiserating themselves?</li>
+<li>The paradox arises only if we assume that the act of sending money is performed simultaneously and is unexpected</li>
+<li>If it is to be expected that everyone gives something, then no one has to give the maximum amount they're able</li>
+<li>If everyone is not acting simultaneously, then we know how much more is necessary to give, and people giving later can give only as much as is necessary to reach that amount</li>
+<li><i>I don't understand this argument &#x2013; is he saying that the people who give to a charitable cause first are obligated to give more, with people who donate later obligated to give less and less as the total amount donated approaches the amount required?</i></li>
+<li><i>Then why should anyone be the first to donate, when they know full-well that if they wait, they can give less?</i></li>
+<li><i>Another objection to this argument is that he hasn't actually demolished the claim that this leads to an indefinite obligation</i>
+<ul class="org-ul">
+<li><i>Let's say that we donate and we fix the famine in Bengal</i></li>
+<li><i>Then there's a famine in Ethiopia, so we donate and fix that</i></li>
+<li><i>Then there's a smallpox outbreak (remember, smallpox isn't declared eradicated until 1980)</i></li>
+<li><i>Where does it end?</i></li>
+<li><i>By this logic, any investment in research, technological development, economic growth, etc. is morally wrong insofar as there are still people who are dying from lack of food, shelter and medicine</i></li>
+</ul></li>
+<li><i>Finally, his argument carries troubling echoes of "the white man's burden"</i>
+<ul class="org-ul">
+<li><i>At what point do we say, "Okay, it's time for you to fix your own problems?"</i></li>
+</ul></li>
+</ul></li>
+</ul></li>
+<li>The outcome of Singer's argument is that our traditional moral categories are upset
+<ul class="org-ul">
+<li>Normally, giving to food aid is considered to be a "charitable" donation</li>
+<li>It's "superogatory" &#x2013; it's good to give, but no one will judge you morally for failing to give</li>
+<li>Singer redraws that boundary between obligatory and superogatory</li>
+</ul></li>
+<li>This revision has radical implications</li>
+<li>Is this too big a revision of our moral code
+<ul class="org-ul">
+<li>In the past, society drew a distinction between duties (behaviors that we are obligated to do) and superogatory acts (which are good to do, but optional) in order to draw a line between behaviors that allow society to function, and other good behaviors in general</li>
+<li>However, the moral point of view requires us to look beyond our own society &#x2013; the prevention of the starvation of millions is at least as important as the upholding of property norms within our society
+<ul class="org-ul">
+<li><i>WHOA! Did&#x2026; Singer really go there? Did he actually say that it's okay to steal as long as you're stealing from the rich and giving to the poor</i></li>
+<li><i>Hey, that big screen TV you have is unnecessary, let me take it, sell it on eBay and donate the proceeds to famine relief</i></li>
+</ul></li>
+</ul></li>
+<li>Is this a moral code that people are actually capable of upholding
+<ul class="org-ul">
+<li>Sidgwick and Urmson argue that we need to have a basic moral code which is not too far beyond the capacities of ordinary people</li>
+<li>Otherwise there will be a general breakdown in compliance with the moral code</li>
+<li>However, this ignores the amount of influence that moral codes have on social norms and personal behavior
+<ul class="org-ul">
+<li>In a society in which the maximum one is expected to give is 5% of their income, giving away half seems absurdly unrealistic</li>
+<li>However, if the norm in society held that no person should have more than what they need so long there exists somebody who has less than what they need, giving away only 5% of your income would seem narrow-minded</li>
+<li><i>It also ignores the effect that society has on morality</i></li>
+<li><i>Moral codes are just as subject to memetic evolutionary pressure as anything else</i></li>
+</ul></li>
+<li>Finally, this consideration only applies to what we should expect from others, not the standards that we hold ourselves to</li>
+</ul></li>
+<li>There are a number of other points, more practical than moral, which have bearing on this issue
+<ul class="org-ul">
+<li>Aid ought to be given by government, rather than private charity
+<ul class="org-ul">
+<li>There is no evidence that private charitable giving reduces the likelihood that goverment will step in</li>
+<li>In fact, the opposite view &#x2013; that lack of giving indicates disinterest, and thus reduces the likelihood of government intervention, seems more likely</li>
+<li>Yes, one can claim that it is more important to campaign to get governments to intervene than it is to donate on one's own, but one ought also to practice what they preach</li>
+</ul></li>
+<li>Famine relief only increases the amount of starvation later, by leading to population growth
+<ul class="org-ul">
+<li><i>This is <b>such</b> a 1970s objection</i></li>
+<li>If you think that, then you ought to be supporting organizations that encourage population control rather than famine relief directly</li>
+<li>But you still ought to be giving the same amount</li>
+<li><i>Ironic, then, that the greatest form of population control appears to be capitalist economic growth</i></li>
+<li><i>Heck, the total-fertility-rate in Bangladesh has dropped to 2.1 (from 8!), over the past 30 years &#x2013; largely due to economic growth</i></li>
+</ul></li>
+<li>How much should we be giving away
+<ul class="org-ul">
+<li>The strong version of Singer's principle is that one should give until one has lowered themselves to the position of the person that they are giving to</li>
+<li>Singer thinks the strong version is correct</li>
+<li>The weak version of this argument is that we should give until further giving would cause us to sacrifice something morally significant</li>
+<li>Even with this weak form of the argument, we would have a radical reshifting of our lifestyles</li>
+<li>Practically, we ought to give only so much as is necessary to avoid slowing economic growth</li>
+<li><i>The problem with that line of reasoning is that it's a very centralized, almost Marxist, way of thingking</i></li>
+<li><i>It presumes that the economy is this single giant machine in a room somewhere, with knobs that can be twiddled to adjust the ratio between "wasteful" expenditure, charitable donations and investment in the future</i></li>
+<li><i>The problem is that there is no hard-and-fast distinction between investment in the future and wasteful expenditure</i></li>
+<li>However, these considerations are academic, insofar as today we give so little, we can increase the amount we give by massive amounts and still have lots left over for economic growth
+<ul class="org-ul">
+<li><i>Yeah, that's fair.</i></li>
+</ul></li>
+</ul></li>
+</ul></li>
+<li>Do philosophers have a role to play in public affairs
+<ul class="org-ul">
+<li>It is sometimes argued that public policy depends on assessments of facts, and philosophers, because they're not experts in factual matters, aren't qualified to comment on public affairs</li>
+<li>However, the famine is not one of these issues
+<ul class="org-ul">
+<li>The existence of the famine is not in doubt</li>
+<li>Nor is it disputed that Western societies could help, either through direct aid or through investment in population control</li>
+</ul></li>
+<li>Therefore, this is an issue in which philosophers can take a position</li>
+<li>The issue is one that must be faced by everyone who has more money than is necessary to support themselves</li>
+<li>It is not enough to discuss, we must also act and work to bring the practice of our lives more in line with our philosophical theories</li>
+<li><i>I actually disagree with this premise</i></li>
+<li><i>Singer presents the Bengal famine as if it were this thing that randomly happened</i></li>
+<li><i>But that's not the case &#x2013; the famine in Bengal was the result of a civil war that resulted in the independence of Bangladesh</i></li>
+<li><i>Remember, Bangladesh, at one point, was East Pakistan &#x2013; after decades of misrule, they broke away, with the help of Indian military assistance, and formed their own state &#x2013; this occured in 1971, not coincidentally</i></li>
+<li><i>So, I do think that you need to know the specific facts about what's going on before you decide to intervene &#x2013; after all, I think it's surely a relevant consideration that Bangladesh in 1971 was an active war zone!</i></li>
+<li><i>Moreover, Bangladesh isn't an isolated case</i>
+<ul class="org-ul">
+<li><i>The Ethiopian famine of the 1980s was a result, in large part, of the civil war/war of independence between Ethiopia and Eritrea</i></li>
+<li><i>Similarly, the famine going on now in Yemen is a result of the civil war there</i></li>
+</ul></li>
+<li><i>Time and again, development economists have said, there's usually enough food in a famine &#x2013; it's just that because of war, state failure, lack of infrastructure, etc the food isn't getting to the people who need it</i></li>
+<li><i>Donating food, in such circumstances, often makes things worse &#x2013; you just end up piling up more food in warehouses and airports, and when this food enters the market, it causes massive price fluctuations which causes farmers and distributors to go out of business, which then makes the place more vulnerable to famine in the future</i></li>
+<li><i>But, in order to know this, you need to understand the facts on the ground; not just the immediate fact of the famine, but also the historical, political, cultural, economic etc. context that led to the present moment &#x2013; precisely the sort of knowledge that philsophers are unqualified to talk about</i></li>
+<li><i>In a very real sense, Peter Singer has turned a nation of millions into a trolley problem</i></li>
+</ul></li>
+<li>Postscript
+<ul class="org-ul">
+<li>While the famine in Bangladesh has ended, the world food crisis, is, if anything even more serious</li>
+<li>US no longer has huge grain reserves</li>
+<li>Increased oil prices have made fertilizer and energy more expensive in developing countries</li>
+<li>However, the case of aid remains as great today as it does in 1971</li>
+<li>It's just that Peter Singer would give much more to aid limiting population growth &#x2013; since that would have much more long term-impact</li>
+<li>The important thing is to give aid, and choose the aid that's the most effective</li>
+<li><i>Yes, this is a laudable goal, but once again, the devil is in the details &#x2013; I'm not sure that giving aid is the most effective way of helping people</i></li>
+<li><i>It seems to me that giving aid is inherently subject to Goodhart's Law &#x2013; we choose measures as targets, and we seem to think that if only we can find the <b>right</b> measure, we can use it without it being subject to Goodhart's Law</i></li>
+<li><i>But no such measure exists &#x2013; at some level, people have to help themselves</i>
+<ul class="org-ul">
+<li><i>Yes, we can remove certain obstacles, but we have to be careful that our aid isn't locking in place an unsustainable local maximum</i></li>
+<li><i>For example, even though starvation is a <b>huge</b> problem in North Korea, I would <b>not</b> recommend giving North Korea food aid, because the government deliberately starves its people in order to use those resources for other things</i></li>
+</ul></li>
+<li><i>In philosophy, as in economics, one must be careful to consider unseen effects as well as seen effects</i></li>
+</ul></li>
+<li><i>tl;dr: Peter Singer lives up to his reputation as master of repugnant conclusion</i></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org29a3143" class="outline-2">
+<h2 id="org29a3143"><a href="https://www.effectivealtruism.org/articles/cause-profile-global-health-and-development/">Global Health and Development</a></h2>
+<div class="outline-text-2" id="text-org29a3143">
+<ul class="org-ul">
+<li>Introduction
+<ul class="org-ul">
+<li>In 2013, nearly 800 million people were living under the international poverty line</li>
+<li>Living in poverty has a significant negative impact on health</li>
+<li>People die of easily preventable illnesses, such as malaria, tuberculosis and diarrhoea</li>
+<li>This suffering is preventable but neglected &#x2013; only 0.31% of GNI is spent on foreign aid</li>
+</ul></li>
+<li>The case for global health and development as an important cause area
+<ul class="org-ul">
+<li>Global poverty causes a great deal of suffering for a huge number of people
+<ul class="org-ul">
+<li>In 2013, 10.7% of the global population lived under the global poverty line of $1.90 a day</li>
+<li>This line is the minimum level of income required to fulfill basic needs &#x2013; food, clothing, shelter</li>
+<li>Millions of people die each year of preventable diseases, such as malaria or tuberculosis</li>
+<li>It is estimated that the damage done by these diseases in the least-developed-countries plus India is between 200 and 500 million DALYs per year
+<ul class="org-ul">
+<li><i>Okay, hang on. Why "least developed countries plus India"? Why not "least developed countries plus India and China"? Why not "least developed countries plus Brazil"?</i></li>
+</ul></li>
+</ul></li>
+<li>There are well-evidenced ways of reducing poverty
+<ul class="org-ul">
+<li>Poverty is relatively tractable if we focus on the immediate costs to health and quality of life</li>
+<li>Relatively simple and cheap interventions can prevent the most common illnesses, such as malaria, tuberculosis, diarrhoea and parasitic diseases</li>
+</ul></li>
+<li>Additional resources could do a great deal more in this area
+<ul class="org-ul">
+<li>Global poverty gets a great deal of attention, but the total funding it receives is relatively small</li>
+<li>The UK government spends 0.7% of its national income on foreign aid, but spends nearly three times as much on defence
+<ul class="org-ul">
+<li><i>Okay, this is something that just occurred to me: why do these people <b>always</b> compare foreign aid spending to defence spending?</i></li>
+<li><i>I have seen hundreds of articles that say, in effect, "Oh we spend x million on foreign aid, but 2x million on defence"</i></li>
+<li><i>Why is defense the proper point of comaprison</i></li>
+<li><i>Why not social security? Or medicare? Do you really think that old people really <b>need</b> as much money from the government as they're getting? Do you really think that all the medical procedures that medicare pays for are as necessary as oral rehydration therapy for a dying Sudanese child? And we spend far far more on these social programs than we do on defense</i>
+<ul class="org-ul">
+<li><i>Or, to go to an even greater extreme, why even look at the government at all? Why not compare the spending on social programs with, say, the revenue that Facebook gets?</i></li>
+</ul></li>
+<li><i>All of the above is a bit hyperbolic, true; I merely wish to highlight the fact that using defence spending as a point of comparison to foreign aid spending panders to a particular set of liberal, upper-middle-class values, and, moreover, I've never seen the choice of a point of comparison questioned or justified</i></li>
+</ul></li>
+<li>Individual donations are also rather small
+<ul class="org-ul">
+<li>In the UK in 2015, people donated more to medical research, hospitals, religious charities and charities for children and young people than they did to overseas disaster relief</li>
+<li>The charities currently implementing the most effective global health interventions seem to have a clear need for more funds</li>
+</ul></li>
+</ul></li>
+<li>We have stronger evidence for interventions in this area than almost anything else
+<ul class="org-ul">
+<li>Robust record of success in global health and development</li>
+<li>Outcomes are at least somewhat measurable</li>
+<li>Though other cause areas may have larger gains, there is also less certainty about what the actual benefit will be</li>
+<li><i>This, to me, is the strongest argument in this article</i></li>
+<li><i>It boils down to: "Look, there might be other things that are better, which reduce poverty and improve life outcomes more. But, we don't know if any of those things actually work. Plus, reducing disease probably won't have horrible second order effects."</i></li>
+</ul></li>
+<li>Cost-effectiveness analyses and RCTs
+<ul class="org-ul">
+<li>Cost-effectiveness analyses attempt to quantify how much good can be done with a given amount of money</li>
+<li>The cost of eradicating smallpox was $1.6 billion</li>
+<li>A conservative estimate of the amount of lives saved is 60 million</li>
+<li>This works out to $25/life saved, which is extremely cost-effective given that people are willing to spend tens of thousands just to extend life by a few years</li>
+<li>The best health interventions aren't as effective as eradicating smallpox, but they are quite effective</li>
+<li>Recommended charities can save a life for between $900 and $7,000 per life saved, which is still very cost effective compared to health care spending in the developed world</li>
+<li>These cost effectiveness estimates are based on the results of randomized controlled trials (RCTs)</li>
+<li>An RCT involves giving an intervention to half the population, while giving the other half no intervention</li>
+<li>Outcomes are then compared</li>
+<li>Interventions in global health are backed up by more RCTs than any other cause area</li>
+</ul></li>
+<li>In summary, it is possible to have a large impact on global health and development because
+<ul class="org-ul">
+<li>The problem of global poverty is large in scale</li>
+<li>Many of the problems associated with poverty, particulary its impact on health, are highly tractable</li>
+<li>The problem is relatively neglected, given its scale</li>
+<li>The evidence for interventions working is very strong</li>
+</ul></li>
+</ul></li>
+<li>Concerns about prioritizing global health as a cause area
+<ul class="org-ul">
+<li>Does foreign aid really work?
+<ul class="org-ul">
+<li>While some foreign aid interventions are wasted, the average foreign aid intervention does a lot of good</li>
+<li>Even if all other aid spending was wasted the eradication of smallpox alone would be enough to justify all the foreign aid spent upto today</li>
+<li><i>But how much of the eradication of smallpox was driven by foreign aid? Didn't national governments also have a big push?</i></li>
+</ul></li>
+<li>Charity "begins at home"
+<ul class="org-ul">
+<li>Additional resources can do a lot more good in developing countries than they can do at home</li>
+<li>Developing countries lack resources, and their problems are ones that we know how to solve</li>
+</ul></li>
+<li>Who are we to say what poor people need
+<ul class="org-ul">
+<li>Global health interventions aren't necessarily paternalistic</li>
+<li>Concerns about paternalism seem less well-founded when people have clear and pressing needs, like poverty and preventable disease</li>
+<li><i>"If people are dying of known preventable diseases, it seems hard to imagine how we could be “wrong” about the need to prevent this. There may well be other things that they need beyond surviving, but sorting this out first seems fairly uncontroversial."</i></li>
+<li><i>See, that's just it &#x2013; it can be "wrong", as was pointed out in the commentary on Peter Singer's drowning child essay</i></li>
+<li><i>It's possible that by coming in and "solving" every disease outbreak, you're creating an attitude where people don't attempt to come up with local solutions to their problems, because they're confident that powerful outsiders will intervene and save them</i></li>
+</ul></li>
+</ul></li>
+<li>Why might you <i>not</i> chooose to prioritize this cause area
+<ul class="org-ul">
+<li>There might be better ways to improve the lives of people living today
+<ul class="org-ul">
+<li>Mental health problems might be creating even more suffering than poverty</li>
+<li>Investing in broader cause areas might improve the decision making of all humanity, improving our ability to solve not just this problem, but all problems</li>
+<li>We need to avoid the "streetlight fallacy" of investing in cause areas because it is easy to gather evidence for them, not because they are good</li>
+</ul></li>
+<li>We should prioritize reducing the suffering of non-human animals
+<ul class="org-ul">
+<li>Over 50 billion animals currently live in conditions of extreme suffering before being slaughtered in factory farms</li>
+<li>There is even less spent on this than is spent on global poverty</li>
+<li>Comparing the two depends on the following judgment calls
+<ul class="org-ul">
+<li>The significance of animal suffering relative to human suffering
+<ul class="org-ul">
+<li>Perhaps human suffering is more morally signficant than animal suffering</li>
+<li>Perhaps freedom and dignity are more important for humans than they are for animals</li>
+</ul></li>
+<li>The indirect effects of poverty interventions vs. animal interventions
+<ul class="org-ul">
+<li>Human societies are capable of development in ways that animal societies are not</li>
+<li>Therefore the indirect effects of human-focused interventions might be greater</li>
+</ul></li>
+<li>Importance of a strong evidence base
+<ul class="org-ul">
+<li>Global health interventions have much more evidence behind them than animal welfare interventions</li>
+</ul></li>
+</ul></li>
+</ul></li>
+<li>We should prioritize the long-run survival of humanity
+<ul class="org-ul">
+<li>If we think we can affect the long run future, we focusing on that might have a higher impact than focusing on more immediate problems</li>
+<li>How much weight should we give "future people"
+<ul class="org-ul">
+<li>Should we give future not-yet-existing people the same moral weight as existent people?
+<ul class="org-ul">
+<li><i>No, please don't do this</i></li>
+<li><i>The consequence of this logic is that abortion and birth control both become morally wrong</i></li>
+</ul></li>
+<li>If we don't give future people the same moral weight as existing people, then human extinction carries no longer term harms &#x2013; no moral harm done by causing people to fail to come into existence
+<ul class="org-ul">
+<li><i>To be honest, this is my view</i></li>
+<li><i>Also, if the extinction of 7 billion plus people isn't enough to cause you to take the threat seriously, I'm not sure that adding more hypothetical future people changes the calculation all that much</i></li>
+<li><i>I find it difficult to come up with a risk where I'm willing to say, "Yeah, this might wipe out 2/3s of humanity, but it's okay, because it won't cause <b>total extinction</b>."</i></li>
+</ul></li>
+<li>How much weight should we give the non-identity problem
+<ul class="org-ul">
+<li>Policies enacted today will determine which jobs people get and who they marry, therefore causing different people to be born in the future</li>
+<li>These policies might affect how good the lives of future people are</li>
+<li>How can we balance policies that make future people worse off, but also cause those same future people to be born?</li>
+</ul></li>
+</ul></li>
+<li>Can our actions have any real impact on the far future?
+<ul class="org-ul">
+<li>We only have one history &#x2013; no way to do randomized controlled trials and see which sorts of interventions have long term impact and which do not</li>
+<li>However, there are reasons to be optimistic &#x2013; small changes in the values of a civilization could last a very long time, since people try to pass their values on to their desencdants
+<ul class="org-ul">
+<li><i>Depends &#x2013; if the change is genetically or memetically beneficial, then yes, small changes can persist for a long time</i></li>
+<li><i>If the change is not genetically or memetically beneficial, then it will either remain confined to a small group that can afford to pay the price for having that idea or it will die out completely</i></li>
+<li><i>Please don't overestimate your ability to effect deliberate change on the long-run trajectory of civilization; you're not the Second Foundation</i></li>
+</ul></li>
+</ul></li>
+<li>How should we trade off fixing immediate problems against longer-term thinking
+<ul class="org-ul">
+<li>Even if you think that longer term problems are the most important, maybe the best way of solving longer-term problems is by fixing immediate problems</li>
+<li>Make sure that current problems aren't around to affect future generations</li>
+</ul></li>
+</ul></li>
+<li>We might want to focus more on "systemic change"
+<ul class="org-ul">
+<li>Poverty reduction and alleviation tackles only the symptoms of poverty, and not the root causes</li>
+<li>It's not clear whether focusing on the most immediately obvious problems will help us end poverty altogether</li>
+<li>Inequality might be caused by more fundamental problems, such as the politics of developing world countries</li>
+<li>However, current marginal efforts are still more effectively spent directly helping the poor</li>
+<li><i>Well, the problem I worry about is that all of these direct interventions shove us into a local maximum</i></li>
+<li><i>Bednets, food aid, oral rehydration, etc. will certainly alleviate the worst of the worst of poverty</i></li>
+<li><i>But there's still a <b>huge</b> gap between "won't literally starve to death in the next week" and a "middle-class" lifestyle</i></li>
+<li><i>While it is clear that massive amounts of foreign aid can fix the former, it's not at all clear that they fix the latter; in fact, foreign aid might actually make fixing the latter more difficult</i></li>
+<li><i>Moreover, what happens when the aid goes away? If you stop providing bednets to an area, does it just sink back into poverty and malaria?</i></li>
+<li><i>On the other hand, systemic change can also backfire spectacularly</i>
+<ul class="org-ul">
+<li><i>China offers examples on both sides: Great Leap Forward vs. Deng Xiaoping's economic reforms</i></li>
+</ul></li>
+</ul></li>
+</ul></li>
+<li>Summary
+<ul class="org-ul">
+<li>Global poverty causes a huge amount of suffering across the world</li>
+<li>One of the worse consequences of this is preventable diseases</li>
+<li>We have a number of highly effective interventions which can prevent and treat these diseases</li>
+<li>We have strong evidence that these interventions work and are cost effective</li>
+<li>In light of this, the objection that foreign aid doesn't work appears to be false</li>
+<li>Also, given the relative lack of resources in the developing world, our aid dollars accomplish more in developing countries than in developed ones</li>
+<li>It's plausible that we should further systemic change to solve these problems</li>
+<li>However, systemic change might be best effected by giving local participants the ability to better influence their own futures
+<ul class="org-ul">
+<li><i>This is actually a really good point, and I wish they'd elaborated on it more</i></li>
+<li><i>tl;dr: you can't think about political change when you're battling malaria chills</i></li>
+</ul></li>
+<li>Whether you believe this to be the most important cause depends on
+<ul class="org-ul">
+<li>Whether you believe there to be other ways to improve human lives</li>
+<li>How much marginal value you give to reducing human suffering</li>
+<li>Whether you believe it more important to focus on the long-term future of humanity</li>
+</ul></li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgb971f66" class="outline-2">
+<h2 id="orgb971f66"><a href="https://www.givewell.org/how-we-work/criteria">Givewell's Criteria for Top Charities</a></h2>
+<div class="outline-text-2" id="text-orgb971f66">
+<ul class="org-ul">
+<li>The top charities recommended to donors are characterized by:
+<ul class="org-ul">
+<li>Evidence of effectiveness
+<ul class="org-ul">
+<li>Programs should be studied rigorously and repeatedly</li>
+<li>Benefits should be expected to generalize to large populations</li>
+<li>Will the charity be able to execute well enough to deliver results found in academic studies?</li>
+</ul></li>
+<li>Cost effectiveness
+<ul class="org-ul">
+<li>Estimate figures such as "cost per life saved"</li>
+<li>"Cost per total economic benefit to others, normalized by base income"</li>
+<li>People in the developing world have dramatically lower standards of living, and a dollar can help them more</li>
+</ul></li>
+<li>Room for more funding
+<ul class="org-ul">
+<li>Top charities receive a significant number of donations as a result of GiveWell's recommendations</li>
+<li>Will the additional funds that GiveWell would direct to that charity enable that charity to do more goood?</li>
+<li>GiveWell has suspended recommendations of charities when they felt the charity couldn't use the incoming dollars efficiently enough</li>
+</ul></li>
+<li>Transparency
+<ul class="org-ul">
+<li>Potential top charities are examined thoroughly and skeptically</li>
+<li>Givewell tries to publish detailed reviews as well as concerns related to their work</li>
+<li>Charities must be open to this investigative process</li>
+</ul></li>
+</ul></li>
+<li>Why these criteria?
+<ul class="org-ul">
+<li>Why evidence of effectiveness
+<ul class="org-ul">
+<li><i>To be honest, this one is self explanatory &#x2013; if you're donating to do good, you should actually verify that your donations are doing good, right?</i></li>
+<li>Most of the available information about the effectiveness of charities is simplified, exaggerated or incomplete</li>
+<li>In order to judge how much good a donation will do, we need to answer the following questions
+<ul class="org-ul">
+<li>What will the donation enable which wouldn't have otherwise happened</li>
+<li>Will this activity change people's lives for the better or will it run into unexpected challenges?
+<ul class="org-ul">
+<li><i>Wait a second&#x2026; how can you predict an unexpected challenge?</i></li>
+</ul></li>
+<li>Will it accomplish a large amount of good, relative to other things we could donate towards?</li>
+</ul></li>
+<li>While one can make an informed assessment of these questions by taking to time to get to know an organization and the field it operates in, not everyone has the time to do this</li>
+<li>GiveWell focuses on recommending charities that are verifiably outstanding, for whom a case can be made without relying on a lot of judgment calls</li>
+</ul></li>
+<li>Why the focus on global poverty?
+<ul class="org-ul">
+<li>Developing world poverty is far more severe than developed-world poverty</li>
+</ul></li>
+<li>Why the focus on direct aid rather than root causes
+<ul class="org-ul">
+<li>Root cause efforts are more suited to highly engaged donors who can take the time to do deep evaluations of the effectiveness of a charity</li>
+<li>Direct aid can empower people to make differences in their own communities</li>
+<li>Donors should focus on the areas where they're best able to help</li>
+</ul></li>
+</ul></li>
+<li>Why so few charities
+<ul class="org-ul">
+<li>GiveWell focuses on a relatively small portion of the charitable sector (charities working on direct health interventions in the developing world)</li>
+<li>Charities need to publish the appropriate statistics that allow for them to be assessed</li>
+<li>Evaluation process is time-intensive</li>
+<li>It's better to know a few charities really well than a large number of charities poorly</li>
+</ul></li>
+<li>The process for identifying top charities
+<ul class="org-ul">
+<li>Find eligible charities
+<ul class="org-ul">
+<li>Search for charities that focus on the priority areas</li>
+<li>Charities will apply for recommendations</li>
+</ul></li>
+<li>Examine charities
+<ul class="org-ul">
+<li>Deeply and critically question a charity's impact</li>
+<li>Find out where the strengths and weaknesses of the charity lie</li>
+</ul></li>
+<li>Follow up
+<ul class="org-ul">
+<li>Track charities over time</li>
+<li>Because of GiveWell's track record in directing donations, charities are often open to engaging substantively with GiveWell</li>
+<li><i>Hmmm&#x2026; that <b>sounds</b> good, but how does GiveWell keep from being "captured" by these charities?</i></li>
+<li><i>Regulatory capture doesn't (just) occur with envelopes of cash being passed around in smoke filled back rooms</i></li>
+<li><i>It also happens when a regulator becomes hyperfocused on the current participants in a field, rather than the field itself</i></li>
+<li><i>By focusing on current charities, it's possible for an oversight organization such as GiveWell to adopt the charities' metrics as its own, thus overlooking other, possibly more effective charities, because that charity scores poorly on the metrics that GiveWell and its current charities have agreed upon</i></li>
+<li>GiveWell writes about both positive and negative developments faced by charities</li>
+</ul></li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org1cb854b" class="outline-2">
+<h2 id="org1cb854b"><a href="https://blog.givewell.org/2018/11/26/our-updated-top-charities-for-giving-season-2018/">Givewell's Updated Top Charities For Giving Season 2018</a></h2>
+<div class="outline-text-2" id="text-org1cb854b">
+<ul class="org-ul">
+<li>3 top charities implementing programs whose goal is reducing deaths
+<ul class="org-ul">
+<li>Malaria consortium's seasonal malaria chemoprevention (SMC) program</li>
+<li>Helen Keller International (HKI)'s vitamin A supplementation (VAS) program</li>
+<li>Against Malaria Foundation (AMF)</li>
+</ul></li>
+<li>5 charities implementing programs to increase income
+<ul class="org-ul">
+<li>Evidence Actions's Deworm The World Initiative</li>
+<li>Schistosomiaisis Control Initiative</li>
+<li>Sightsavers' deworming program</li>
+<li>EDN Fund's deworming program</li>
+<li>GiveDirectly</li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Rohit Patnaik</p>
+<p class="date">Created: 2019-02-25 Mon 16:06</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>
