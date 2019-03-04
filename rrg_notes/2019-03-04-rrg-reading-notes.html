@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- 2019-03-04 Mon 10:44 -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>2019-02-25 RRG Notes</title>
+<meta name="generator" content="Org mode">
+<meta name="author" content="Rohit Patnaik">
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<meta charset="utf-8">
+<link href="/page.css" rel="stylesheet">
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2019 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="preamble" class="status">
+<header class="page-header">
+  <div class="logo"><a href="/"><img src="/logo.png" height="160"></a></div>
+  <div class="header-text">
+    <div class="header-text-wrapper">
+      <h1>Quanticle.net</h1>
+    </div>
+  </div>
+</header>
+</div>
+<div id="content">
+<h1 class="title">2019-02-25 RRG Notes</h1>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#orgfef2cb0">Effective Altruists Love Systemic Change</a></li>
+<li><a href="#orgc6754e2">Beware Systemic Change</a></li>
+<li><a href="#org18b42da">How Not To Be A "White In Shining Armor"</a></li>
+<li><a href="#org216c284">The Animal-Free Food Movement Should Move Towards An Institutional Message</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgfef2cb0" class="outline-2">
+<h2 id="orgfef2cb0"><a href="https://80000hours.org/2015/07/effective-altruists-love-systemic-change/">Effective Altruists Love Systemic Change</a></h2>
+<div class="outline-text-2" id="text-orgfef2cb0">
+<ul class="org-ul">
+<li>There is nothing in principle that rules out using wide-spread legal, cultural or political changes to make the world a better place</li>
+<li>Examples of effective altruists working on systemic change
+<ul class="org-ul">
+<li>Many Open Philanthropy grants are focused on immigration reform, criminal justice reform, macroeconomics, institutional development and other huge structural changes</li>
+<li>OpenBorders.info &#x2013; collates material promoting open borders as an option to increase the migration from poor countries to rich countries</li>
+<li>EAPolicy &#x2013; making recommendations to open policy forums held by the US government</li>
+<li>One of GiveWell's goals has been to change cultural norms within the nonprofit sector</li>
+<li>Giving What We Can has met with the UK government to look at options for better improving its foreign aid</li>
+<li>80,000 Hours alumni are going into politics and business to effect systemic change that would benefit the global poor</li>
+<li>Organizations focused on existential risk take a large interest in government policies that could influence the development of new powerful technologies or institutions that could promote inter-state cooperation and conflict prevention</li>
+</ul></li>
+<li>There are other systemic changes that 80,000 Hours has researched which show promise for future action
+<ul class="org-ul">
+<li>Significantly more spending on development aid</li>
+<li>Improved regulation to crack down on illicit financial flows from poor countries to rich countries</li>
+<li>Changes to financial regulations to make it more difficult for financial institutions to externalize systemic risk</li>
+<li>Pricing greenhouse gas emissions</li>
+<li>More international cooperation around prevention and containment of contagious diseases</li>
+</ul></li>
+<li>80,000 Hours already has positive views on careers in policy and politics; it just hasn't done enough research on them to confidently recommend them over all alternatives</li>
+<li>Therefore it's not accurate to say that 80,000 Hours is hostile to systemic change</li>
+<li>So why might there be a perception that 80,000 Hours is against systemic change
+<ul class="org-ul">
+<li>"Earning to give" is perceived as being anti-systemic change
+<ul class="org-ul">
+<li>However, earning to give is neutral on systemic change</li>
+<li>Someone who earns to give and gives their donations to someone working for systemic change is working for systemic change themselves</li>
+<li>Example: Engels traveled back to Britain and entered the business world in order to support Marx financially</li>
+</ul></li>
+<li>Effective altruists are usually not radicals or revolutionaries
+<ul class="org-ul">
+<li>Sudden dramatic changes in society usually lead to worse outcomes than evolutionary improvements</li>
+<li>Favor marginal changes to existing systems rather than throwing everything out and starting from scratch &#x2013; history shows us that that never works</li>
+</ul></li>
+<li>Effective altruists work on systemic changes that are more likely to be achieved
+<ul class="org-ul">
+<li><i>So this is where I disagree</i></li>
+<li><i>There's an implicit argument here that incremental changes are more likely to be achieved than revolutionary changes</i></li>
+<li><i>That's often, but not always true</i></li>
+<li><i>Sometimes a revolutionary change that fires the imagination can get more popular support than an incremental change that's only of interest to people who read the tax code for fun</i></li>
+</ul></li>
+<li>Effective Altruists have chosen to take on the task of figuring out how to do the most good
+<ul class="org-ul">
+<li>This is an enormous task</li>
+<li>Makes sense to start with the parts we <b>can</b> do right away, and then focus on the bigger systemic changes</li>
+</ul></li>
+</ul></li>
+<li>Effective Altruists totally want systemic change &#x2013; the question is how best to achieve those changes</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgc6754e2" class="outline-2">
+<h2 id="orgc6754e2"><a href="https://slatestarcodex.com/2015/09/22/beware-systemic-change/?comments=false">Beware Systemic Change</a></h2>
+<div class="outline-text-2" id="text-orgc6754e2">
+<ul class="org-ul">
+<li>One of the most common critiques of Effective Altruism is that it focuses too narrowly in specific monetary interventions rather than fighting for systemic change</li>
+<li>This has led to leaders in the EA movement writing about how the EA movement isn't opposed to systemic change, and is in fact in favor of it</li>
+<li>However, Scott worries about systemic change</li>
+<li>What does Scott mean by systemic change?
+<ul class="org-ul">
+<li>Traditional charity is viewed as being universally good, or at least neutral</li>
+<li>Everyone agrees that the sick should be healed, the hungry fed, etc.</li>
+<li>If we can't do the above, it's just because we don't have enough resources to achieve our goals</li>
+<li><i>I was with him through the examples on healing the sick and feeding the hungry, but I lost him at the Koch Brothers example</i></li>
+<li><i>It's not self-evident to me that the Koch Brothers would be willing to install CO2 scrubbers at their refineries and chemical plants if those scrubbers were paid for by a private party</i></li>
+<li>Some political issues are universally accepted like this</li>
+<li>Nobody is for corporate welfare, but corporate welfare exists because there's not enough organization and attention to eliminate it</li>
+<li><i>Again, I disagree with his specific example</i></li>
+<li><i>Everyone is against "corporate welfare", but few agree on what corporate welfare is</i></li>
+<li><i>One person's "corporate welfare" is another person's "subsidy to preserve our traditional way of life" &#x2013; this is especially true of agricultural subsides, for example</i></li>
+<li><i>This actually <b>reinforces</b> his broader point re: systemic change</i></li>
+<li>These issues can be contrasted with things like increasing the minimum wage, or gun control</li>
+<li>On both of those issues, there are factions in favor and factions opposed</li>
+<li>Change isn't happening because the two factions have canceled each other out</li>
+<li>Moreover, the track record of EAs pursuing systemic change isn't that great
+<ul class="org-ul">
+<li>Engels and Marx (as alluded to in the previous reading)</li>
+<li>Widespread liberal support for Stalin</li>
+<li>Eugenics</li>
+</ul></li>
+<li>The consequences of being wrong once can outweigh the effects of being right many times &#x2013; systemic change as asymmetric downside risk</li>
+</ul></li>
+<li>Systemic change is controversial and its pursuit will tear the movement apart
+<ul class="org-ul">
+<li>EAs got into a huge controversy over the <span class="underline">option</span> of non-vegetarian meals at EA Global</li>
+<li>Can you imagine what would happen if they started tackling issues that were genuinely controversial?</li>
+</ul></li>
+<li>Advocating for working on incremental changes that are widely regarded as universally good helps EA avoid a host of failure modes</li>
+<li>EA currently has a strong moral message &#x2013; we should be wary of diluting it
+<ul class="org-ul">
+<li><i>The problem is that the moral message is one that appeals only to utilitarians</i></li>
+<li><i>For example, if you do not accept the notion that distance doesn't matter when doing good, if you think that it is morally more important to do good for those close to you, what appeal does EA hold?</i></li>
+<li><i>The other problem with the moral message argument is that it's vulnerable to those who question EA's perceived shunning of systemic change</i></li>
+<li><i>It's valid to ask, "If this cause is so morally justified, why are you 'only' nibbling at the margins? Why not effect systemic change in order to dramatically reduce the problem?"</i></li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org18b42da" class="outline-2">
+<h2 id="org18b42da"><a href="https://ea.greaterwrong.com/posts/3wvLSv6aYaGBKwf9S/how-not-to-be-a-white-in-shining-armor">How Not To Be A "White In Shining Armor"</a></h2>
+<div class="outline-text-2" id="text-org18b42da">
+<ul class="org-ul">
+<li>One of the objections to EA is that EA approaches seem to only work for certain problems, like infectious disease</li>
+<li>However, developing countries have many needs &#x2013; why don't EAs try to tackle things like economic growth, gender equity, economic inequality, etc</li>
+<li>This objection commits the fallacy of viewing the developed-world donor as the only person who can help the developing-world beneficiary</li>
+<li>EAs believe that progress must be locally driven
+<ul class="org-ul">
+<li>Give money to "low-insulation" charities, which have a good track record</li>
+<li>Need to make sure that we're not consolidating power among local elites</li>
+</ul></li>
+<li>Global health and nutrition
+<ul class="org-ul">
+<li>Another approach is that we should focus on areas where we are confident that we know a lot and can make a significant impact</li>
+<li>Health issues are the most prominent of these areas</li>
+<li>Aid on health issues has a good track record</li>
+</ul></li>
+<li>Another way of helping the global poor is direct cash transfers
+<ul class="org-ul">
+<li>Direct cash transfers give complete control to locals</li>
+<li>GiveWell now ranks GiveDirectly as one of its top three charities</li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org216c284" class="outline-2">
+<h2 id="org216c284"><a href="https://medium.com/@jacyreese/the-animal-free-food-movement-should-move-towards-an-institutional-message-534d7cd0298e">The Animal-Free Food Movement Should Move Towards An Institutional Message</a></h2>
+<div class="outline-text-2" id="text-org216c284">
+<ul class="org-ul">
+<li>Vegetarianism and veganism started out as fringe diets for the ascetic</li>
+<li>In recent years, we have had movement to make veganism and vegetarianism more mainstream
+<ul class="org-ul">
+<li>Celebrities are talking about how they're adopting vegetarianism</li>
+</ul></li>
+<li>However, to do the most good, we should focus on institutional messaging, making it clear that society as a whole should change towards vegetarianism</li>
+<li>Good Food Institute is already using institutional messaging &#x2013; promote a better food system</li>
+<li>Another question is whether we should emphasize a reduction in consumption of meat or total elimination of meat</li>
+<li>Historical precedent for institutional messaging
+<ul class="org-ul">
+<li>We should look at other social movements when strategizing for social impact</li>
+<li>The animal-free food movement has a virtual unprecedented focus on indvidual consumer change</li>
+<li>One of the only other movements to have such a focus was the free-produce movement, a movement to buy "slavery-free" products, in order to reduce the economic viability of slavery</li>
+<li>The free-produce movement was influential in the early 1800s, but by the 1840s even its proponents had come to the conclusion that there were more effective ways to fight slavery</li>
+<li>Some in the environmental movement feel the same way about "green consumerism"
+<ul class="org-ul">
+<li>Think that an emphasis on affecting individual choices makes activists complacent</li>
+<li>Environmental movement, as a result, has been moving towards more institutional messaging, focusing on systemic changes to energy and industry rather than individual choices</li>
+</ul></li>
+<li>One potential counterexample for institutional messaging is the success of the anti-tobacco movement, which largely used individual messaging
+<ul class="org-ul">
+<li><i>Did it? Tobacco companies have numerous restrictions on advertising, which other companies and industries do not have</i></li>
+<li><i>Tobacco companies had were sued by a coalition of state attorneys general, and had to pay massive multi-billion dollar judgments, which were put into anti-smoking efforts</i></li>
+<li><i>Also, a large part of why smoking has become "uncool" is that indoor smoking bans have banished smokers outside</i></li>
+</ul></li>
+</ul></li>
+<li>Avoiding the "collpase of compassion"
+<ul class="org-ul">
+<li>"Collapse of compassion" refers to the low levels of compassion that many people feel towards large problems that affect large numbers of individuals</li>
+<li>People expect the needs of large groups to be overwhelming, and, as a result, engage in emotional regulation to prevent themselves from experiencing overwhelming levels of emotion</li>
+<li>We might be able to avoid collapse of compassion by making it clear that problems are solvable and there's a concrete path to success</li>
+<li>Taking collective action feels more meaningful than just changing our own diet</li>
+<li>On the other hand, people might see that institutional messaging is too aggressive or totalitarian-sounding for people to accept</li>
+</ul></li>
+<li>Evoking "moral outrage" and expressing the seriousness of the issue
+<ul class="org-ul">
+<li>Institutional messaging evokes more "moral outrage" than individual messaging</li>
+<li>Moral outrage: "a special type of anger, one that ignites when people recognize that a person or institution has violated a moral principle, and must be prevented from continuing to do so"</li>
+<li>Is a response to the behavior of others, never one's own</li>
+<li>Institutional messaging places the blame for for an issue on an outside institution or one that the member is only a small part of</li>
+<li>Moral outrage allows people to break from "system justification" &#x2013; an often irrational defense of the status quo</li>
+<li>Activist motivation is driven by emotions that are similar to, but broader than moral outrage</li>
+</ul></li>
+<li>Institiutional messaging makes the audience view the issue as more serious, given that it's being deemed important enough to require society-wide action</li>
+<li>Peer pressure
+<ul class="org-ul">
+<li>Institutional messaging has more peer pressure built in</li>
+<li>Institutional messages require large demonstrations to deliver, which allow people to realize that they're not part of a small fringe group &#x2013; their group is larger and more organized than they thought it was</li>
+</ul></li>
+<li>An argument that cuts both ways: we could be biased in favor of one of these strategies
+<ul class="org-ul">
+<li>We're biased in favor of individual messaging because of the general psychological desire for instant gratification</li>
+<li><i>Wait, what? I don't see this bias in my everyday experience</i></li>
+<li><i>Lots of movements start out with institutional messages, when individual messaging might work better</i></li>
+<li><i>In fact, I'd argue that EA is the exception in that it started out with a strong ethos of individual messaging, and is only now considering institutional messaging</i></li>
+</ul></li>
+<li>Counterargument: Individual messaging has a clearer call to action and promising spillover benefits
+<ul class="org-ul">
+<li>Individual change is something that you can do right away, while institutional change is vague and long-term</li>
+<li>Clarity of individual focus could make the recipient more likely to act on a call to action</li>
+<li>Short-term change has a shorter feedback loop &#x2013; can measure the effects of your activism more quickly</li>
+<li>Given how small the animal-free food movement is, institutional change might be intractable</li>
+</ul></li>
+<li>Mixed messaging
+<ul class="org-ul">
+<li>There might be a way to combine both modes of messaging to capture the benefits of both</li>
+</ul></li>
+<li>Implications of favoring institutional messaging
+<ul class="org-ul">
+<li>The tentative preponderance of evidence is in favor of institutional messaging</li>
+<li><i>I'm not so sure, based upon this piece alone</i></li>
+<li><i>This piece hasn't addressed any of the downsides of institutional change that Scott brought up in the previous piece</i></li>
+<li><i>There is a hidden assumption here that EAs can manage institutional change so that it won't go in a direction other than what they intend</i></li>
+<li>Focusing on institutional messaging and interventions is the an important underappreciated conclusion in the EA for animals space</li>
+<li>While EAs shouldn't stop using individual messaging, institutional messaging probably has more marginal gain at this moment</li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Rohit Patnaik</p>
+<p class="date">Created: 2019-03-04 Mon 10:44</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>
