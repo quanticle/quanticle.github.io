@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- 2019-02-26 Tue 21:16 -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Managing Risk: Nuclear Weapons in the New Era of Geopolitics</title>
+<meta name="generator" content="Org mode">
+<meta name="author" content="Rohit Patnaik">
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<link href="/page.css" rel="stylesheet">
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2018 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="preamble" class="status">
+<header class="page-header">
+  <div class="logo"><a href="/"><img src="/logo.png" height="160"></a></div>
+  <div class="header-text">
+    <div class="header-text-wrapper">
+      <h1>Quanticle.net</h1>
+    </div>
+  </div>
+</header>
+</div>
+<div id="content">
+<h1 class="title">Managing Risk: Nuclear Weapons in the New Era of Geopolitics</h1>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#org1c5304b">Introduction: The New Nuclear World Order</a></li>
+<li><a href="#org5a3b9b0">Arms Control</a>
+<ul>
+<li><a href="#org93a6289">Russian Resurgence</a></li>
+<li><a href="#orgf53cb70">The China Challenge</a></li>
+<li><a href="#org654d536">Technology and nuclear weapons</a></li>
+</ul>
+</li>
+<li><a href="#orgfddc982">Non-Proliferation</a>
+<ul>
+<li><a href="#orge98bae1">Crisis In North Korea</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org1c5304b" class="outline-2">
+<h2 id="org1c5304b">Introduction: The New Nuclear World Order</h2>
+<div class="outline-text-2" id="text-org1c5304b">
+<ul class="org-ul">
+<li>Bruce Jones:
+<ul class="org-ul">
+<li>For the past two decades, governments and observers have paid more attention to nuclear non-proliferation than to the more traditional concerns of deterrence, strategic stability and arms control</li>
+<li>These concerns are once again coming to the forefront with the new era of great-power competition</li>
+<li>Discuss the intersection of strategic stability and non-proliferation &#x2013; these two concerns don't always align</li>
+<li>Discuss whether the US government is well-positioned to handle contemporary challenges posed by nuclear weapons</li>
+</ul></li>
+<li>Frank Rose:
+<ul class="org-ul">
+<li>For the past 25 years, our nuclear policy has been about reducing the number of nuclear weapons</li>
+<li>We are now probably at the end of that process and we won't be talking about reductions for some time</li>
+<li>How do we manage great power competition with Russia and China</li>
+<li>Nuclear deterrence is necessarily a part of this competition</li>
+<li>Nuclear modernization is a components of deterrence</li>
+<li>Keep in mind the <i>real goal</i> of arms control: prevent nuclear war</li>
+</ul></li>
+<li>Strobe Talbott:
+<ul class="org-ul">
+<li>Examine deterrence and arms control together</li>
+<li>"Classical" approaches to arms control are obsolete</li>
+<li>Evolution of Russia's strategy has made the old discussions around arms control obsolete</li>
+</ul></li>
+<li>Robert Einhorn:
+<ul class="org-ul">
+<li>Stability has to take priority over reductions</li>
+<li>Prevailing framework is out of date
+<ul class="org-ul">
+<li>Prevailing framework was focused on bilateral deals between the USA and the USSR</li>
+<li>Provide for equal numbers of nuclear weapons on equal numbers of 3 types of delivery vehicles:
+<ul class="org-ul">
+<li>ICBMs</li>
+<li>Land-based missiles</li>
+<li>Strategic bombers</li>
+<li><i>Surprised that he doesn't mention submarine launched missiles, but perhaps that's because submarine-launched missiles weren't subject to arms control treaties?</i></li>
+<li><i>Submarine-launched missiles <b>are</b> covered by arms control treaties, both directly and as a result of limitations on numbers of warheads and delivery systems</i></li>
+<li><i>Maybe he misspoke, and meant submarine-based missiles instead of land-based missiles</i></li>
+</ul></li>
+</ul></li>
+<li>2 things have made this old framework obsolete
+<ul class="org-ul">
+<li>Emergence of China as a near-peer great-power competitor</li>
+<li>Advent of new offensive and defensive systems
+<ul class="org-ul">
+<li>Missile defenses</li>
+<li>Long-range high-precision conventional strike systems</li>
+<li>Anti-space systems</li>
+<li>Cyber-warfare</li>
+</ul></li>
+<li><i>Adversaries now have credible <b>non-nuclear</b> ways to cripple their enemy's ability to launch a retaliatory counterstrike</i></li>
+</ul></li>
+<li>We need to think about many more variables when considering arms control and strategic stability</li>
+</ul></li>
+<li>Madelyn Creedon:
+<ul class="org-ul">
+<li>Some of this is due to natural forces of economics and politics</li>
+<li>At the end of the Cold War, it was clear that neither the US nor Russia <b>needed</b> as many nuclear weapons as they had</li>
+<li>Russia's dire economic straits created an opportunity where Russia was willing to negotiate arms reduction
+<ul class="org-ul">
+<li><i>They gained directly by having fewer weapons to maintain, which was an important concern, given how many weapons they had and how much maintenance nuclear weapons need</i></li>
+</ul></li>
+<li>US, meanwhile, was focused on terrorism rather than great power conflict
+<ul class="org-ul">
+<li><i>Allowed the US government a freer hand on negotiating arms control because the US public and US politicians were more focused on the threat posed by transnational terrorism &#x2013; didn't seem as important for the US to maintain an unassailable lead in nuclear weapons</i></li>
+</ul></li>
+<li>The new environment is a result of states wanting better, not necessarily more, nuclear capability
+<ul class="org-ul">
+<li>Russia needed a credible nuclear arsenal in order to be taken seriously as a world power, and it began to modernize its weapons as soon as it had the money to do so</li>
+<li>United States had a series of unfortunate incidents which brought to light how badly its nuclear arsenal had deteriorated in the post-Cold War era</li>
+<li>China needed a more credible nuclear deterrent in order to exert more influence in its region
+<ul class="org-ul">
+<li><i>Remember, unlike the US, China has <b>two</b> nuclear states bordering it: India and Russia</i></li>
+<li><i>The US nuclear arsenal would get a lot more attention too, if:</i>
+<ol class="org-ol">
+<li><i>Canada and Mexico were both nuclear armed powers</i></li>
+<li><i>They had expansionary geopolitical ambitions of their own</i></li>
+</ol></li>
+</ul></li>
+</ul></li>
+<li>We need to worry about the qualitative capabilities of nuclear weapons, not just absolute numbers (<i>like "throw weight", or numbers of delivery vehicles</i>)</li>
+</ul></li>
+<li>Frank Rose:
+<ul class="org-ul">
+<li>Thomas Schelling, in the '60s, wrote about how the "character" of weapons mattered, in addition to the numbers of weapons</li>
+<li>We can no longer used the "two-states/one-weapon" paradigm when discussing arms control
+<ul class="org-ul">
+<li><i>Two states: US and USSR</i></li>
+<li><i>One weapon: ICBMs</i></li>
+</ul></li>
+<li>Today, we need to think about not just the US-Russia relationship, but the US-China relationship, the Russia-China relationship, the India-Pakistan relationship&#x2026;</li>
+<li>Meanwhile, the introduction of new technology means that we can't discuss arms control solely in terms of a single weapons system</li>
+<li><i>Can't just talk about how many ICBMs we have vs. how many they have</i></li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org5a3b9b0" class="outline-2">
+<h2 id="org5a3b9b0">Arms Control</h2>
+<div class="outline-text-2" id="text-org5a3b9b0">
+</div>
+<div id="outline-container-org93a6289" class="outline-3">
+<h3 id="org93a6289">Russian Resurgence</h3>
+<div class="outline-text-3" id="text-org93a6289">
+<ul class="org-ul">
+<li>Bruce Jones: Given Russia's modernization and its threats to explicitly use nuclear weapons, how should the US approach the bilateral nuclear relationship with Russia?</li>
+<li>Michael O'Hanlon:
+<ul class="org-ul">
+<li>Nuclear stability depends on great-power stability</li>
+<li>The only way that nuclear weapons become safe is if the great powers outline which domains they're going to compete in and which domains are off limits</li>
+<li>Russia's nuclear threats are in service of other goals</li>
+<li>The Russian government is not interested in pursuing a nuclear stability strategy for its own sake</li>
+<li>They're willing to violate arms control treaties if they think it will serve their broader strategic objectives</li>
+<li>It is a mistake to think that everyone is after nuclear stability</li>
+</ul></li>
+<li>Frank Rose:
+<ul class="org-ul">
+<li>Nuclear weapons are critical to Russian geopolitical strategy</li>
+<li>Russia has no real allies, other than maybe Syria and Belarus</li>
+<li>Demographic challenges</li>
+<li>Economy that is still dangerously dependent on commodities and resource extraction</li>
+<li>While they have modernized their military to some extent, their military still lags far behind the US, especially in its ability to operate globally
+<ul class="org-ul">
+<li><i>For example, look at all the problems they had with their sole aircraft carrier when they attempted to perform combat operations in Syria</i></li>
+<li><i>There were so many issues that the airplanes were transferred to a land base, and the carrier sailed back to Russia, empty</i></li>
+<li><i>Meanwhile the US routinely conducts combat operations from two or three carriers at the same time</i></li>
+</ul></li>
+<li>The Russian "strategic partnership" with China is solely about balancing the US</li>
+<li>Nuclear weapons are the only thing where the Russians can credibly claim that they are the equals of the US</li>
+<li>What are the geopolitical implications for the US?
+<ul class="org-ul">
+<li>Russia does not believe that the European security infrastructure that was built up in the '80s and the '90s is in its interest</li>
+<li>View that arms controls treaties were imposed upon Russia when it was weak</li>
+<li><i>Shades of German dissatisfaction with the Treaty of Versailles</i></li>
+<li>Russia has a different view of bilateral nuclear treaties than the US
+<ul class="org-ul">
+<li>Treaties are about ensuring that they maintain parity with the US</li>
+<li>What the treaty bans and does not ban gives Russia insight into our nuclear strategy and our technological capabilities</li>
+<li><i>Anecdote time:</i>
+<ul class="org-ul">
+<li><i>Payne, in <span class="underline">The Great American Gamble</span>, talks about how the Russians were absolutely baffled when the US proposed ABM treaty banning missile defense research</i></li>
+<li><i>The Russians considered US missile defense capabilities to far superior to their own, and could not understand why the US would throw away the possibility of a decisive strategic advantage</i></li>
+<li><i>Of course, that didn't stop them from signing the ABM treaty</i></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul></li>
+<li>Bruce Jones: What role does Russia play in the North Korean and Iranian proliferation efforts?</li>
+<li>Madelyn Creedon:
+<ul class="org-ul">
+<li>With regards to North Korea, Russia plays a disruptive role</li>
+<li>Not viewed as a major player by Pyongyang</li>
+</ul></li>
+<li>Suzanne Maloney:
+<ul class="org-ul">
+<li>With regards to Iran, it's the US that's the disruptor</li>
+<li>Russia played a crucial role in negotiating the JCPOA and continued to participate productively in those negotiations even as US-Russia relations deteriorated elsewhere</li>
+<li>It is in Russia's interest to appear to be the more reliable partner after the US walked away from the JCPOA deal
+<ul class="org-ul">
+<li>Deepen ties with both Iran and Syria</li>
+<li>Simultaneously benefit from higher oil prices due to reductions in Iranian exports due to US sanctions</li>
+</ul></li>
+</ul></li>
+<li>Robert Einhorn:
+<ul class="org-ul">
+<li>Russia genuinely does not want Iran to have nuclear weapons</li>
+<li>Russia also has a commercial interest in being able to sell nuclear reactors and fuel to Iran</li>
+<li>The US and Russia have a common interest with regards to Iranian nuclear capability</li>
+<li>While we cannot currently act on those interests, we will need to do so in the future to discourage Iran from pursuing nuclear weapons</li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgf53cb70" class="outline-3">
+<h3 id="orgf53cb70">The China Challenge</h3>
+<div class="outline-text-3" id="text-orgf53cb70">
+<ul class="org-ul">
+<li>Bruce Jones: China is also seeking to change the world order to its benefit, but in a very different way than Russia. Where do nuclear weapons fit into Chinese thinking?</li>
+<li>Frank Rose:
+<ul class="org-ul">
+<li>China presents a fundamentally different nuclear challenge</li>
+<li>Russia has been very belligerent with its nuclear policy</li>
+<li>China continues to maintain a no-first-use policy</li>
+<li>Restrained nuclear rhetoric</li>
+<li>Aren't trying to match US or Russian arsenals</li>
+<li>China's primary priority is to maintain a survivable second-strike capability</li>
+<li>To this end, they see US missile defense initiatives as an existential threat to their nuclear deterrent capability</li>
+<li>The main concern with China is their offensive anti-satellite and cyberwarfare capabilities</li>
+<li>We have a (fraying) dialogue with Russia on cyber and ASAT</li>
+<li>We need to start a similar dialogue with China</li>
+</ul></li>
+<li>Michael O'Hanlon
+<ul class="org-ul">
+<li>It's a mistake to treat Russia and China similarly when it comes to nuclear policy</li>
+<li>Russia is far more reckless than China &#x2013; Russia knows that its power is on the wane, long term</li>
+<li>China, on the other hand, is more confident &#x2013; it knows that its conventional capabilities are on the rise</li>
+<li>We should be more grateful that China hasn't been more belligerent with their nuclear policy</li>
+</ul></li>
+<li>Strobe Talbott
+<ul class="org-ul">
+<li>China has been a beneficiary of globalization</li>
+<li>They see it in their best interest to maintain a peaceful world order</li>
+</ul></li>
+<li>Michael O'Hanlon
+<ul class="org-ul">
+<li>Russia is much more willing to overturn international norms</li>
+<li>China wants to be seen as an equal, but it is willing to work within existing institutions and structures</li>
+</ul></li>
+<li>Bruce Jones:
+<ul class="org-ul">
+<li>China and Russia are playing complementary strategies</li>
+<li>While China may not condone what Russia is doing, it benefits from Russia's disruptiveness
+<ul class="org-ul">
+<li>Distracts the US</li>
+<li>Weakens Europe</li>
+</ul></li>
+<li>Main risk for China is that Russia will go too far and will cause a breakdown in the world order which will harm China</li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org654d536" class="outline-3">
+<h3 id="org654d536">Technology and nuclear weapons</h3>
+<div class="outline-text-3" id="text-org654d536">
+<ul class="org-ul">
+<li>Bruce Jones: What impact does cyberwarfare have on nuclear strategy?</li>
+<li>Frank Rose
+<ul class="org-ul">
+<li>Cyberwarfare fundamentally changes the nuclear threat landscape</li>
+<li>We need to keep the potential for cyber-attack as we modernize our nuclear command and control systems</li>
+<li>Strategic capabilities (nuclear, cyberwarfare, artificial intelligence, missile defense, space-borne weapons) are increasingly becoming integrated</li>
+<li>One of the mistakes that the Obama administration was that it eliminated the position of Undersecretary of Defense for global strategic affairs</li>
+<li>Russia and China most definitely do not consider nuclear, cyber and space as separate &#x2013; why should we?</li>
+<li>Unlikely that future conflict will be limited to a single domain</li>
+</ul></li>
+<li>Bruce Jones: Could cyber operations be met with a nuclear response?</li>
+<li>Frank Rose
+<ul class="org-ul">
+<li>No, there is no cyber-attack which would merit a nuclear response</li>
+<li>More generally, we need to be more careful about threatening a nuclear response</li>
+<li>Given that we're not going to use nuclear weapons to respond to a cyber-attack, we need to formulate credible cyber and conventional responses which can be used to meet a cyber-attack</li>
+</ul></li>
+<li>Michael O'Hanlon
+<ul class="org-ul">
+<li>If a cyber-attack, biological weapon or artificial intelligence caused as much damage as a nuclear strike, then we should be open to using nuclear weapons in response</li>
+<li>Taking nuclear weapons off the table prematurely ties our hands</li>
+</ul></li>
+<li>Madelyn Creedon
+<ul class="org-ul">
+<li>We need to maintain some level of ambiguity in our response</li>
+<li>In the near term, however, the main danger is theft of intellectual property</li>
+<li>Even the most severe cyber-attacks perpetrated by Russia have been relatively minor things</li>
+</ul></li>
+<li>Strobe Talbot: We can't count on cyber-attacks remaining mild</li>
+<li>Madelyn Creedon
+<ul class="org-ul">
+<li>Need to better protect military and critical assets against cyberattack</li>
+<li>Maintain flexibility in response (be it conventional, cyber, or nuclear)</li>
+<li>Response should depend on the consequences of the attack, not the nature of the attack</li>
+<li>Cyberwarfare is part of a strategic whole</li>
+<li>Need to figure out how we can achieve strategic stability in a world with advanced cyberwarfare capabilities and artificial intelligence</li>
+</ul></li>
+<li>Frank Rose
+<ul class="org-ul">
+<li>Need to improve our ability to adopt and adapt new technology</li>
+<li>Plans need to be flexible so that our modernization programs can pick up new technologies as they become available</li>
+</ul></li>
+<li>Bruce Jones: Should we worry about a medium or longer term future where nuclear launches are automated?</li>
+<li>Frank Rose:
+<ul class="org-ul">
+<li>China, Russia and other authoritarian countries don't have the same qualms about AI that we do</li>
+<li>Need to come up with guidelines about launch automation that everyone agrees to stick to for the collective good</li>
+<li>It will be difficult to get a formal treaty restricting AI in nuclear weapons so long as nations think the technology can be used for strategic advantage</li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgfddc982" class="outline-2">
+<h2 id="orgfddc982">Non-Proliferation</h2>
+<div class="outline-text-2" id="text-orgfddc982">
+</div>
+<div id="outline-container-orge98bae1" class="outline-3">
+<h3 id="orge98bae1">Crisis In North Korea</h3>
+<div class="outline-text-3" id="text-orge98bae1">
+<ul class="org-ul">
+<li></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Rohit Patnaik</p>
+<p class="date">Created: 2019-02-26 Tue 21:16</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>
