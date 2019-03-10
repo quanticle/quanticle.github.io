@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- 2019-03-10 Sun 16:28 -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>2019-03-11 RRG Notes</title>
+<meta name="generator" content="Org mode">
+<meta name="author" content="Rohit Patnaik">
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<link href="/page.css" rel="stylesheet">
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2018 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="preamble" class="status">
+<header class="page-header">
+  <div class="logo"><a href="/"><img src="/logo.png" height="160"></a></div>
+  <div class="header-text">
+    <div class="header-text-wrapper">
+      <h1>Quanticle.net</h1>
+    </div>
+  </div>
+</header>
+</div>
+<div id="content">
+<h1 class="title">2019-03-11 RRG Notes</h1>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#org6de7ceb">The Bottom Line</a></li>
+<li><a href="#org237e810">The Apologist and the Revolutionary</a></li>
+<li><a href="#org1b0435a">Rationalization</a></li>
+<li><a href="#orgd4b0215">Simultaneously Right and Wrong</a></li>
+<li><a href="#orgd9f268a">You May Already Be A Sinner</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org6de7ceb" class="outline-2">
+<h2 id="org6de7ceb"><a href="https://www.greaterwrong.com/posts/34XxbRFe54FycoCDw/the-bottom-line">The Bottom Line</a></h2>
+<div class="outline-text-2" id="text-org6de7ceb">
+<ul class="org-ul">
+<li>There are two boxes up for auction</li>
+<li>One contains a valuable diamond, the other is empty</li>
+<li>The boxes are covered with signs and portents, but no sign or portent is known to be perfectly reliable</li>
+<li>Let's say that there's a clever arguer, hired by one of the box owners to argue that their box has the diamond
+<ul class="org-ul">
+<li>The clever arguer starts by writing, at the bottom of the page, "And therefore that's why this box contains the diamond."</li>
+<li>Then, they go back and fill in all of the other arguments as to why the box might contain the diamond</li>
+<li>When the clever arguer comes to you, they recite their argument &#x2013; saying that the box is blue, it has certain markings, etc, and therefore it must contain the diamond</li>
+<li>However, the evidentiary entanglement between the box and the argument became fixed when the clever arguer wrote their conclusion at the bottom of the paper</li>
+</ul></li>
+<li>Let's say there's another person, who is genuinely curious about the contents of the box
+<ul class="org-ul">
+<li>This person writes down the distinguishing characteristics of both boxes</li>
+<li>Then, using their knowledge of the laws of probability, they write down the conclusion</li>
+<li>In this world, the conclusion is entangled not with the willingness of the box owner to pay, but with the actual signs and evidence on the boxes</li>
+</ul></li>
+<li>Your effectiveness as a rationalist is determined by whether you write down your conclusion first or last</li>
+<li>Note: this is intended as a check on your own thinking, not as a fully-general counterargument against others</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org237e810" class="outline-2">
+<h2 id="org237e810"><a href="https://www.greaterwrong.com/posts/ZiQqsgGX6a42Sfpii/the-apologist-and-the-revolutionary">The Apologist and the Revolutionary</a></h2>
+<div class="outline-text-2" id="text-org237e810">
+<ul class="org-ul">
+<li>Anosognosia is the condition of not knowing your own disability</li>
+<li>People deny even clearly observable disabilities, like paralysis or blindness and come up with increasingly implausible excuses for why they can't e.g. move their limbs</li>
+<li>Why do people have trouble admitting their disability?
+<ul class="org-ul">
+<li>Patients might be psychologically incapable of coping with their disability, but anosognosia only occurs in patients who have strokes in the right hemisphere</li>
+<li>Patients might not have access to the part of the brain responsible for thinking about the affected area &#x2013; however anosognosic patients will make equally implausible claims about other parts of their body</li>
+<li>This points to anosognosia as being a failure in rationality, rather than a problem particular to a particular part of the body</li>
+</ul></li>
+<li>Dr. Ramachandran posits two different interacting systems in the brain
+<ul class="org-ul">
+<li>Apologist &#x2013; tries to fit data to the brain's existing theory</li>
+<li>Revolutionary &#x2013; initiates a "paradigm shift" when the enough contradictory evidence has accumulated to overthrow the brain's existing hypothesis</li>
+</ul></li>
+<li>Normally these two systems work in balance</li>
+<li>However, if a stroke takes the revolutionary offline, then the brain loses its ability to "update"</li>
+<li>The really weird thing is that squirting cold water into the patient's left ear seems to temporarily "wake up" the revolutionary
+<ul class="org-ul">
+<li>The patient will admit to their paralysis and will exhibit confusion that they ever denied their paralysis</li>
+<li>However, after some time, the effect fades and the patient will go back to not only denying their paralysis but also denying that they ever admitted that they were paralyzed</li>
+</ul></li>
+<li>The reason this seems so strange is because we think of our intellect as being primarily propositional in nature, and therefore internally consistent</li>
+<li>However, anosognosia shows that our intellects don't have to be internally consistent</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org1b0435a" class="outline-2">
+<h2 id="org1b0435a"><a href="https://www.greaterwrong.com/posts/SFZoEBpLo9frSJGkc/rationalization">Rationalization</a></h2>
+<div class="outline-text-2" id="text-org1b0435a">
+<ul class="org-ul">
+<li>Rationality is a forward flow from evidence to conclusion</li>
+<li>Rationalization is a backwards flow that starts with the conclusion and assembles the evidence to fit that conclusion</li>
+<li>These two words shouldn't be as close to each other as they are</li>
+<li>When you're investigating something, make sure that you're weighing the evidence first, and then coming to the conclusion, and not the other way around</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgd4b0215" class="outline-2">
+<h2 id="orgd4b0215"><a href="https://www.greaterwrong.com/posts/P3uavjFmZD5RopJKk/simultaneously-right-and-wrong">Simultaneously Right and Wrong</a></h2>
+<div class="outline-text-2" id="text-orgd4b0215">
+<ul class="org-ul">
+<li>1978 study on self-handicapping shows that people will voluntarily choose circumstances that make them perform more poorly if those circumstances allow them to "excuse" their poor performance
+<ul class="org-ul">
+<li><i>Hmmm&#x2026; this is a sexy result from before 2005; I'm not sure how much I believe it</i></li>
+<li><i><a href="https://1drv.ms/b/s!AplHlBHEPfr26Se37tO0dyqOvsjm">Leary (1986)</a> contains a list of replications</i>
+<ul class="org-ul">
+<li><i>Gibbons &amp; Gaeddert, 1984</i></li>
+<li><i>Kolditz &amp; Arkin, 1982</i></li>
+<li><i>Tucker, Vuchinich &amp; Sobell, 1981</i></li>
+</ul></li>
+</ul></li>
+<li>In order to handicap, subjects must have both an inaccurate and an accurate assessment of their own abilities</li>
+<li>Need to know that they expect to perform well (in order to have self-esteem to handicap) and must know that their "true" expectation is lower than their ostensible expectation</li>
+<li>This is a different version of the "belief in belief" problem, similar to the person who has to explain away experimental results disconfirming the presence of a dragon in their garage</li>
+<li>Belief in religious faith and self-confidence seem to be two areas where we can be simultaneously right and wrong &#x2013; we can express a biased position on a superficial level while holding accurate beliefs at a deeper level</li>
+<li><i>This relates to the</i> Apologist and Revolutionary <i>reading as another example of the intellect not being propositionally consistent</i></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgd9f268a" class="outline-2">
+<h2 id="orgd9f268a"><a href="https://www.greaterwrong.com/posts/Cq45AuedYnzekp3LX/you-may-already-be-a-sinner">You May Already Be A Sinner</a></h2>
+<div class="outline-text-2" id="text-orgd9f268a">
+<ul class="org-ul">
+<li>The doctrine of Calvinism emphasizes predestination &#x2013; it's already determined whether you'll go to heaven or hell, and there's nothing you can do in this world to affect that outcome</li>
+<li>The blessed live virtuous lives, and the damned live sinful lives, but the type of life a person leads has no bearing on their entrance to heaven; it's just something that happens to them after they've been blessed or damned</li>
+<li>So knowing this, would you choose to live a virtuous life or a sinful life?</li>
+<li>Amos Tsversky argues that one should live a sinful life &#x2013; the blessed/damned decision has already been made, so why not have an enjoyable sinful life, full of earthly pleasures?</li>
+<li>However, people under a Calvinist doctrine often lead virtuous lives, under the impression that the choice to lead a virtuous life affects the probability of their soul being blessed or damned</li>
+<li>In a similar experiment volunteers were told that there were two kinds of heart &#x2013; Type I and Type II</li>
+<li>They were also told that people with Type II hearts had longer, healthier lives</li>
+<li>One group of volunteers was told that people with Type II hearts had higher pain tolerance after exercise</li>
+<li>The other group was told that people with Type II hearts had lower pain tolerance after exercise</li>
+<li>The group that was told that people with Type II hearts had higher pain tolerance chose to keep their hands in ice water longer after excercising</li>
+<li>In both the Calvinist predestination case and the Type II heart case, people believed on some level that their actions would be able to affect a predestined outcome</li>
+<li>However, in both cases, that knowledge didn't rise to the level of conscious thought, and thus when asked, people got the causation reversed &#x2013; said that their actions were a result of predestined variables</li>
+<li>Similar to self-handicapping literature &#x2013; in both cases people take an action to protect their self-image that will work if and only if the intent behind the action doesn't rise to the level of conscious thought</li>
+<li>In both cases, the action is apparently successful, self-image is protected, and the mind remains unaware of its true motives</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Rohit Patnaik</p>
+<p class="date">Created: 2019-03-10 Sun 16:28</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>
